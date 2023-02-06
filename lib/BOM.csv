@@ -1,0 +1,27 @@
+Submodule,Description,Model #,Link,Per submodule,Per total,unit price,Subtotal
+Box,Green LED,L513GD-B,https://www.digikey.com/en/products/detail/american-opto-plus-led/L513GD-B/13556882,15,15,$0.18,$2.70
+Box,Yellow LED,2460-L513YD-C-ND,https://www.digikey.com/en/products/detail/american-opto-plus-led/L513YD-C/13556895,1,1,$0.18,$0.18
+Box,150Ohm Array (9),4610X-101-151LF,https://www.digikey.com/en/products/detail/bourns-inc/4610X-101-151LF/1089176,2,2,$0.52,$1.04
+Box,33Ohm Array (4),4608X-2-330LF-ND,https://www.digikey.com/en/products/detail/bourns-inc/4608X-102-330LF/1089133,4,4,$0.45,$1.80
+Box,10kOhm Array (9),4610X-1-103LF-ND,https://www.digikey.com/en/products/detail/bourns-inc/4610X-101-103LF/1089169,2,2,$0.55,$1.10
+Box,Stablizing Capacitors,399-C410C105K3R5TA-ND,https://www.digikey.com/en/products/detail/kemet/C410C105K3R5TA/12701220,3,3,$0.32,$0.96
+Box,Isolating capacitors (10nF),399-C410C103K5R5TA-ND,https://www.digikey.com/en/products/detail/kemet/C410C103K5R5TA/12701142,15,15,$0.19,$2.85
+Box,Digital Inverter,296-4217-5-ND,https://www.digikey.com/en/products/detail/texas-instruments/CD74AC04E/375681,1,1,$0.79,$0.79
+Box,"OR gate  (2ch, 4-in)",CD4072BE,https://www.digikey.com/en/products/detail/texas-instruments/CD4072BE/67317,3,3,$0.88,$2.64
+Box,D-Latch (Octal),SN74AC573N,https://www.digikey.com/en/products/detail/texas-instruments/SN74AC573N/1575944,2,2,$0.98,$1.96
+Box,RJ45 Female,MTJ-881X1,https://www.digikey.com/en/products/detail/adam-tech/MTJ-881X1/9832263,3,3,$0.63,$1.89
+Box,USB A,USB-A1HSW6,https://www.digikey.com/en/products/detail/on-shore-technology-inc/USB-A1HSW6/2677750,1,1,$0.48,$0.48
+Box,RJ11 Female,,,1,1,$0.32,$0.32
+Box,Project Box (fillament),,,0.1,0.1,$25.00,$2.50
+Box,PCB,,,1,1,$5.00,$5.00
+Breakout,RJ45 Female,,,1,3,$0.62,$1.86
+Breakout,RJ11 Female,54601-906001WPLF,https://www.digikey.com/en/products/detail/amphenol-cs-fci/54601-906001WPLF/4242889,5,15,$0.32,$4.80
+Breakout,Project Box (fillament),,,0.05,0.05,$25.00,$1.25
+Breakout,PCB,,,1,3,$1.00,$3.00
+Buzzer,Momentary Switch,KS1100OA1AF060,https://www.digikey.com/en/products/detail/e-switch/KS1100OA1AF060/7364301,1,16,$0.75,$12.00
+Buzzer,RJ11 Female,54601-906001WPLF,https://www.digikey.com/en/products/detail/amphenol-cs-fci/54601-906001WPLF/4242889,1,16,$0.32,$5.12
+Buzzer,PVC Pipe (~5ft),,,1,1,$5.00,$5.00
+Box-Module,Ethernet Cable (cat5),,,,,,
+Buzzer Wire,Phone Cable (cat 3),,,,,,
+General,USB A cable,,,,,,
+,,,,,,Total,$59.24
