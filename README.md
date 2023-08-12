@@ -23,6 +23,7 @@ Additional build tools are given at the bottom as:
   - 2m Allen Wrench
   - Wire Strippers
   - Super Glue/Epoxy
+  - Optional: electrical tape (or equivalent insulation, like heat shrink tubing) -- see erratum 1 below
 
 All electrical schematics are available in the `graphics` folder.
 
@@ -33,9 +34,13 @@ The following are two saved shopping carts from digikey for the electrical compo
 
 All 3D printable parts are available in the `3d` folder; check out [the README](3d/README.md) for details.
 
-For help souldering and constructing the Lesser Magistrate system, a guided build playlist is [available here](https://www.youtube.com/watch?v=u-B20jy8v2o&list=PL-Vn05Kf5ezxIfupx7_Z1d6l5HKGBeLW2).
+For help soldering and constructing the Lesser Magistrate system, a guided build playlist is [available here](https://www.youtube.com/watch?v=u-B20jy8v2o&list=PL-Vn05Kf5ezxIfupx7_Z1d6l5HKGBeLW2).
 
 If you are interested in purchasing a Lesser Magistrate system (or any of the necessary components -- particularly the PCBs), contact [the author](https://github.com/jonathanvanschenck).
+
+### Build Errata
+  1. During the final stage of constructing the hand triggers/buzzers, some assemblers have found that the twisting action of inserting the bottom 3d printed plug in for gluing can cause the bent-apart RJ11 contacts to be twisted together. This shorts out the linear switch -- making the buzzer effectively "always on". This can be mitigated by wrapping the exposed metal of the contact/solder/wire with electrical tape or heat shrink tubing.
+
 
 
 ## Contributing
