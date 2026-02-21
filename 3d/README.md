@@ -1,5 +1,10 @@
 # Enclosures and Construction Assests
-This subdirectory contains all the information for the plastic enclosures for the electronics as well as jigs for assembly.
+This subdirectory contains all the stl files for the plastic enclosures for the electronics as well as jigs for assembly.
+
+An STL file is the standard format used in the 3d printing world. So, if you are ordering out these parts, you can provide these STLs and
+your manufacturer will know what to do with them.
+
+Note, each set of files will create a single instance of whatever you are printing. So, for example, you will need a barrel, cap and stablizer to make 1 trigger. So if you want 16 triggers, you will need 16 stablizers, caps and barrrels.
 
 ## STL Files
 The STL files for all 3d printed parts can be found in the `stl` folder. Contained are:
@@ -12,9 +17,9 @@ The STL files for all 3d printed parts can be found in the `stl` folder. Contain
         - [Bottom](./stl/LLMBottom.stl)
     - Trigger:
         - [Barrel](./stl/TriggerBottom.stl)
-        - [Cap](./stl/TriggerCap.stl)
+        - [Cap](./stl/TriggerCap.stl): Important Note! You might need to scale this part up/down by a few percent during slicing so that you achieve an interference fit with the barrel.
         - [Stabilizer](./stl/TriggerStablizer.stl)
-  - Jigs:
+  - Jigs: These are optional assembly jigs, which are very nice if you are make many sets all together
     - [Board holder](./stl/LMConstructionBoardHolder.stl): used to hold the PCB in place while soldering.
     - Trigger jig:
         - [Anvil](./stl/TriggerConstructionAnvil.stl): creates a flat surface for the trigger to be pressed against.
