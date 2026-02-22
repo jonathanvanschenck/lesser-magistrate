@@ -25,7 +25,31 @@ The STL files for all 3d printed parts can be found in the `stl` folder. Contain
         - [Anvil](./stl/TriggerConstructionAnvil.stl): creates a flat surface for the trigger to be pressed against.
         - [Ram](./stl/TriggerConstructionRam.stl): used to press the cap onto the barrel without hurting your hands.
 
-When generating gcode with your slicer, it is recommended to use 0.2mm accuracy, rectilinear infill at 20% and print using PLA. Additionally, the trigger's
+When generating gcode with your slicer, it is recommended to use 0.2mm accuracy, rectilinear infill at 20% and print using PLA. Additionally, the trigger's cap may need to be scaled slightly (a few percent) in your slicer to achieve a good interference fit with the barrel.
+
+## Quantities by Trigger Set
+
+The number of printed parts depends on how many triggers you are building. Enclosure quantities scale with triggers; jigs are optional and quantity depends on your workflow.
+
+### Enclosures
+
+| STL File | 16 Trigger Set | 12 Trigger Set | 10 Trigger Set | Explanation |
+|----------|:--------------:|:--------------:|:--------------:|-------------|
+| [LM Box Top](./stl/LMTop.stl) | 1 | 1 | 1 | One per set — top half of the main controller enclosure |
+| [LM Box Bottom](./stl/LMBottom.stl) | 1 | 1 | 1 | One per set — bottom half of the main controller enclosure |
+| [LMM Box Top](./stl/LMMTop.stl) | 3 | 3 | 3 | One per team (3 teams in every configuration) |
+| [LMM Box Bottom](./stl/LLMBottom.stl) | 3 | 3 | 3 | One per team (3 teams in every configuration) |
+| [Trigger Barrel](./stl/TriggerBottom.stl) | 16 | 12 | 10 | One per trigger |
+| [Trigger Cap](./stl/TriggerCap.stl) | 16 | 12 | 10 | One per trigger — may need slight scaling for interference fit |
+| [Trigger Stabilizer](./stl/TriggerStablizer.stl) | 16 | 12 | 10 | One per trigger |
+
+### Assembly Jigs (Optional)
+
+| STL File | Suggested Qty | Explanation |
+|----------|:-------------:|-------------|
+| [Board Holder](./stl/LMConstructionBoardHolder.stl) | 1 | Holds the PCB steady during soldering; one is sufficient for any set size |
+| [Trigger Jig Anvil](./stl/TriggerConstructionAnvil.stl) | 1 | Flat surface for pressing caps onto barrels; one is sufficient |
+| [Trigger Jig Ram](./stl/TriggerConstructionRam.stl) | 1 | Used with the anvil to press caps without hand strain; one is sufficient |
 
 Contact [the author](https://github.com/jonathanvanschenck/) for further details.
 

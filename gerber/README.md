@@ -9,3 +9,13 @@ Note, each file will create only a single instance of whatever it contains. So, 
   - [LM Board](./LMGerber.zip)
   - [LMM Board](./LMMGerber.zip)
   - [Trigger Board](./TriggerGerber.zip)
+
+## Quantities by Trigger Set
+
+The number of PCBs you need to order depends on how many triggers you are building. There is always 1 LM (main controller) board and 1 LMM (module) board per team. The number of Trigger boards equals the total number of triggers.
+
+| Gerber File | 16 Trigger Set | 12 Trigger Set | 10 Trigger Set | Explanation |
+|-------------|:--------------:|:--------------:|:--------------:|-------------|
+| [LM Board](./LMGerber.zip) | 1 | 1 | 1 | One per set — the main quiz magistrate controller board |
+| [LMM Board](./LMMGerber.zip) | 3 | 3 | 3 | One per team |
+| [Trigger Board](./TriggerGerber.zip) | 16 | 12 | 10 | One per trigger |
