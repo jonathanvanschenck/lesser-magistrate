@@ -43,8 +43,9 @@ If you did not receive kit, you will need to acquire the raw materials. Broadly 
 You will need to buy all the electrical components (meaning chips, resistors, connectors and wires). You can reference the [BOM](lib/BOM.csv) to see details, but easier is to just use one of the two pre-created shopping carts below to order what you need.
 
 Digikey Shopping lists:
-- [LM Set including 16 triggers](https://www.digikey.com/en/mylists/list/9FWNPUPV9Y)
-- [LM Set including 12 triggers](https://www.digikey.com/en/mylists/list/25X0QC0BVT)
+- [LM Set including 16 triggers](https://www.digikey.com/en/mylists/list/F2CUTMZWMI)
+- [LM Set including 12 triggers](https://www.digikey.com/en/mylists/list/Z0QW9PNE1D)
+
 
 #### 2. PCB
 You will also need to buy the actual PCBs to soulder everything to. Most You can find the gerber files (the extension is `.zip`) in the `gerber` directory, with a [README](./gerber/README.md) for details.
