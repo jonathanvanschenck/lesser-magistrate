@@ -28,7 +28,22 @@ If you have recieved a build kit, you should already have all the raw materials 
   - Allen Wrench
   - Phillips head screw driver (long shaft)
 
-There is a video guide you can follow for step-by-step instructions on how to build your Lesser Magistrate system: [available here](https://www.youtube.com/watch?v=u-B20jy8v2o&list=PL-Vn05Kf5ezxIfupx7_Z1d6l5HKGBeLW2).
+### Video Guides and Examples
+
+There is a video guide you can follow for step-by-step instructions on how to build your Lesser Magistrate system:
+
+- https://www.youtube.com/watch?v=u-B20jy8v2o&list=PL-Vn05Kf5ezxIfupx7_Z1d6l5HKGBeLW2
+
+Here are additional example videos:
+
+- https://youtu.be/reuCWvhqvTU
+- https://youtu.be/7Vi3QWguprs
+- https://youtu.be/mlhh7Sf7_HU
+- https://youtu.be/uHA6wKbFMOs
+- https://youtu.be/KhpSTn409PQ
+- https://youtu.be/kogF7mJOyTQ
+
+### Electrical Schematics
 
 All electrical schematics are available in the [graphics](./graphcis) directory, which can be helpful during assembly, particularly for those who are more electrically inclined.
 
@@ -65,4 +80,3 @@ Currently the electrical side of the project is developed in [diptrace](https://
 Love the Lord your God with all your heart and with all your soul and with all your strength.
 These commandments that I give you today are to be on your hearts.
 Impress them on your children. Talk about them when you sit at home and when you walk along the road, when you lie down and when you get up.
-
