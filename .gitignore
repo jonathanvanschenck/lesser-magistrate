@@ -3,3 +3,10 @@
 ~*~
 !*.png
 *.gcode
+
+# DigiKey API credentials and token cache (see template.env)
+.env
+tools/digikey/.cache/
+
+# Downloaded datasheets (summaries alongside them are fine to commit)
+datasheets/*.pdf

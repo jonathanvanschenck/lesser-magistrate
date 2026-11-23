@@ -74,6 +74,8 @@ The Lesser Magistrate is a fully open sourced project, and as such contribution 
 
 Currently the electrical side of the project is developed in [diptrace](https://diptrace.com/), and all the project files are in the [lib](./lib) directory. That being said, we are in the process of converting to KiCAD as the development tool, and also creating a SMD-variant of the LM/LMM/Trigger boards which will facilitate a pick-n-place machine assembly; so don't get too attached to diptrace.
 
+Developer tooling (a DigiKey part-search CLI, and a KiCad MCP server for AI-assisted board design with Claude Code) is described in [DEVELOPMENT.md](./DEVELOPMENT.md).
+
 ## Related Projects
 
 ## Deuteronomy 6:5-7
