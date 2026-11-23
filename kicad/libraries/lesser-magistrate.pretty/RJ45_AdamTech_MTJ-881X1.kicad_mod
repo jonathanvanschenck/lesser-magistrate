@@ -10,8 +10,8 @@
 		(uuid "d355f316-bebf-4d8e-beb1-d7eb728bffdd")
 		(effects
 			(font
-				(size 1.215 1.215)
-				(thickness 0.135)
+				(size 1.2825 1.2825)
+				(thickness 0.196)
 			)
 			(justify right top)
 		)
@@ -154,7 +154,7 @@
 	(fp_text user "RJ45"
 		(at -0.293 17.36 0)
 		(unlocked yes)
-		(layer "F.SilkS")
+		(layer "F.Fab")
 		(uuid "11798f60-0844-436c-a790-0c067a1a6740")
 		(effects
 			(font
@@ -269,4 +269,15 @@
 		(uuid "53c81088-fafe-4359-9fbc-de81fe74ce71")
 	)
 	(embedded_fonts no)
+	(model "${KIPRJMOD}/../libraries/lesser-magistrate.3dshapes/RJ45_AdamTech_MTJ-881X1.step"
+		(offset
+			(xyz 1.905 -16.85 16)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 0 0)
+		)
+	)
 )

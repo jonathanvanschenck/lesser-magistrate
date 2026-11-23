@@ -1593,7 +1593,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "lesser-magistrate:RJ11"
+		(symbol "lesser-magistrate:RJ11_DipTrace"
 			(pin_names
 				(hide yes)
 			)
@@ -1657,7 +1657,7 @@
 					)
 				)
 			)
-			(symbol "RJ11_1_0"
+			(symbol "RJ11_DipTrace_1_0"
 				(polyline
 					(pts
 						(xy -1.27 0) (xy 6.35 0)
@@ -1799,7 +1799,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "lesser-magistrate:RJ45"
+		(symbol "lesser-magistrate:RJ45_DipTrace"
 			(pin_names
 				(hide yes)
 			)
@@ -1863,7 +1863,7 @@
 					)
 				)
 			)
-			(symbol "RJ45_1_0"
+			(symbol "RJ45_DipTrace_1_0"
 				(polyline
 					(pts
 						(xy -2.54 12.7) (xy 11.43 12.7)
@@ -10411,7 +10411,7 @@
 		)
 	)
 	(symbol
-		(lib_id "lesser-magistrate:RJ11")
+		(lib_id "lesser-magistrate:RJ11_DipTrace")
 		(at 59.69 41.91 270)
 		(unit 1)
 		(body_style 1)
@@ -11813,7 +11813,7 @@
 		)
 	)
 	(symbol
-		(lib_id "lesser-magistrate:RJ45")
+		(lib_id "lesser-magistrate:RJ45_DipTrace")
 		(at 144.78 25.4 180)
 		(unit 1)
 		(body_style 1)
@@ -12407,7 +12407,7 @@
 		)
 	)
 	(symbol
-		(lib_id "lesser-magistrate:RJ45")
+		(lib_id "lesser-magistrate:RJ45_DipTrace")
 		(at 176.53 25.4 180)
 		(unit 1)
 		(body_style 1)
@@ -13313,7 +13313,7 @@
 		)
 	)
 	(symbol
-		(lib_id "lesser-magistrate:RJ45")
+		(lib_id "lesser-magistrate:RJ45_DipTrace")
 		(at 115.57 25.4 180)
 		(unit 1)
 		(body_style 1)

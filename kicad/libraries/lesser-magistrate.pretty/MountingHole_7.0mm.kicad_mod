@@ -10,7 +10,8 @@
 		(uuid "ef07bb7e-bc88-47ab-8fec-f7f1600a3d2c")
 		(effects
 			(font
-				(size 1.27 1.27)
+				(size 1.2825 1.2825)
+				(thickness 0.196)
 			)
 		)
 	)

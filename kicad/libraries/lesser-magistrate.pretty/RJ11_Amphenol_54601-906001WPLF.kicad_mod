@@ -10,8 +10,8 @@
 		(uuid "8cb3b3b0-aff7-42a6-b7a4-026579de79e5")
 		(effects
 			(font
-				(size 1.215 1.215)
-				(thickness 0.135)
+				(size 1.2825 1.2825)
+				(thickness 0.196)
 			)
 			(justify right top)
 		)
@@ -19,7 +19,7 @@
 	(property "Value" "RJ11_Amphenol_54601-906001WPLF"
 		(at 8.028 -17.49 0)
 		(unlocked yes)
-		(layer "F.SilkS")
+		(layer "F.Fab")
 		(uuid "2b01ea79-340a-4cbd-b9a6-3c772005d61a")
 		(effects
 			(font
@@ -95,7 +95,7 @@
 	(fp_text user "RJ11"
 		(at -1.622 0.51 0)
 		(unlocked yes)
-		(layer "F.SilkS")
+		(layer "F.Fab")
 		(uuid "8930bef2-a567-42d4-a97a-f8433eca9e78")
 		(effects
 			(font

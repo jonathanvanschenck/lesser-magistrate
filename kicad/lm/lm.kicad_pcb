@@ -99,10 +99,10 @@
 			(uuid "97d01f4c-06cc-4547-83aa-e1ec2faa8b0f")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify left bottom)
+				(justify bottom)
 			)
 		)
 		(property "Value" "33"
@@ -276,10 +276,10 @@
 			(uuid "b32bd8bb-6ed6-4e1c-9c29-0d06f281f9e2")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify right top)
+				(justify bottom)
 			)
 		)
 		(property "Value" "10nF"
@@ -421,10 +421,10 @@
 			(uuid "02f28e44-42cf-4f15-8057-4caf948ba547")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify right top)
+				(justify bottom)
 			)
 		)
 		(property "Value" "10nF"
@@ -566,10 +566,10 @@
 			(uuid "5330a34a-127e-4c91-8195-3c8367ebb821")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify left bottom)
+				(justify bottom)
 			)
 		)
 		(property "Value" "33"
@@ -743,10 +743,10 @@
 			(uuid "c2b5e286-08c4-4afa-91a5-491eb3c41248")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify right top)
+				(justify bottom)
 			)
 		)
 		(property "Value" "10nF"
@@ -888,10 +888,10 @@
 			(uuid "7dbf3b7d-58bd-48cc-9a69-3ae71e6ebaf9")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify right top)
+				(justify bottom)
 			)
 		)
 		(property "Value" "10nF"
@@ -1027,29 +1027,29 @@
 		(at -36.5125 -60.325 -90)
 		(descr "Description: Octal D-Type Transparent Latches With 3-State Outputs")
 		(property "Reference" "U1"
-			(at -3.81 -25.378 270)
+			(at -3.81 -25.378 90)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "e150bf42-f95b-4360-8720-114e8a3700f2")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify right top)
+				(justify top)
 			)
 		)
 		(property "Value" "SN74AC573N"
-			(at 1.661 -24.382 270)
+			(at 1.661 -24.382 90)
 			(unlocked yes)
-			(layer "F.SilkS")
+			(layer "F.Fab")
 			(uuid "bf3e2287-60d0-4bb0-a3fe-a516d3ff3d76")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify right top)
+				(justify right bottom)
 			)
 		)
 		(property "Datasheet" "https://www.digikey.com/en/products/detail/texas-instruments/SN74AC573N/1575944"
@@ -2053,16 +2053,16 @@
 			(uuid "fb9d2e16-851d-404f-bd8b-ced620fc9b1b")
 		)
 		(fp_text user "Octal D-Latch"
-			(at -10.489 2.542 270)
+			(at -10.489 2.542 90)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "391ddb3b-5fb7-45e2-b99a-6fea94221657")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify left top)
+				(justify right bottom)
 			)
 		)
 		(pad "1" thru_hole rect
@@ -2323,29 +2323,29 @@
 		(uuid "54d2487a-4312-4030-8c58-31e83e9a28c6")
 		(at -66.675 -37.7825 180)
 		(property "Reference" "U6"
-			(at 0 -10.286 180)
+			(at 0 -10.286001 0)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "6df9f781-1a11-41ba-af93-13125fa8c7ca")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify right top)
+				(justify top)
 			)
 		)
 		(property "Value" "CD4072BE"
-			(at 0 10.31 180)
+			(at 0 10.31 0)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "1505766c-7400-4156-bd6e-47db403cd303")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify right top)
+				(justify bottom)
 			)
 		)
 		(property "Datasheet" "https://www.digikey.com/en/products/detail/texas-instruments/CD4072BE/67317"
@@ -2640,10 +2640,10 @@
 			(uuid "225d8c3e-a5be-49a9-a6e5-d48ea0f2448a")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify right top)
+				(justify bottom)
 			)
 		)
 		(property "Value" "10nF"
@@ -2785,10 +2785,10 @@
 			(uuid "5fea4930-2293-4618-bd50-059299075470")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify right top)
+				(justify bottom)
 			)
 		)
 		(property "Value" "10nF"
@@ -2930,10 +2930,10 @@
 			(uuid "4495c006-8392-4232-979f-73798eba3f61")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify left bottom)
+				(justify bottom)
 			)
 		)
 		(property "Value" "33"
@@ -3107,10 +3107,10 @@
 			(uuid "c5c1c3a4-e7ef-4035-9511-f4f644924bdb")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify right top)
+				(justify bottom)
 			)
 		)
 		(property "Value" "10nF"
@@ -3252,10 +3252,10 @@
 			(uuid "ab3fced3-ffd9-4782-b2cb-ab0cbfaaa2bc")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify right top)
+				(justify bottom)
 			)
 		)
 		(property "Value" "10nF"
@@ -3391,29 +3391,29 @@
 		(at -101.6 -85.725 -90)
 		(descr "DipTrace pattern: USB A")
 		(property "Reference" "U4"
-			(at 0 -8.336 270)
+			(at 0 -8.336 90)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "8a0fa72c-be9c-4722-8a19-2041681715da")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify right top)
+				(justify top)
 			)
 		)
 		(property "Value" "USB_A"
-			(at 8.693 -7.34 270)
+			(at 8.693 -7.340001 90)
 			(unlocked yes)
-			(layer "F.SilkS")
+			(layer "F.Fab")
 			(uuid "ae9a0076-9b41-47a7-b644-8f1990dc63e2")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify right top)
+				(justify right bottom)
 			)
 		)
 		(property "Datasheet" "https://www.digikey.com/en/products/detail/on-shore-technology-inc/USB-A1HSW6/2677750"
@@ -3515,16 +3515,16 @@
 			(uuid "2f5487c6-8770-4605-beee-a81de8e22ba6")
 		)
 		(fp_text user "USB A"
-			(at -2.968 7.26 270)
+			(at -2.968 7.26 90)
 			(unlocked yes)
-			(layer "F.SilkS")
+			(layer "F.Fab")
 			(uuid "0ce1baa5-c110-47f8-b6bd-d55741807d06")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify left top)
+				(justify right bottom)
 			)
 		)
 		(pad "" np_thru_hole circle
@@ -3616,10 +3616,10 @@
 			(uuid "b225ba1a-64b7-4c5e-acaa-37a77d49dd7a")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify left bottom)
+				(justify bottom)
 			)
 		)
 		(property "Value" "33"
@@ -3793,10 +3793,10 @@
 			(uuid "6e3eab45-931d-4169-853d-6222bd13851d")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify right top)
+				(justify bottom)
 			)
 		)
 		(property "Value" "1uF"
@@ -3938,10 +3938,10 @@
 			(uuid "e706ed32-4155-4021-85e9-c39b0017929e")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify right top)
+				(justify bottom)
 			)
 		)
 		(property "Value" "10nF"
@@ -4083,10 +4083,10 @@
 			(uuid "0907c3a2-affd-42a1-b807-6bff669e06e9")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify right top)
+				(justify bottom)
 			)
 		)
 		(property "Value" "1uF"
@@ -4228,10 +4228,10 @@
 			(uuid "d982e3f7-0aba-4b58-b3e5-4be9778fa6f1")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify right top)
+				(justify bottom)
 			)
 		)
 		(property "Value" "10nF"
@@ -4367,16 +4367,16 @@
 		(at -87.3125 -19.05 -90)
 		(descr "DipTrace pattern: Capacitor (Axial 6.5m)")
 		(property "Reference" "C3"
-			(at 0 -1.436 270)
+			(at 0 -1.436 90)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "49fbc3ef-8f34-4917-940e-6dd303ea0171")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify right top)
+				(justify top)
 			)
 		)
 		(property "Value" "1uF"
@@ -4512,16 +4512,16 @@
 		(at -43.4975 -66.9925 180)
 		(descr "DipTrace pattern: 1k 10 Array")
 		(property "Reference" "RB1"
-			(at -1.286 11.43 270)
+			(at -1.286 11.43 90)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "64dd4c88-70c5-4e72-9f9a-c13ce7b80e7a")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify right top)
+				(justify top)
 			)
 		)
 		(property "Value" "10k"
@@ -4718,10 +4718,10 @@
 			(uuid "a70d09ff-05a6-4f3d-97a9-68c09255644a")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify right top)
+				(justify bottom)
 			)
 		)
 		(property "Value" "CD74AC04E"
@@ -4731,10 +4731,10 @@
 			(uuid "a24bb19d-9de5-462a-9e7a-f29b2842f197")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify right top)
+				(justify top)
 			)
 		)
 		(property "Datasheet" "https://www.digikey.com/en/products/detail/texas-instruments/CD74AC04E/375681"
@@ -5022,16 +5022,16 @@
 		(uuid "949cc51c-cfe2-402e-a3f4-60335e9f8080")
 		(at -10.795 -96.735 180)
 		(property "Reference" "UA1"
-			(at 1.905 -4.206 180)
+			(at 1.905 -4.206 0)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "cfc33522-7140-4c88-963a-28c909721591")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify right top)
+				(justify top)
 			)
 		)
 		(property "Value" "RJ45"
@@ -5185,16 +5185,16 @@
 			(uuid "7e09d47a-227b-4027-a557-c5063a2a2f3b")
 		)
 		(fp_text user "RJ45"
-			(at -0.293 17.36 180)
+			(at -0.293001 17.36 0)
 			(unlocked yes)
-			(layer "F.SilkS")
+			(layer "F.Fab")
 			(uuid "11798f60-0844-436c-a790-0c067a1a6740")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify left top)
+				(justify right bottom)
 			)
 		)
 		(pad "" np_thru_hole circle
@@ -5310,6 +5310,17 @@
 			(uuid "53c81088-fafe-4359-9fbc-de81fe74ce71")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/../libraries/lesser-magistrate.3dshapes/RJ45_AdamTech_MTJ-881X1.step"
+			(offset
+				(xyz 1.905 -16.85 16)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -90 0 0)
+			)
+		)
 	)
 	(footprint "lesser-magistrate:DIP-20_W7.62mm"
 		(layer "F.Cu")
@@ -5317,29 +5328,29 @@
 		(at -83.185 -60.325 -90)
 		(descr "Description: Octal D-Type Transparent Latches With 3-State Outputs")
 		(property "Reference" "U2"
-			(at -3.81 -25.378 270)
+			(at -3.81 -25.378 90)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "c8cddc87-fbf0-4621-947d-0c7065845ebe")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify right top)
+				(justify top)
 			)
 		)
 		(property "Value" "SN74AC573N"
-			(at 1.661 -24.382 270)
+			(at 1.661 -24.382 90)
 			(unlocked yes)
-			(layer "F.SilkS")
+			(layer "F.Fab")
 			(uuid "110a3551-113e-4e97-b110-6d6503855f2f")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify right top)
+				(justify right bottom)
 			)
 		)
 		(property "Datasheet" "https://www.digikey.com/en/products/detail/texas-instruments/SN74AC573N/1575944"
@@ -6343,16 +6354,16 @@
 			(uuid "794aad8b-ebee-46d8-ab11-18fe8ba4c3cf")
 		)
 		(fp_text user "Octal D-Latch"
-			(at -10.489 2.542 270)
+			(at -10.489 2.542 90)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "3844e32d-6b6a-4269-a8fb-27812e9e2fed")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify left top)
+				(justify right bottom)
 			)
 		)
 		(pad "1" thru_hole rect
@@ -6620,10 +6631,10 @@
 			(uuid "3addcc85-757b-4916-acb0-e6bb2eb18537")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify right top)
+				(justify bottom)
 			)
 		)
 		(property "Value" "10nF"
@@ -6765,10 +6776,10 @@
 			(uuid "5c0ceb09-74d7-4976-9df9-d0315e148c05")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify right top)
+				(justify bottom)
 			)
 		)
 		(property "Value" "10nF"
@@ -6969,10 +6980,10 @@
 			(uuid "cb8d86b1-a707-47dd-85e4-21f21f8e0e4f")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify left bottom)
+				(justify bottom)
 			)
 		)
 		(property "Value" "150"
@@ -7169,10 +7180,10 @@
 			(uuid "fc5ef789-a00b-46c9-a9a9-b51542cd3828")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify right top)
+				(justify bottom)
 			)
 		)
 		(property "Value" "CD4072BE"
@@ -7182,10 +7193,10 @@
 			(uuid "724c17e8-6792-4cc1-9e7f-cc485b55400e")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify right top)
+				(justify top)
 			)
 		)
 		(property "Datasheet" "https://www.digikey.com/en/products/detail/texas-instruments/CD4072BE/67317"
@@ -7532,16 +7543,16 @@
 		(uuid "bdd93830-bb78-40a9-b77f-167e922efafa")
 		(at -44.7675 -96.735 180)
 		(property "Reference" "UB1"
-			(at 1.905 -4.206 180)
+			(at 1.905 -4.206 0)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "cc7fb3ea-5f7a-4d63-b038-2c1c7e4190fe")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify right top)
+				(justify top)
 			)
 		)
 		(property "Value" "RJ45"
@@ -7695,16 +7706,16 @@
 			(uuid "4aa5bd3b-1fce-406d-b611-dc7c44105c6b")
 		)
 		(fp_text user "RJ45"
-			(at -0.293 17.36 180)
+			(at -0.293 17.36 0)
 			(unlocked yes)
-			(layer "F.SilkS")
+			(layer "F.Fab")
 			(uuid "67a1ebef-38e4-46fe-82f1-3fefe3d1b72f")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify left top)
+				(justify right bottom)
 			)
 		)
 		(pad "" np_thru_hole circle
@@ -7820,6 +7831,17 @@
 			(uuid "5858b170-6c17-4a75-b964-e9259ea3648a")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/../libraries/lesser-magistrate.3dshapes/RJ45_AdamTech_MTJ-881X1.step"
+			(offset
+				(xyz 1.905 -16.85 16)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -90 0 0)
+			)
+		)
 	)
 	(footprint "lesser-magistrate:C_Kemet_C410"
 		(layer "F.Cu")
@@ -7833,10 +7855,10 @@
 			(uuid "d1429ea4-9076-41e9-8cac-3d443d36a1d3")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify right top)
+				(justify bottom)
 			)
 		)
 		(property "Value" "10nF"
@@ -8037,10 +8059,10 @@
 			(uuid "f750a3f0-54ae-462d-9f8a-8b3eefc6117b")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify right top)
+				(justify bottom)
 			)
 		)
 		(property "Value" "10nF"
@@ -8175,29 +8197,29 @@
 		(uuid "c9ff0d45-c2b7-4d95-a6e6-29572228fb6a")
 		(at -28.8925 -37.7825 180)
 		(property "Reference" "U5"
-			(at 0 -10.286 180)
+			(at 0 -10.286001 0)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "9585a7a6-bfdb-4717-ad6d-fa7e37ef415f")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify right top)
+				(justify top)
 			)
 		)
 		(property "Value" "CD4072BE"
-			(at 0 10.31 180)
+			(at 0 10.31 0)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "89a0883b-de6d-41bf-9150-031b4852f88a")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify right top)
+				(justify bottom)
 			)
 		)
 		(property "Datasheet" "https://www.digikey.com/en/products/detail/texas-instruments/CD4072BE/67317"
@@ -8544,16 +8566,16 @@
 		(uuid "dca6d3f7-17b2-470b-bd8f-0c0944c9643c")
 		(at -78.74 -96.735 180)
 		(property "Reference" "UC1"
-			(at 1.905 -4.206 180)
+			(at 1.905 -4.206 0)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "2ea9a052-4a28-4b1a-9a28-adafbab8e6f5")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify right top)
+				(justify top)
 			)
 		)
 		(property "Value" "RJ45"
@@ -8707,16 +8729,16 @@
 			(uuid "b4810d2d-72c4-4f24-9734-5187d0ab2d32")
 		)
 		(fp_text user "RJ45"
-			(at -0.293 17.36 180)
+			(at -0.293001 17.36 0)
 			(unlocked yes)
-			(layer "F.SilkS")
+			(layer "F.Fab")
 			(uuid "0ea4246e-ecb5-4875-9d53-90e07d1fef0d")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify left top)
+				(justify right bottom)
 			)
 		)
 		(pad "" np_thru_hole circle
@@ -8832,6 +8854,17 @@
 			(uuid "23a04f53-10fa-462b-a7a3-2f7791c1e13a")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/../libraries/lesser-magistrate.3dshapes/RJ45_AdamTech_MTJ-881X1.step"
+			(offset
+				(xyz 1.905 -16.85 16)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -90 0 0)
+			)
+		)
 	)
 	(footprint "lesser-magistrate:R_Array_SIP10"
 		(layer "F.Cu")
@@ -8839,16 +8872,16 @@
 		(at -49.2125 -66.9925 180)
 		(descr "DipTrace pattern: 1k 10 Array")
 		(property "Reference" "RB2"
-			(at -1.286 11.43 270)
+			(at -1.286 11.43 90)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "acef3c45-4f7c-4bca-8123-538b04fdeaf5")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify right top)
+				(justify top)
 			)
 		)
 		(property "Value" "10k"
@@ -9046,10 +9079,10 @@
 			(uuid "e7594682-180d-4e2c-b7c3-e800597ec4ce")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify left bottom)
+				(justify bottom)
 			)
 		)
 		(property "Value" "150"
@@ -9247,10 +9280,10 @@
 			(uuid "fedc43c9-7b63-4ede-a30b-6e9c11baf583")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify right top)
+				(justify bottom)
 			)
 		)
 		(property "Value" "10nF"
@@ -9385,29 +9418,29 @@
 		(uuid "fc4f4cdc-d6e7-4460-87ba-64b40dda780e")
 		(at -107.95 -66.9925 -90)
 		(property "Reference" "U7"
-			(at 0 -18.486 270)
+			(at 0 -18.486 90)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "7d39ceaa-5962-4d3d-897a-71b72f860ca1")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify right top)
+				(justify top)
 			)
 		)
 		(property "Value" "RJ11"
-			(at 8.028 -17.49 270)
+			(at 8.028 -17.49 90)
 			(unlocked yes)
-			(layer "F.SilkS")
+			(layer "F.Fab")
 			(uuid "888ebd56-84d8-44e9-8780-c04aca2e8e5d")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify right top)
+				(justify right bottom)
 			)
 		)
 		(property "Datasheet" "https://www.digikey.com/en/products/detail/amphenol-cs-fci/54601-906001WPLF/4242889"
@@ -9489,16 +9522,16 @@
 			(uuid "4c8ef934-d0cc-4a9f-9ee5-464173a9dc98")
 		)
 		(fp_text user "RJ11"
-			(at -1.622 0.51 270)
+			(at -1.622 0.51 90)
 			(unlocked yes)
-			(layer "F.SilkS")
+			(layer "F.Fab")
 			(uuid "8930bef2-a567-42d4-a97a-f8433eca9e78")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify left top)
+				(justify right bottom)
 			)
 		)
 		(pad "" np_thru_hole circle
@@ -9549,16 +9582,16 @@
 		(at -46.6725 -51.752833 90)
 		(descr "DipTrace pattern: LED Through")
 		(property "Reference" "DB2"
-			(at 0.318 3.66 270)
+			(at 0.318 3.66 90)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "097d81d1-2043-4d50-b984-c74950346993")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify left bottom mirror)
+				(justify top mirror)
 			)
 		)
 		(property "Value" "Green"
@@ -9737,16 +9770,16 @@
 		(at -8.255 -51.752833 90)
 		(descr "DipTrace pattern: LED Through")
 		(property "Reference" "DA2"
-			(at 0.318 3.66 270)
+			(at 0.318 3.66 90)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "59e2deba-1aff-4256-9010-55b02f3cbc62")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify left bottom mirror)
+				(justify top mirror)
 			)
 		)
 		(property "Value" "Green"
@@ -9925,16 +9958,16 @@
 		(at -41.5925 -44.767833 90)
 		(descr "DipTrace pattern: LED Through")
 		(property "Reference" "DB4"
-			(at 0.318 3.66 270)
+			(at 0.318 3.66 90)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "acb917a4-dece-474c-b38c-ea38e324b659")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify left bottom mirror)
+				(justify top mirror)
 			)
 		)
 		(property "Value" "Green"
@@ -10113,16 +10146,16 @@
 		(at -56.8325 -51.752833 90)
 		(descr "DipTrace pattern: LED Through")
 		(property "Reference" "DB3"
-			(at 0.318 3.66 270)
+			(at 0.318 3.66 90)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "3d0efef4-6aa1-448a-bb84-d78eb0af06f5")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify left bottom mirror)
+				(justify top mirror)
 			)
 		)
 		(property "Value" "Green"
@@ -10301,16 +10334,16 @@
 		(at -46.672833 -19.685 180)
 		(descr "DipTrace pattern: LED Through")
 		(property "Reference" "D1"
-			(at 0.318 3.66 0)
+			(at 0.317999 3.66 0)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "cb661dee-6341-4452-8e9d-2281562ac403")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify left bottom mirror)
+				(justify bottom mirror)
 			)
 		)
 		(property "Value" "Yellow"
@@ -10489,16 +10522,16 @@
 		(at -3.175 -44.767833 90)
 		(descr "DipTrace pattern: LED Through")
 		(property "Reference" "DA4"
-			(at 0.318 3.66 270)
+			(at 0.318 3.66 90)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "92444d23-a93f-485f-9c2d-39234ae4d197")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify left bottom mirror)
+				(justify top mirror)
 			)
 		)
 		(property "Value" "Green"
@@ -10677,16 +10710,16 @@
 		(at 1.905 -51.752833 90)
 		(descr "DipTrace pattern: LED Through")
 		(property "Reference" "DA1"
-			(at 0.318 3.66 270)
+			(at 0.318 3.66 90)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "9954337c-c4f7-4d19-9aa8-e1ec4afa4a05")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify left bottom mirror)
+				(justify top mirror)
 			)
 		)
 		(property "Value" "Green"
@@ -10865,16 +10898,16 @@
 		(at -95.25 -51.752833 90)
 		(descr "DipTrace pattern: LED Through")
 		(property "Reference" "DC3"
-			(at 0.318 3.66 270)
+			(at 0.318 3.66 90)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "4b15842c-bf4c-470a-b100-0b8a8389a1d8")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify left bottom mirror)
+				(justify top mirror)
 			)
 		)
 		(property "Value" "Green"
@@ -11053,16 +11086,16 @@
 		(at -13.335 -44.767833 90)
 		(descr "DipTrace pattern: LED Through")
 		(property "Reference" "DA5"
-			(at 0.318 3.66 270)
+			(at 0.318 3.66 90)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "a7e67dbe-d14d-42ed-9485-73dda207907a")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify left bottom mirror)
+				(justify top mirror)
 			)
 		)
 		(property "Value" "Green"
@@ -11241,16 +11274,16 @@
 		(at -36.5125 -51.752833 90)
 		(descr "DipTrace pattern: LED Through")
 		(property "Reference" "DB1"
-			(at 0.318 3.66 270)
+			(at 0.318 3.66 90)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "4b74e914-1452-4eaf-a35e-d59ba5086dc2")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify left bottom mirror)
+				(justify top mirror)
 			)
 		)
 		(property "Value" "Green"
@@ -11429,16 +11462,16 @@
 		(at -51.7525 -44.767833 90)
 		(descr "DipTrace pattern: LED Through")
 		(property "Reference" "DB5"
-			(at 0.318 3.66 270)
+			(at 0.318 3.66 90)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "1fc43973-1067-49f8-9fbb-a9f0ab1cb0ea")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify left bottom mirror)
+				(justify top mirror)
 			)
 		)
 		(property "Value" "Green"
@@ -11617,16 +11650,16 @@
 		(at -85.09 -51.752833 90)
 		(descr "DipTrace pattern: LED Through")
 		(property "Reference" "DC2"
-			(at 0.318 3.66 270)
+			(at 0.318 3.66 90)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "4189c0c0-67b9-4b79-a43d-241c3d8e3edf")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify left bottom mirror)
+				(justify top mirror)
 			)
 		)
 		(property "Value" "Green"
@@ -11805,16 +11838,16 @@
 		(at -74.93 -51.752833 90)
 		(descr "DipTrace pattern: LED Through")
 		(property "Reference" "DC1"
-			(at 0.318 3.66 270)
+			(at 0.318 3.66 90)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "91bb7c8b-985f-4914-9503-bc0dbeb47bab")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify left bottom mirror)
+				(justify top mirror)
 			)
 		)
 		(property "Value" "Green"
@@ -11993,16 +12026,16 @@
 		(at -80.01 -44.767833 90)
 		(descr "DipTrace pattern: LED Through")
 		(property "Reference" "DC4"
-			(at 0.318 3.66 270)
+			(at 0.318 3.66 90)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "a5c09004-44c4-4e0a-b957-7ec62a599f77")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify left bottom mirror)
+				(justify top mirror)
 			)
 		)
 		(property "Value" "Green"
@@ -12181,16 +12214,16 @@
 		(at -18.415 -51.752833 90)
 		(descr "DipTrace pattern: LED Through")
 		(property "Reference" "DA3"
-			(at 0.318 3.66 270)
+			(at 0.318 3.660001 90)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "28a9aeb4-5a00-4e1b-bd9f-3f4812497373")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify left bottom mirror)
+				(justify top mirror)
 			)
 		)
 		(property "Value" "Green"
@@ -12369,16 +12402,16 @@
 		(at -90.17 -44.767833 90)
 		(descr "DipTrace pattern: LED Through")
 		(property "Reference" "DC5"
-			(at 0.318 3.66 270)
+			(at 0.318 3.66 90)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "bac82e48-3fcb-40c0-82dc-d962c19f8380")
 			(effects
 				(font
-					(size 1.215 1.215)
-					(thickness 0.135)
+					(size 1.2825 1.2825)
+					(thickness 0.19575)
 				)
-				(justify left bottom mirror)
+				(justify top mirror)
 			)
 		)
 		(property "Value" "Green"
@@ -12591,14 +12624,38 @@
 		(layer "Edge.Cuts")
 		(uuid "7deff9f6-55d3-4b97-8e61-d6acde4d57ba")
 	)
-	(gr_text "Lesser Magistrate\nJonathan Van Schenck\nv1.0.0"
+	(gr_text "Lesser Magistrate"
 		(at -41.592 -23.848 0)
 		(layer "F.SilkS")
 		(uuid "d421d683-1dbb-468f-a03a-8fa424b17dae")
 		(effects
 			(font
-				(size 2.1861 2.1861)
-				(thickness 0.2429)
+				(size 2.307549 2.307549)
+				(thickness 0.352204)
+			)
+			(justify left top)
+		)
+	)
+	(gr_text "Jonathan Van Schenck"
+		(at -41.592 -19.992086 0)
+		(layer "F.SilkS")
+		(uuid "21656e1b-2e8c-4241-b5bb-31c1cdbd1258")
+		(effects
+			(font
+				(size 2.307549 2.307549)
+				(thickness 0.352204)
+			)
+			(justify left top)
+		)
+	)
+	(gr_text "v1.0.0"
+		(at -41.592 -16.136171 0)
+		(layer "F.SilkS")
+		(uuid "24f67d95-e269-4006-a19f-c3425dcb3d5e")
+		(effects
+			(font
+				(size 2.307549 2.307549)
+				(thickness 0.352204)
 			)
 			(justify left top)
 		)

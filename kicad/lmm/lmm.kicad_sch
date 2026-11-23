@@ -18,7 +18,7 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "J"
-				(at 0 0 0)
+				(at -5.08 11.43 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -29,7 +29,7 @@
 				)
 			)
 			(property "Value" "RJ11"
-				(at 0 0 0)
+				(at 2.54 11.43 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -72,14 +72,14 @@
 					)
 				)
 			)
-			(symbol "RJ11_1_0"
+			(symbol "RJ11_0_1"
 				(polyline
 					(pts
-						(xy -1.27 0) (xy 6.35 0)
+						(xy -6.35 3.175) (xy -5.08 3.175) (xy -5.08 3.175)
 					)
 					(stroke
-						(width 0.25)
-						(type solid)
+						(width 0)
+						(type default)
 					)
 					(fill
 						(type none)
@@ -87,11 +87,11 @@
 				)
 				(polyline
 					(pts
-						(xy -1.27 -12.7) (xy -1.27 0)
+						(xy -6.35 1.905) (xy -5.08 1.905) (xy -5.08 1.905)
 					)
 					(stroke
-						(width 0.25)
-						(type solid)
+						(width 0)
+						(type default)
 					)
 					(fill
 						(type none)
@@ -99,11 +99,11 @@
 				)
 				(polyline
 					(pts
-						(xy -0.635 -7.303) (xy 0 -8.255)
+						(xy -6.35 0.635) (xy -5.08 0.635) (xy -5.08 0.635)
 					)
 					(stroke
-						(width 0.25)
-						(type solid)
+						(width 0)
+						(type default)
 					)
 					(fill
 						(type none)
@@ -111,11 +111,11 @@
 				)
 				(polyline
 					(pts
-						(xy 0 -4.763) (xy 0 -8.255)
+						(xy -6.35 -0.635) (xy -5.08 -0.635) (xy -5.08 -0.635)
 					)
 					(stroke
-						(width 0.25)
-						(type solid)
+						(width 0)
+						(type default)
 					)
 					(fill
 						(type none)
@@ -123,11 +123,11 @@
 				)
 				(polyline
 					(pts
-						(xy 0 -8.255) (xy 0.635 -7.303)
+						(xy -6.35 -1.905) (xy -5.08 -1.905) (xy -5.08 -1.905)
 					)
 					(stroke
-						(width 0.25)
-						(type solid)
+						(width 0)
+						(type default)
 					)
 					(fill
 						(type none)
@@ -135,11 +135,13 @@
 				)
 				(polyline
 					(pts
-						(xy 6.35 0) (xy 6.35 -12.7)
+						(xy -6.35 -4.445) (xy -6.35 6.985) (xy 3.81 6.985) (xy 3.81 4.445) (xy 5.08 4.445) (xy 5.08 3.175)
+						(xy 6.35 3.175) (xy 6.35 -0.635) (xy 5.08 -0.635) (xy 5.08 -1.905) (xy 3.81 -1.905) (xy 3.81 -4.445)
+						(xy -6.35 -4.445) (xy -6.35 -4.445)
 					)
 					(stroke
-						(width 0.25)
-						(type solid)
+						(width 0)
+						(type default)
 					)
 					(fill
 						(type none)
@@ -147,66 +149,61 @@
 				)
 				(polyline
 					(pts
-						(xy 6.35 -12.7) (xy -1.27 -12.7)
+						(xy -5.08 4.445) (xy -6.35 4.445) (xy -6.35 4.445)
 					)
 					(stroke
-						(width 0.25)
-						(type solid)
+						(width 0)
+						(type default)
 					)
 					(fill
 						(type none)
 					)
 				)
-				(text "RJ11"
-					(at -1.853 -8.297 900)
-					(effects
-						(font
-							(size 1.619 1.619)
-						)
-						(justify left bottom)
+				(rectangle
+					(start 7.62 10.16)
+					(end -7.62 -7.62)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
 					)
 				)
-				(text "Plug"
-					(at 1.27 -5.692 0)
-					(effects
-						(font
-							(size 1.619 1.619)
-						)
-						(justify left top)
-					)
-				)
+			)
+			(symbol "RJ11_1_1"
 				(pin passive line
-					(at 1.27 2.54 270)
+					(at 10.16 0 180)
 					(length 2.54)
-					(name "3"
+					(name ""
 						(effects
 							(font
-								(size 1.524 1.524)
+								(size 1.27 1.27)
 							)
 						)
 					)
 					(number "3"
 						(effects
 							(font
-								(size 1.524 1.524)
+								(size 1.27 1.27)
 							)
 						)
 					)
 				)
 				(pin passive line
-					(at 3.81 -15.24 90)
+					(at 10.16 2.54 180)
 					(length 2.54)
-					(name "4"
+					(name ""
 						(effects
 							(font
-								(size 1.524 1.524)
+								(size 1.27 1.27)
 							)
 						)
 					)
 					(number "4"
 						(effects
 							(font
-								(size 1.524 1.524)
+								(size 1.27 1.27)
 							)
 						)
 					)
@@ -224,7 +221,7 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "J"
-				(at 12.013 6.35 90)
+				(at -5.08 13.97 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -235,7 +232,7 @@
 				)
 			)
 			(property "Value" "RJ45"
-				(at 0 0 0)
+				(at 2.54 13.97 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -278,14 +275,14 @@
 					)
 				)
 			)
-			(symbol "RJ45_1_0"
+			(symbol "RJ45_0_1"
 				(polyline
 					(pts
-						(xy -2.54 12.7) (xy 11.43 12.7)
+						(xy -6.35 1.905) (xy -5.08 1.905) (xy -5.08 1.905)
 					)
 					(stroke
-						(width 0.25)
-						(type solid)
+						(width 0)
+						(type default)
 					)
 					(fill
 						(type none)
@@ -293,11 +290,11 @@
 				)
 				(polyline
 					(pts
-						(xy -2.54 0) (xy -2.54 12.7)
+						(xy -6.35 0.635) (xy -5.08 0.635) (xy -5.08 0.635)
 					)
 					(stroke
-						(width 0.25)
-						(type solid)
+						(width 0)
+						(type default)
 					)
 					(fill
 						(type none)
@@ -305,11 +302,11 @@
 				)
 				(polyline
 					(pts
-						(xy 0.953 5.08) (xy 1.588 4.128)
+						(xy -6.35 -0.635) (xy -5.08 -0.635) (xy -5.08 -0.635)
 					)
 					(stroke
-						(width 0.25)
-						(type solid)
+						(width 0)
+						(type default)
 					)
 					(fill
 						(type none)
@@ -317,11 +314,11 @@
 				)
 				(polyline
 					(pts
-						(xy 1.588 7.62) (xy 1.588 4.128)
+						(xy -6.35 -1.905) (xy -5.08 -1.905) (xy -5.08 -1.905)
 					)
 					(stroke
-						(width 0.25)
-						(type solid)
+						(width 0)
+						(type default)
 					)
 					(fill
 						(type none)
@@ -329,11 +326,11 @@
 				)
 				(polyline
 					(pts
-						(xy 1.588 4.128) (xy 2.223 5.08)
+						(xy -6.35 -3.175) (xy -5.08 -3.175) (xy -5.08 -3.175)
 					)
 					(stroke
-						(width 0.25)
-						(type solid)
+						(width 0)
+						(type default)
 					)
 					(fill
 						(type none)
@@ -341,11 +338,13 @@
 				)
 				(polyline
 					(pts
-						(xy 11.43 12.7) (xy 11.43 0)
+						(xy -6.35 -4.445) (xy -6.35 6.985) (xy 3.81 6.985) (xy 3.81 4.445) (xy 5.08 4.445) (xy 5.08 3.175)
+						(xy 6.35 3.175) (xy 6.35 -0.635) (xy 5.08 -0.635) (xy 5.08 -1.905) (xy 3.81 -1.905) (xy 3.81 -4.445)
+						(xy -6.35 -4.445) (xy -6.35 -4.445)
 					)
 					(stroke
-						(width 0.25)
-						(type solid)
+						(width 0)
+						(type default)
 					)
 					(fill
 						(type none)
@@ -353,174 +352,193 @@
 				)
 				(polyline
 					(pts
-						(xy 11.43 0) (xy -2.54 0)
+						(xy -5.08 5.715) (xy -6.35 5.715)
 					)
 					(stroke
-						(width 0.25)
-						(type solid)
+						(width 0)
+						(type default)
 					)
 					(fill
 						(type none)
 					)
 				)
-				(text "RJ45"
-					(at -3.152 8.988 900)
-					(effects
-						(font
-							(size 1.619 1.619)
-						)
-						(justify right bottom)
+				(polyline
+					(pts
+						(xy -5.08 4.445) (xy -6.35 4.445)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
 					)
 				)
-				(text "Plug"
-					(at 2.858 6.691 0)
-					(effects
-						(font
-							(size 1.619 1.619)
-						)
-						(justify left top)
+				(polyline
+					(pts
+						(xy -5.08 3.175) (xy -6.35 3.175) (xy -6.35 3.175)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
 					)
 				)
+				(rectangle
+					(start 7.62 12.7)
+					(end -7.62 -10.16)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "RJ45_1_1"
 				(pin passive line
-					(at 0 -2.54 90)
+					(at 10.16 -7.62 180)
 					(length 2.54)
-					(name "1"
+					(name ""
 						(effects
 							(font
-								(size 1.524 1.524)
+								(size 1.27 1.27)
 							)
 						)
 					)
 					(number "1"
 						(effects
 							(font
-								(size 1.524 1.524)
+								(size 1.27 1.27)
 							)
 						)
 					)
 				)
 				(pin passive line
-					(at 1.27 15.24 270)
+					(at 10.16 -5.08 180)
 					(length 2.54)
-					(name "2"
+					(name ""
 						(effects
 							(font
-								(size 1.524 1.524)
+								(size 1.27 1.27)
 							)
 						)
 					)
 					(number "2"
 						(effects
 							(font
-								(size 1.524 1.524)
+								(size 1.27 1.27)
 							)
 						)
 					)
 				)
-				(pin no_connect line
-					(at 2.54 -2.54 90)
+				(pin passive line
+					(at 10.16 -2.54 180)
 					(length 2.54)
-					(name "3"
+					(name ""
 						(effects
 							(font
-								(size 1.524 1.524)
+								(size 1.27 1.27)
 							)
 						)
 					)
 					(number "3"
 						(effects
 							(font
-								(size 1.524 1.524)
+								(size 1.27 1.27)
 							)
 						)
 					)
 				)
 				(pin passive line
-					(at 3.81 15.24 270)
+					(at 10.16 0 180)
 					(length 2.54)
-					(name "4"
+					(name ""
 						(effects
 							(font
-								(size 1.524 1.524)
+								(size 1.27 1.27)
 							)
 						)
 					)
 					(number "4"
 						(effects
 							(font
-								(size 1.524 1.524)
+								(size 1.27 1.27)
 							)
 						)
 					)
 				)
-				(pin no_connect line
-					(at 5.08 -2.54 90)
+				(pin passive line
+					(at 10.16 2.54 180)
 					(length 2.54)
-					(name "5"
+					(name ""
 						(effects
 							(font
-								(size 1.524 1.524)
+								(size 1.27 1.27)
 							)
 						)
 					)
 					(number "5"
 						(effects
 							(font
-								(size 1.524 1.524)
+								(size 1.27 1.27)
 							)
 						)
 					)
 				)
 				(pin passive line
-					(at 6.35 15.24 270)
+					(at 10.16 5.08 180)
 					(length 2.54)
-					(name "6"
+					(name ""
 						(effects
 							(font
-								(size 1.524 1.524)
+								(size 1.27 1.27)
 							)
 						)
 					)
 					(number "6"
 						(effects
 							(font
-								(size 1.524 1.524)
+								(size 1.27 1.27)
 							)
 						)
 					)
 				)
 				(pin passive line
-					(at 7.62 -2.54 90)
+					(at 10.16 7.62 180)
 					(length 2.54)
-					(name "7"
+					(name ""
 						(effects
 							(font
-								(size 1.524 1.524)
+								(size 1.27 1.27)
 							)
 						)
 					)
 					(number "7"
 						(effects
 							(font
-								(size 1.524 1.524)
+								(size 1.27 1.27)
 							)
 						)
 					)
 				)
 				(pin passive line
-					(at 8.89 15.24 270)
+					(at 10.16 10.16 180)
 					(length 2.54)
-					(name "8"
+					(name ""
 						(effects
 							(font
-								(size 1.524 1.524)
+								(size 1.27 1.27)
 							)
 						)
 					)
 					(number "8"
 						(effects
 							(font
-								(size 1.524 1.524)
+								(size 1.27 1.27)
 							)
 						)
 					)
@@ -529,552 +547,359 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "Lesser Magistrate Module\nJonathan Van Schenck\nv1.0.0"
-		(exclude_from_sim no)
-		(at 161.29 124.821 0)
+	(wire
+		(pts
+			(xy 86.36 109.22) (xy 93.98 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c21285bb-8623-4813-bac6-967afa4c5444")
+	)
+	(label "5V"
+		(at 93.98 109.22 0)
 		(effects
 			(font
-				(size 4.318 4.318)
+				(size 1.27 1.27)
 			)
-			(justify left top)
+			(justify left bottom)
 		)
-		(uuid "0bc2e8f7-ed52-41fb-9b71-7585937a9721")
+		(uuid "757985a2-85b5-4522-bff8-043a5f6b3ceb")
 	)
-	(text "Color Guide"
-		(exclude_from_sim no)
-		(at 50.8 93.933 0)
+	(wire
+		(pts
+			(xy 180.34 50.8) (xy 172.72 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "617bf6bb-6448-454d-a663-d691c4c2dca7")
+	)
+	(label "TRIG1"
+		(at 172.72 50.8 180)
 		(effects
 			(font
-				(size 3.239 3.239)
+				(size 1.27 1.27)
 			)
-			(justify left top)
+			(justify right bottom)
 		)
-		(uuid "56c3b318-9ee7-4796-855a-c8e2ebb5593a")
+		(uuid "6e4594a0-24dd-410e-afa4-7f7e677b7970")
 	)
-	(text "Light 5"
-		(exclude_from_sim no)
-		(at 50.8 125.479 0)
+	(wire
+		(pts
+			(xy 180.34 48.26) (xy 172.72 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2bfe3aa5-0e9a-4bee-a16d-6bb53f469edc")
+	)
+	(label "5V"
+		(at 172.72 48.26 180)
 		(effects
 			(font
-				(size 2.699 2.699)
+				(size 1.27 1.27)
 			)
-			(justify left top)
+			(justify right bottom)
 		)
-		(uuid "88cce006-3235-4c64-950a-c8e0717cabf4")
+		(uuid "7cb492af-b0cb-4619-aaad-2cde78107471")
 	)
-	(text "+5V"
-		(exclude_from_sim no)
-		(at 50.8 131.829 0)
+	(wire
+		(pts
+			(xy 86.36 106.68) (xy 93.98 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "36ba33e2-ea6f-44d2-a9a6-1be80f55107e")
+	)
+	(label "TRIG1"
+		(at 93.98 106.68 0)
 		(effects
 			(font
-				(size 2.699 2.699)
+				(size 1.27 1.27)
 			)
-			(justify left top)
+			(justify left bottom)
 		)
-		(uuid "89ffa143-92e1-4287-b595-7cf4beee708c")
+		(uuid "ef88dec3-c308-4c50-8147-14b38c1f5d02")
 	)
-	(text "Light 2"
-		(exclude_from_sim no)
-		(at 50.8 106.429 0)
+	(wire
+		(pts
+			(xy 180.34 73.66) (xy 172.72 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b0879033-8240-466b-9676-c678c17f8c8e")
+	)
+	(label "TRIG2"
+		(at 172.72 73.66 180)
 		(effects
 			(font
-				(size 2.699 2.699)
+				(size 1.27 1.27)
 			)
-			(justify left top)
+			(justify right bottom)
 		)
-		(uuid "8e6be57a-ed63-4051-8a58-637baf5c3430")
+		(uuid "a5464ae7-1883-46d3-87f9-5a524b624325")
 	)
-	(text "View from Bottom:\n5  4  3  2  1"
-		(exclude_from_sim no)
-		(at 135.878 61.83 0)
+	(wire
+		(pts
+			(xy 180.34 71.12) (xy 172.72 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4b6dd39b-088f-4c93-ad4a-958dcdf8a42c")
+	)
+	(label "5V"
+		(at 172.72 71.12 180)
 		(effects
 			(font
-				(size 5.668 5.668)
+				(size 1.27 1.27)
 			)
-			(justify top)
+			(justify right bottom)
 		)
-		(uuid "c2b10f89-2fe6-4954-aa16-7d56b92062b6")
+		(uuid "412d8e99-f3d6-45fd-a207-77449a5c3ece")
 	)
-	(text "Light 3"
-		(exclude_from_sim no)
-		(at 50.8 112.779 0)
+	(wire
+		(pts
+			(xy 86.36 96.52) (xy 93.98 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d02c2518-0259-4961-aff1-4a5af113d7ac")
+	)
+	(label "TRIG2"
+		(at 93.98 96.52 0)
 		(effects
 			(font
-				(size 2.699 2.699)
+				(size 1.27 1.27)
 			)
-			(justify left top)
+			(justify left bottom)
 		)
-		(uuid "c33c7eff-89ac-4ea4-9795-d43c7289e35d")
+		(uuid "f2cc3ce8-d43b-4dcb-96b5-254daabc337e")
 	)
-	(text "Light 4"
-		(exclude_from_sim no)
-		(at 50.8 119.129 0)
+	(wire
+		(pts
+			(xy 180.34 96.52) (xy 172.72 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6201ff7e-1c7c-4e78-86a4-c15fa87f988f")
+	)
+	(label "TRIG3"
+		(at 172.72 96.52 180)
 		(effects
 			(font
-				(size 2.699 2.699)
+				(size 1.27 1.27)
 			)
-			(justify left top)
+			(justify right bottom)
 		)
-		(uuid "ce232fe9-64be-422a-ac89-5adb37a183ed")
+		(uuid "4ed74162-4910-461d-891b-8687dfa5cbff")
 	)
-	(text "Light 1"
-		(exclude_from_sim no)
-		(at 50.8 100.079 0)
+	(wire
+		(pts
+			(xy 180.34 93.98) (xy 172.72 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eaf3a542-89b9-442e-935d-62f9a6063225")
+	)
+	(label "5V"
+		(at 172.72 93.98 180)
 		(effects
 			(font
-				(size 2.699 2.699)
+				(size 1.27 1.27)
 			)
-			(justify left top)
+			(justify right bottom)
 		)
-		(uuid "fb5dc10e-4a84-44fa-9e69-040643af5b11")
-	)
-	(junction
-		(at 116.84 83.82)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "1b5e4ccf-3e98-4ce8-aecf-4358a30c8252")
-	)
-	(junction
-		(at 151.13 83.82)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "510412b1-24e6-43c0-b724-bf5a6407d2e5")
-	)
-	(junction
-		(at 133.35 83.82)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ac9a5b11-2e10-4ed9-a875-5c642f776618")
-	)
-	(junction
-		(at 100.33 83.82)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f6375f98-ed99-4ff6-b713-3d328551b0b0")
+		(uuid "12afb746-c010-489f-8a27-b856368e3001")
 	)
 	(wire
 		(pts
-			(xy 100.33 83.82) (xy 100.33 87.63)
+			(xy 86.36 93.98) (xy 93.98 93.98)
 		)
 		(stroke
-			(width 0.25)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "006cf25e-ddbb-49ab-ab19-3cbce61a2c8e")
+		(uuid "644b6de0-212c-4b80-8613-afff55718ce8")
 	)
-	(polyline
-		(pts
-			(xy 91.44 83.82) (xy 91.44 58.42)
+	(label "TRIG3"
+		(at 93.98 93.98 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
 		)
-		(stroke
-			(width 0.333)
-			(type solid)
-		)
-		(uuid "00e5ac2c-ef7c-4c1a-b340-e8e8aa67a76d")
-	)
-	(wire
-		(pts
-			(xy 116.84 83.82) (xy 116.84 87.63)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "0a472af1-a7e8-4891-bee4-8dd41a3940d8")
+		(uuid "46df0301-d3ff-4714-9a00-2661945de3a6")
 	)
 	(wire
 		(pts
-			(xy 100.33 83.82) (xy 116.84 83.82)
+			(xy 180.34 119.38) (xy 172.72 119.38)
 		)
 		(stroke
-			(width 0.25)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "1011dc30-869b-48fd-a918-98abbd43e703")
+		(uuid "2844f0e1-64b6-4db0-af60-73705576fa46")
 	)
-	(polyline
-		(pts
-			(xy 243.84 121.92) (xy 243.84 147.32)
+	(label "TRIG4"
+		(at 172.72 119.38 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
 		)
-		(stroke
-			(width 0.333)
-			(type solid)
-		)
-		(uuid "12665550-412e-4600-8a56-8680f543c8d8")
-	)
-	(wire
-		(pts
-			(xy 91.44 83.82) (xy 100.33 83.82)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "14722ebb-9d7e-47cb-9f54-2bc3490e485a")
+		(uuid "e7c7b3b9-22e7-4352-902a-a35a2e59928d")
 	)
 	(wire
 		(pts
-			(xy 148.59 147.32) (xy 138.43 147.32)
+			(xy 180.34 116.84) (xy 172.72 116.84)
 		)
 		(stroke
-			(width 0.25)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "1d9bb605-9bf9-46f5-94e0-f4ac87985302")
+		(uuid "40192141-c573-41a8-be78-392dcdd34483")
+	)
+	(label "5V"
+		(at 172.72 116.84 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "19f7c10d-3168-4320-9d76-46f5eb8faba1")
 	)
 	(wire
 		(pts
-			(xy 91.44 147.32) (xy 91.44 83.82)
+			(xy 86.36 101.6) (xy 93.98 101.6)
 		)
 		(stroke
-			(width 0.25)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "23fdf232-31ad-4b34-96f6-b991d1754a1b")
+		(uuid "ed3e7519-f254-4bea-80a0-40a8a8bb970b")
+	)
+	(label "TRIG4"
+		(at 93.98 101.6 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1ca051f7-4aff-438c-962c-589a54f2f819")
 	)
 	(wire
 		(pts
-			(xy 130.81 143.51) (xy 130.81 147.32)
+			(xy 180.34 142.24) (xy 172.72 142.24)
 		)
 		(stroke
-			(width 0.25)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "2bbec196-c187-4857-ae62-c1ecc8722355")
+		(uuid "34bf9fb0-7658-4312-84ba-b0577a159225")
+	)
+	(label "TRIG5"
+		(at 172.72 142.24 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "b3ba67b4-142c-4ae6-a789-4423493b8817")
 	)
 	(wire
 		(pts
-			(xy 119.38 113.03) (xy 134.62 113.03)
+			(xy 180.34 139.7) (xy 172.72 139.7)
 		)
 		(stroke
-			(width 0.25)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "2e783941-491e-4aa1-a2da-d0bde4ff10b4")
+		(uuid "1232f110-5399-4155-8406-232e719ce476")
+	)
+	(label "5V"
+		(at 172.72 139.7 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "0e9336c9-63a7-4a2c-8a85-358c92681f73")
 	)
 	(wire
 		(pts
-			(xy 133.35 83.82) (xy 151.13 83.82)
+			(xy 86.36 91.44) (xy 93.98 91.44)
 		)
 		(stroke
-			(width 0.25)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "3020be5a-e47f-404e-825d-ec594bd29a6a")
+		(uuid "c947af56-c49f-4a9a-8938-a4fa656e4bac")
 	)
-	(wire
-		(pts
-			(xy 135.89 105.41) (xy 135.89 109.22)
+	(label "TRIG5"
+		(at 93.98 91.44 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
 		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "309e9a3a-aba9-4639-ba24-e8766d5334a8")
+		(uuid "e48492fe-9a28-4e67-92da-f0c810639921")
 	)
-	(wire
-		(pts
-			(xy 135.89 109.22) (xy 148.59 109.22)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "39efab7d-7f15-4e85-9554-61a10a4b43f0")
+	(no_connect
+		(at 86.36 104.14)
+		(uuid "5815da2e-b9b2-4243-ab4b-680e24d1a3fa")
 	)
-	(polyline
-		(pts
-			(xy 91.44 58.42) (xy 176.53 58.42)
-		)
-		(stroke
-			(width 0.333)
-			(type solid)
-		)
-		(uuid "442ed1ea-d2e8-4ecd-9335-b2c97de8adbc")
+	(no_connect
+		(at 86.36 99.06)
+		(uuid "0aac527e-2b04-41da-ac3c-6a67bcab7f3f")
 	)
-	(wire
-		(pts
-			(xy 153.67 105.41) (xy 153.67 120.65)
+	(text "Trigger jacks U1-U5 sit left to right as 5 4 3 2 1\nwhen the board is viewed from the bottom.\nTRIGn is the trigger in jack Un."
+		(exclude_from_sim no)
+		(at 167.64 38.1 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
 		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "4cb9bbab-bd97-43a7-93f7-f07bd7a0d329")
+		(uuid "b1f802a0-d660-42f7-bbf2-49b65890f0a7")
 	)
-	(wire
-		(pts
-			(xy 133.35 83.82) (xy 133.35 87.63)
+	(text "To the LM. The signals are pulled down\nand filtered on the LM board."
+		(exclude_from_sim no)
+		(at 63.5 121.92 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
 		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "52dc1aed-d467-4a04-8318-3fe6118a0a4c")
-	)
-	(polyline
-		(pts
-			(xy 48.26 91.44) (xy 83.82 91.44)
-		)
-		(stroke
-			(width 0.333)
-			(type solid)
-		)
-		(uuid "54667e79-072a-4163-99fc-d09d12560b88")
-	)
-	(wire
-		(pts
-			(xy 130.81 147.32) (xy 91.44 147.32)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "5887e7ba-765c-41fa-a7dd-23d4b86669c7")
-	)
-	(polyline
-		(pts
-			(xy 158.75 121.92) (xy 243.84 121.92)
-		)
-		(stroke
-			(width 0.333)
-			(type solid)
-		)
-		(uuid "5af74af8-bd1f-4039-baef-e475e9b62243")
-	)
-	(wire
-		(pts
-			(xy 171.45 115.57) (xy 171.45 105.41)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "69b2fcec-a694-43f7-ae95-15aa2870153f")
-	)
-	(wire
-		(pts
-			(xy 102.87 111.76) (xy 139.7 111.76)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "69dfa82e-d7ac-4ff6-8b37-11df0f9a69e1")
-	)
-	(polyline
-		(pts
-			(xy 83.82 137.16) (xy 48.26 137.16)
-		)
-		(stroke
-			(width 0.333)
-			(type solid)
-		)
-		(uuid "772f6caf-a96e-4ccb-ba28-b888c9b0dc4a")
-	)
-	(wire
-		(pts
-			(xy 119.38 105.41) (xy 119.38 113.03)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "8158456e-7000-49ee-a5ed-3de6cc359d55")
-	)
-	(polyline
-		(pts
-			(xy 243.84 147.32) (xy 158.75 147.32)
-		)
-		(stroke
-			(width 0.333)
-			(type solid)
-		)
-		(uuid "82886409-be01-440b-9250-5fb1a26cd380")
-	)
-	(polyline
-		(pts
-			(xy 48.26 137.16) (xy 48.26 91.44)
-		)
-		(stroke
-			(width 0.333)
-			(type solid)
-		)
-		(uuid "834783e6-f5ae-4d0f-b0a6-653c62354ee4")
-	)
-	(wire
-		(pts
-			(xy 132.08 115.57) (xy 171.45 115.57)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "a72f1de4-15bf-47d7-ab6b-654726ec3cde")
-	)
-	(polyline
-		(pts
-			(xy 176.53 83.82) (xy 91.44 83.82)
-		)
-		(stroke
-			(width 0.333)
-			(type solid)
-		)
-		(uuid "a7703539-bfd7-48af-9c16-a143731406cb")
-	)
-	(wire
-		(pts
-			(xy 134.62 113.03) (xy 134.62 125.73)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "a793e813-db36-4ee3-a84e-49f610fb713b")
-	)
-	(wire
-		(pts
-			(xy 102.87 105.41) (xy 102.87 111.76)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "bbad9f23-6bf7-496d-9a69-0b9fd608b4fe")
-	)
-	(polyline
-		(pts
-			(xy 176.53 58.42) (xy 176.53 83.82)
-		)
-		(stroke
-			(width 0.333)
-			(type solid)
-		)
-		(uuid "c0736617-3ab9-4ec7-baa2-b9aec9390895")
-	)
-	(wire
-		(pts
-			(xy 151.13 83.82) (xy 151.13 87.63)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "c20d307e-fe56-478c-9ef0-d90a0b0da090")
-	)
-	(wire
-		(pts
-			(xy 168.91 83.82) (xy 168.91 87.63)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "ced3db93-0096-47b0-a33d-1f173ff129df")
-	)
-	(wire
-		(pts
-			(xy 137.16 120.65) (xy 137.16 125.73)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "d6a26a78-31c7-4c21-b97c-6ef868c5762b")
-	)
-	(polyline
-		(pts
-			(xy 158.75 147.32) (xy 158.75 121.92)
-		)
-		(stroke
-			(width 0.333)
-			(type solid)
-		)
-		(uuid "df303570-7986-4416-8523-312eb9d81a18")
-	)
-	(polyline
-		(pts
-			(xy 83.82 91.44) (xy 83.82 137.16)
-		)
-		(stroke
-			(width 0.333)
-			(type solid)
-		)
-		(uuid "e28e2314-4064-4fd7-992d-6172849d297f")
-	)
-	(wire
-		(pts
-			(xy 116.84 83.82) (xy 133.35 83.82)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "e2d30694-7375-4b1a-b72e-abf22f0c6fa2")
-	)
-	(wire
-		(pts
-			(xy 138.43 147.32) (xy 138.43 143.51)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "e9036c0b-205f-4bb0-b40f-99f2e6f842df")
-	)
-	(wire
-		(pts
-			(xy 139.7 111.76) (xy 139.7 125.73)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "eb3bc4de-a959-48ec-8d41-6551b7ab10e3")
-	)
-	(wire
-		(pts
-			(xy 148.59 109.22) (xy 148.59 147.32)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "eff339a0-dba0-477e-83ae-38b32e232da7")
-	)
-	(wire
-		(pts
-			(xy 153.67 120.65) (xy 137.16 120.65)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "f4dd4b87-d90b-4931-a204-81b960070ff3")
-	)
-	(wire
-		(pts
-			(xy 132.08 125.73) (xy 132.08 115.57)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "f6152a05-432b-4172-96f0-217df3575b5e")
-	)
-	(wire
-		(pts
-			(xy 151.13 83.82) (xy 168.91 83.82)
-		)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(uuid "f7719988-60d6-461a-bc66-9301c35d0846")
+		(uuid "61e19f9a-a3ce-4781-b0e6-9196465aa5fb")
 	)
 	(symbol
 		(lib_id "lesser-magistrate:RJ45")
-		(at 130.81 140.97 0)
+		(at 76.2 101.6 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -1084,7 +909,7 @@
 		(dnp no)
 		(uuid "ae435df2-59b2-4fd0-a358-3e507e7654f3")
 		(property "Reference" "U0"
-			(at 127.687 134.62 0)
+			(at 71.12 87.63 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1094,7 +919,7 @@
 			)
 		)
 		(property "Value" "RJ45"
-			(at 130.81 140.97 0)
+			(at 78.74 87.63 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1183,7 +1008,8 @@
 	)
 	(symbol
 		(lib_id "lesser-magistrate:RJ11")
-		(at 104.14 102.87 180)
+		(at 190.5 142.24 0)
+		(mirror y)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -1193,7 +1019,7 @@
 		(dnp no)
 		(uuid "eb6490dd-29cb-4b2e-8aaa-89f75e41ba5a")
 		(property "Reference" "U5"
-			(at 97.207 96.52 0)
+			(at 195.58 130.81 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1203,7 +1029,7 @@
 			)
 		)
 		(property "Value" "RJ11"
-			(at 104.14 102.87 0)
+			(at 187.96 130.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1274,7 +1100,8 @@
 	)
 	(symbol
 		(lib_id "lesser-magistrate:RJ11")
-		(at 120.65 102.87 180)
+		(at 190.5 119.38 0)
+		(mirror y)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -1284,7 +1111,7 @@
 		(dnp no)
 		(uuid "a0340728-29c9-48f7-866c-35d6230031e8")
 		(property "Reference" "U4"
-			(at 113.717 96.52 0)
+			(at 195.58 107.95 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1294,7 +1121,7 @@
 			)
 		)
 		(property "Value" "RJ11"
-			(at 120.65 102.87 0)
+			(at 187.96 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1365,7 +1192,8 @@
 	)
 	(symbol
 		(lib_id "lesser-magistrate:RJ11")
-		(at 137.16 102.87 180)
+		(at 190.5 96.52 0)
+		(mirror y)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -1375,7 +1203,7 @@
 		(dnp no)
 		(uuid "1f1362f4-b5e4-4ee6-ac9e-3f0d3f390dc6")
 		(property "Reference" "U3"
-			(at 130.227 96.52 0)
+			(at 195.58 85.09 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1385,7 +1213,7 @@
 			)
 		)
 		(property "Value" "RJ11"
-			(at 137.16 102.87 0)
+			(at 187.96 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1456,7 +1284,8 @@
 	)
 	(symbol
 		(lib_id "lesser-magistrate:RJ11")
-		(at 154.94 102.87 180)
+		(at 190.5 73.66 0)
+		(mirror y)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -1466,7 +1295,7 @@
 		(dnp no)
 		(uuid "9657e6f8-5241-4233-9f39-999665f26d5e")
 		(property "Reference" "U2"
-			(at 148.007 96.52 0)
+			(at 195.58 62.23 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1476,7 +1305,7 @@
 			)
 		)
 		(property "Value" "RJ11"
-			(at 154.94 102.87 0)
+			(at 187.96 62.23 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1547,7 +1376,8 @@
 	)
 	(symbol
 		(lib_id "lesser-magistrate:RJ11")
-		(at 172.72 102.87 180)
+		(at 190.5 50.8 0)
+		(mirror y)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -1557,7 +1387,7 @@
 		(dnp no)
 		(uuid "0e8ddb7a-330f-43d6-8950-0beee4e63371")
 		(property "Reference" "U1"
-			(at 165.787 96.52 0)
+			(at 195.58 39.37 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1567,7 +1397,7 @@
 			)
 		)
 		(property "Value" "RJ11"
-			(at 172.72 102.87 0)
+			(at 187.96 39.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1635,16 +1465,6 @@
 				)
 			)
 		)
-	)
-	(label "5V"
-		(at 130.81 143.51 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "489296ab-a983-4372-a6e0-b8de46ca1e74")
 	)
 	(sheet_instances
 		(path "/"

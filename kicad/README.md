@@ -6,7 +6,8 @@ The electrical design for the Lesser Magistrate, in KiCad 10. One project per bo
 kicad/
 ├── libraries/
 │   ├── lesser-magistrate.kicad_sym   # symbols for the parts used on the boards
-│   └── lesser-magistrate.pretty/     # footprints for the parts used on the boards
+│   ├── lesser-magistrate.pretty/     # footprints for the parts used on the boards
+│   └── lesser-magistrate.3dshapes/   # manufacturer 3D models KiCad doesn't ship
 ├── lm/        # LM: main quiz-magistrate controller board  (1 per set)
 ├── lmm/       # LMM: team module / breakout board          (1 per team)
 └── trigger/   # Trigger: the quizzer's push button          (1 per quizzer)
@@ -29,7 +30,9 @@ KiCad's stock DIP and resistor-array footprints have different drill sizes, for 
 1.118 mm here). New designs should start from the stock libraries.
 
 Symbols are named after the generic part (`C`, `LED`, `R_Network09`, `R_Pack04_SIP`, `74AC573`, `4072`, `74AC04`,
-`RJ11`, `RJ45`, `USB_A`, `SW_Push`). Footprints are named after the physical package or the specific part they were
+`RJ11`, `RJ45`, `USB_A`, `SW_Push`). `RJ11` and `RJ45` use KiCad's stock modular-jack drawings (pins numbered by contact
+position, to match the footprints). LM still uses the DipTrace drawings of those two, kept as `RJ11_DipTrace` and
+`RJ45_DipTrace` until the LM schematic is redrawn; don't use them in new work. Footprints are named after the physical package or the specific part they were
 drawn for (`RJ45_AdamTech_MTJ-881X1`, `DIP-20_W7.62mm`, …). Every placed part has:
 
 - **Value**: what is printed on the board and the BOM (e.g. `10nF`, `CD4072BE`, `Green`)
@@ -55,11 +58,12 @@ Where no stock model of the exact part exists, the closest stock model with the 
 | `C_Kemet_C410` | stock 3.8 mm axial capacitor, squeezed from 7.5 mm to 6.5 mm pitch | close |
 | `USB_A_OnShore_USB-A1HSW6` | Molex 67643 USB-A (same pin pattern) | close |
 | `SW_Tactile_TS11-674_RA` | C&K PTS645 right-angle tactile switch (same pin pattern) | close |
-| `RJ11_Amphenol_54601-906001WPLF`, `RJ45_AdamTech_MTJ-881X1` | none yet | — |
+| `RJ45_AdamTech_MTJ-881X1` | Adam Tech's model, in `lesser-magistrate.3dshapes/` | yes |
+| `RJ11_Amphenol_54601-906001WPLF` | none yet | — |
 
-Manufacturer models (STEP) for the RJ11 and RJ45 jacks would go in `libraries/lesser-magistrate.3dshapes/`,
-referenced as `${KIPRJMOD}/../libraries/lesser-magistrate.3dshapes/<name>.step`. The vendors only offer them behind
-download forms.
+Manufacturer models go in `libraries/lesser-magistrate.3dshapes/`, named after the footprint and referenced as
+`${KIPRJMOD}/../libraries/lesser-magistrate.3dshapes/<name>.step`. Amphenol only offers the RJ11 model behind its
+website's download page, which blocks scripted downloads.
 
 ## Checks and outputs
 
@@ -106,13 +110,19 @@ Known differences from the manufactured boards (none of them electrical):
 
 - **Bottom copper pour (LM)**: KiCad's refill puts about 130 mm² more ground copper than DipTrace did, mostly in narrow
   gaps between pads. DipTrace filled with a 0.635 mm stroke and couldn't reach them. Clearances are unchanged.
-- **Silkscreen text** uses KiCad's font, so it is placed and spaced slightly differently. Part values on the silkscreen
-  now show the part number (e.g. `SN74AC573N` where DipTrace printed `Octal D-Latch`).
+- **Silkscreen text** is placed, sized and stroked like the manufactured boards (rebuilt from the Eagle export, using
+  Eagle's rule that turns upside-down text the right way up). KiCad's font is slightly wider than DipTrace's. Text that
+  DipTrace printed upside down now reads upright in the same spot. The 14-pin chips show their Value field, which is
+  now the part number (`CD4072BE` where DipTrace printed `OR`); the label choice is still open. Multi-line titles are
+  split into one text per line, because KiCad's 3D renderer and gerber plotter space multi-line text differently.
 - **Mounting holes** are footprints `H1`–`H4`, marked board-only, so they're on the board but not in the schematic.
 
-Schematic cleanup after the import (connectivity unchanged): net labels moved off the pins onto the ends of their wire
-stubs, no-connect flags on intentionally unused pins, `PWR_FLAG`s where 5V and GND enter from the USB connector, and
-pin names hidden on symbols whose pin names were just their numbers.
+Schematic cleanup after the import (connectivity unchanged):
+
+- LM: net labels moved off the pins onto the ends of their wire stubs, no-connect flags on intentionally unused pins,
+  `PWR_FLAG`s where 5V and GND enter from the USB connector, and pin names hidden on symbols whose pin names were just
+  their numbers.
+- LMM and Trigger: redrawn with the stock-style jack symbols and named nets (`5V`, `TRIG1`–`TRIG5`, `TRIG`).
 
 ## Known issues from the original design
 
