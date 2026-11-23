@@ -150,7 +150,7 @@
 		(layer "F.Cu")
 		(uuid "19eab32a-f546-4ae5-ac91-386af7ccef8a")
 		(at 186.69 97.154835 90)
-		(property "Reference" "U4"
+		(property "Reference" "J4"
 			(at 0 -18.486 90)
 			(unlocked yes)
 			(layer "F.SilkS")
@@ -323,7 +323,7 @@
 		(layer "F.Cu")
 		(uuid "6bea411b-d5bd-4c65-a9c5-261c7028229c")
 		(at 146.685 96.043767)
-		(property "Reference" "U0"
+		(property "Reference" "J6"
 			(at 1.905 -4.206 0)
 			(unlocked yes)
 			(layer "F.SilkS")
@@ -545,7 +545,7 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "unconnected-(U0-Pad3)")
+			(net "unconnected-(J6-Pad3)")
 			(solder_mask_margin 0.0508)
 			(zone_connect 2)
 			(thermal_bridge_angle 0)
@@ -569,7 +569,7 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "unconnected-(U0-Pad5)")
+			(net "unconnected-(J6-Pad5)")
 			(solder_mask_margin 0.0508)
 			(zone_connect 2)
 			(thermal_bridge_angle 0)
@@ -746,7 +746,7 @@
 		(layer "F.Cu")
 		(uuid "965091b1-4795-4445-884d-74405d3ddc8e")
 		(at 110.49 97.155231 -90)
-		(property "Reference" "U5"
+		(property "Reference" "J5"
 			(at 0 -18.486 90)
 			(unlocked yes)
 			(layer "F.SilkS")
@@ -919,7 +919,7 @@
 		(layer "F.Cu")
 		(uuid "9ac2cc41-5619-46ee-b3ec-a41b2b0646e6")
 		(at 163.830167 69.214833 180)
-		(property "Reference" "U1"
+		(property "Reference" "J1"
 			(at 0 -18.486 0)
 			(unlocked yes)
 			(layer "F.SilkS")
@@ -1092,7 +1092,7 @@
 		(layer "F.Cu")
 		(uuid "ac841733-822d-4d44-8ae2-37e37b69e3d6")
 		(at 133.35 69.215 180)
-		(property "Reference" "U3"
+		(property "Reference" "J3"
 			(at 0.000001 -18.486 0)
 			(unlocked yes)
 			(layer "F.SilkS")
@@ -1265,7 +1265,7 @@
 		(layer "F.Cu")
 		(uuid "afa6cbad-46c1-4ab5-a2e6-81d6a3a6729f")
 		(at 148.589802 69.215 180)
-		(property "Reference" "U2"
+		(property "Reference" "J2"
 			(at 0 -18.486 0)
 			(unlocked yes)
 			(layer "F.SilkS")

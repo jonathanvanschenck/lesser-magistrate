@@ -479,7 +479,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "17108e26-e946-458c-b307-e1e291b50d25")
-		(property "Reference" "U1"
+		(property "Reference" "J1"
 			(at 116.84 85.09 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -552,7 +552,7 @@
 		(instances
 			(project "trigger"
 				(path "/4fed1873-ce98-404b-b566-a6e0fc779241"
-					(reference "U1")
+					(reference "J1")
 					(unit 1)
 				)
 			)

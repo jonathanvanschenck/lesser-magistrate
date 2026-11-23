@@ -895,7 +895,7 @@
 		(at 104.14 101.6)
 		(uuid "0aac527e-2b04-41da-ac3c-6a67bcab7f3f")
 	)
-	(text "Trigger jacks U1-U5 sit left to right as 5 4 3 2 1\nwhen the board is viewed from the bottom.\nTRIGn is the trigger in jack Un."
+	(text "Trigger jacks J1-J5 sit left to right as 5 4 3 2 1\nwhen the board is viewed from the bottom.\nTRIGn is the trigger in jack Jn."
 		(exclude_from_sim no)
 		(at 185.42 40.64 0)
 		(effects
@@ -1029,7 +1029,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ae435df2-59b2-4fd0-a358-3e507e7654f3")
-		(property "Reference" "U0"
+		(property "Reference" "J6"
 			(at 88.9 90.17 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1121,7 +1121,7 @@
 		(instances
 			(project "lmm"
 				(path "/4aaed70d-43ab-42a1-bf4f-36bc07322f39"
-					(reference "U0")
+					(reference "J6")
 					(unit 1)
 				)
 			)
@@ -1139,7 +1139,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "eb6490dd-29cb-4b2e-8aaa-89f75e41ba5a")
-		(property "Reference" "U5"
+		(property "Reference" "J5"
 			(at 213.36 133.35 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1213,7 +1213,7 @@
 		(instances
 			(project "lmm"
 				(path "/4aaed70d-43ab-42a1-bf4f-36bc07322f39"
-					(reference "U5")
+					(reference "J5")
 					(unit 1)
 				)
 			)
@@ -1231,7 +1231,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a0340728-29c9-48f7-866c-35d6230031e8")
-		(property "Reference" "U4"
+		(property "Reference" "J4"
 			(at 213.36 110.49 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1305,7 +1305,7 @@
 		(instances
 			(project "lmm"
 				(path "/4aaed70d-43ab-42a1-bf4f-36bc07322f39"
-					(reference "U4")
+					(reference "J4")
 					(unit 1)
 				)
 			)
@@ -1323,7 +1323,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1f1362f4-b5e4-4ee6-ac9e-3f0d3f390dc6")
-		(property "Reference" "U3"
+		(property "Reference" "J3"
 			(at 213.36 87.63 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1397,7 +1397,7 @@
 		(instances
 			(project "lmm"
 				(path "/4aaed70d-43ab-42a1-bf4f-36bc07322f39"
-					(reference "U3")
+					(reference "J3")
 					(unit 1)
 				)
 			)
@@ -1415,7 +1415,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "9657e6f8-5241-4233-9f39-999665f26d5e")
-		(property "Reference" "U2"
+		(property "Reference" "J2"
 			(at 213.36 64.77 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1489,7 +1489,7 @@
 		(instances
 			(project "lmm"
 				(path "/4aaed70d-43ab-42a1-bf4f-36bc07322f39"
-					(reference "U2")
+					(reference "J2")
 					(unit 1)
 				)
 			)
@@ -1507,7 +1507,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "0e8ddb7a-330f-43d6-8950-0beee4e63371")
-		(property "Reference" "U1"
+		(property "Reference" "J1"
 			(at 213.36 41.91 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1581,7 +1581,7 @@
 		(instances
 			(project "lmm"
 				(path "/4aaed70d-43ab-42a1-bf4f-36bc07322f39"
-					(reference "U1")
+					(reference "J1")
 					(unit 1)
 				)
 			)

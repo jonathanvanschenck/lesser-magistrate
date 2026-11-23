@@ -30,8 +30,8 @@ KiCad's stock DIP and resistor-array footprints have different drill sizes, for 
 1.118 mm here). New designs should start from the stock libraries.
 
 Symbols are named after the generic part (`C`, `LED`, `R_Network09`, `R_Pack04_SIP`, `74AC573`, `4072`, `74AC04`,
-`RJ11`, `RJ45`, `USB_A`, `SW_Push`). `RJ11` and `RJ45` use KiCad's stock modular-jack drawings (pins numbered by contact
-position, to match the footprints). Footprints are named after the physical package or the specific part they were
+`RJ11`, `RJ45`, `USB_A`, `SW_Push`). `LED`, `RJ11` and `RJ45` use KiCad's stock drawings (the jack pins are numbered by
+contact position, to match the footprints). Connectors are `J` (`JA1`-`JC1` are the team jacks on the LM). Footprints are named after the physical package or the specific part they were
 drawn for (`RJ45_AdamTech_MTJ-881X1`, `DIP-20_W7.62mm`, …). Every placed part has:
 
 - **Value**: the generic part, printed on the board and the BOM (e.g. `10nF`, `4072`, `74AC573`, `Green`)
@@ -118,8 +118,10 @@ Known differences from the manufactured boards (none of them electrical):
 Schematic cleanup after the import (connectivity unchanged):
 
 - LM: net labels moved off the pins onto the ends of their wire stubs, no-connect flags on intentionally unused pins,
-  `PWR_FLAG`s where 5V and GND enter from the USB connector, and pin names hidden on symbols whose pin names were just
-  their numbers.
+  `PWR_FLAG`s where 5V and GND enter from the USB connector, pin names hidden on symbols whose pin names were just
+  their numbers, everything on KiCad's 50 mil grid, the latch-enable wire rerouted so it no longer crosses U2, and
+  every reference designator visible (the filter capacitors C4-C18 show their reference, with a note giving their
+  value).
 - Boards moved to the middle of their pages (LM's Eagle import had put it off the page); every fab layer moved by the
   same exact offset and is otherwise unchanged.
 - All three: jacks drawn with the stock-style symbols, each pin a short wire and a named net (`5V`, `TRIG_A1`–`TRIG_C5`
@@ -136,8 +138,8 @@ These are reported by ERC/DRC on LM and fail `check.sh` until they're excluded o
 
 - **Floating inputs (ERC, 4 errors):** the three unused inverters in U8 (CD74AC04E, inputs A1–A3) and latch input
   U2 D8 are left floating. Unused CMOS inputs are normally tied to GND.
-- **Clearance (DRC, 3 errors):** the 5V track passes 0.18 mm from the unconnected pad 3 of each RJ45 (UA1, UB1, UC1).
+- **Clearance (DRC, 3 errors):** the 5V track passes 0.18 mm from the unconnected pad 3 of each RJ45 (JA1, JB1, JC1).
   The design rule is 0.2032 mm (8 mil).
 
-Warnings that don't fail the check: 32 wire ends off KiCad's 50 mil grid (LM schematic), silkscreen overlaps on all
-three boards, and 28 small isolated copper islands in LM's ground pour.
+Warnings that don't fail the check: silkscreen overlaps on all three boards, and 28 small isolated copper islands in
+LM's ground pour.

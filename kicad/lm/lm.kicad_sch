@@ -848,15 +848,6 @@
 						(type none)
 					)
 				)
-				(text "Octal D-Latch"
-					(at 2.935 18.392 0)
-					(effects
-						(font
-							(size 1.619 1.619)
-						)
-						(justify right bottom)
-					)
-				)
 				(pin input line
 					(at -15.24 15.24 0)
 					(length 2.54)
@@ -1221,6 +1212,9 @@
 			(embedded_fonts no)
 		)
 		(symbol "lesser-magistrate:C"
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(hide yes)
 			)
@@ -1373,6 +1367,9 @@
 			(embedded_fonts no)
 		)
 		(symbol "lesser-magistrate:LED"
+			(pin_numbers
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1433,26 +1430,14 @@
 					)
 				)
 			)
-			(symbol "LED_1_0"
+			(symbol "LED_0_1"
 				(polyline
 					(pts
-						(xy -1.27 -3.492) (xy -0.926 -2.521) (xy -0.509 -2.797)
+						(xy -3.048 -0.762) (xy -4.572 -2.286) (xy -3.81 -2.286) (xy -4.572 -2.286) (xy -4.572 -1.524)
 					)
 					(stroke
-						(width 0.002)
-						(type solid)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.257 0) (xy -2.223 0)
-					)
-					(stroke
-						(width 0.25)
-						(type solid)
+						(width 0)
+						(type default)
 					)
 					(fill
 						(type none)
@@ -1460,11 +1445,11 @@
 				)
 				(polyline
 					(pts
-						(xy -1.257 0) (xy 1.918 1.905)
+						(xy -1.778 -0.762) (xy -3.302 -2.286) (xy -2.54 -2.286) (xy -3.302 -2.286) (xy -3.302 -1.524)
 					)
 					(stroke
-						(width 0.25)
-						(type solid)
+						(width 0)
+						(type default)
 					)
 					(fill
 						(type none)
@@ -1472,11 +1457,11 @@
 				)
 				(polyline
 					(pts
-						(xy -1.257 -1.905) (xy -1.257 1.905)
+						(xy -1.27 0) (xy 1.27 0)
 					)
 					(stroke
-						(width 0.25)
-						(type solid)
+						(width 0)
+						(type default)
 					)
 					(fill
 						(type none)
@@ -1484,23 +1469,11 @@
 				)
 				(polyline
 					(pts
-						(xy -0.317 -4.127) (xy 0.026 -3.156) (xy 0.443 -3.432)
+						(xy -1.27 -1.27) (xy -1.27 1.27)
 					)
 					(stroke
-						(width 0.002)
-						(type solid)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.025 1.613) (xy -0.718 2.659)
-					)
-					(stroke
-						(width 0.25)
-						(type solid)
+						(width 0.254)
+						(type default)
 					)
 					(fill
 						(type none)
@@ -1508,84 +1481,50 @@
 				)
 				(polyline
 					(pts
-						(xy 0.927 2.248) (xy 0.235 3.294)
+						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
 					)
 					(stroke
-						(width 0.25)
-						(type solid)
+						(width 0.254)
+						(type default)
 					)
 					(fill
 						(type none)
 					)
 				)
-				(polyline
-					(pts
-						(xy 1.918 1.905) (xy 1.918 -1.905)
-					)
-					(stroke
-						(width 0.25)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.918 -1.905) (xy -1.257 0)
-					)
-					(stroke
-						(width 0.25)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.857 0) (xy 1.918 0)
-					)
-					(stroke
-						(width 0.25)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
+			)
+			(symbol "LED_1_1"
 				(pin passive line
-					(at -4.763 0 0)
+					(at -3.81 0 0)
 					(length 2.54)
 					(name "K"
 						(effects
 							(font
-								(size 0 0)
+								(size 1.27 1.27)
 							)
 						)
 					)
 					(number "1"
 						(effects
 							(font
-								(size 1.524 1.524)
+								(size 1.27 1.27)
 							)
 						)
 					)
 				)
 				(pin passive line
-					(at 5.398 0 180)
+					(at 3.81 0 180)
 					(length 2.54)
 					(name "A"
 						(effects
 							(font
-								(size 0 0)
+								(size 1.27 1.27)
 							)
 						)
 					)
 					(number "2"
 						(effects
 							(font
-								(size 1.524 1.524)
+								(size 1.27 1.27)
 							)
 						)
 					)
@@ -4261,33 +4200,6 @@
 						(type none)
 					)
 				)
-				(text "USB A"
-					(at -6.933 -8.007 900)
-					(effects
-						(font
-							(size 1.619 1.619)
-						)
-						(justify left bottom)
-					)
-				)
-				(text "USB A"
-					(at -3.679 -9.293 0)
-					(effects
-						(font
-							(size 1.619 1.619)
-						)
-						(justify left top)
-					)
-				)
-				(text "Plug"
-					(at -0.952 -4.739 0)
-					(effects
-						(font
-							(size 1.619 1.619)
-						)
-						(justify left top)
-					)
-				)
 				(pin passive line
 					(at -3.81 5.08 270)
 					(length 2.54)
@@ -4772,12 +4684,6 @@
 		(color 0 0 0 0)
 		(uuid "f912958d-e4eb-417c-b149-6fecde8faab0")
 	)
-	(junction
-		(at 105.41 128.27)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "fd398de6-fc26-4089-9c74-41a12b02aa66")
-	)
 	(no_connect
 		(at 62.23 100.33)
 		(uuid "0d1e6fa2-e029-4f52-b1a5-687da33ad3bb")
@@ -4809,6 +4715,23 @@
 	(no_connect
 		(at 250.19 100.33)
 		(uuid "14ffc85b-5aab-4138-8d2f-0ac1b787d857")
+	)
+	(wire
+		(pts
+			(xy 113.03 139.7) (xy 152.4 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 70 70 70 1)
+		)
+		(uuid "eed0d0cf-d6f9-45d7-9a3a-a2a813245fc8")
+	)
+	(junction
+		(at 113.03 139.7)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a388d218-2675-4afc-8ee5-07dcfae3316a")
 	)
 	(wire
 		(pts
@@ -5618,6 +5541,181 @@
 		)
 		(uuid "3f5c026e-a6c0-4f57-929f-ff15d0db09f0")
 	)
+	(wire
+		(pts
+			(xy 110.49 158.75) (xy 110.49 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 180 150 0 1)
+		)
+		(uuid "58415d89-33b2-4899-9db5-ec3c36ac5cd9")
+	)
+	(wire
+		(pts
+			(xy 120.65 158.75) (xy 120.65 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 230 120 0 1)
+		)
+		(uuid "59a7cfd1-e37d-4f3d-bf87-11c52b795ff5")
+	)
+	(wire
+		(pts
+			(xy 162.56 158.75) (xy 162.56 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 230 120 0 1)
+		)
+		(uuid "cf63ddcc-4ab7-4b94-b77d-45dd2ca64a4e")
+	)
+	(wire
+		(pts
+			(xy 172.72 158.75) (xy 172.72 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 200 0 0 1)
+		)
+		(uuid "73a6391d-1d14-417d-9097-9c28448a128f")
+	)
+	(wire
+		(pts
+			(xy 152.4 158.75) (xy 152.4 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 180 150 0 1)
+		)
+		(uuid "740e0446-3f4d-45ec-8e10-0de056cb323c")
+	)
+	(wire
+		(pts
+			(xy 130.81 158.75) (xy 130.81 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 200 0 0 1)
+		)
+		(uuid "802df78f-7b0e-4bdc-90bc-6e4849a36d7d")
+	)
+	(wire
+		(pts
+			(xy 125.73 170.18) (xy 125.73 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 0 80 220 1)
+		)
+		(uuid "788de87c-d8bd-43e9-b234-9617fcc68ad3")
+	)
+	(wire
+		(pts
+			(xy 203.2 158.75) (xy 203.2 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 230 120 0 1)
+		)
+		(uuid "41d0311d-f11d-4681-a5e3-880ae22dc92b")
+	)
+	(wire
+		(pts
+			(xy 157.48 170.18) (xy 157.48 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 150 0 180 1)
+		)
+		(uuid "cfda71e9-d41f-465d-b110-b41cac700fa2")
+	)
+	(wire
+		(pts
+			(xy 158.75 229.87) (xy 161.29 229.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f1c3da1e-c094-4458-9ed1-ce0186927866")
+	)
+	(wire
+		(pts
+			(xy 198.12 170.18) (xy 198.12 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 150 0 180 1)
+		)
+		(uuid "70f95908-8675-4298-a515-f0067a988e29")
+	)
+	(wire
+		(pts
+			(xy 167.64 170.18) (xy 167.64 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 0 80 220 1)
+		)
+		(uuid "dcf0af11-5083-4a3c-a0bc-30a713af655a")
+	)
+	(wire
+		(pts
+			(xy 213.36 158.75) (xy 213.36 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 200 0 0 1)
+		)
+		(uuid "b43e2dbb-644d-467f-b9de-a73b0c105c8b")
+	)
+	(wire
+		(pts
+			(xy 208.28 170.18) (xy 208.28 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 0 80 220 1)
+		)
+		(uuid "8e90b36c-928a-45c5-93dd-2c8cf9d78194")
+	)
+	(wire
+		(pts
+			(xy 193.04 158.75) (xy 193.04 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 180 150 0 1)
+		)
+		(uuid "8a23a091-470d-49d3-b0bb-727d2b5c4834")
+	)
+	(wire
+		(pts
+			(xy 115.57 170.18) (xy 115.57 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 150 0 180 1)
+		)
+		(uuid "2e10621c-bc25-43a6-9101-22c0a4af3f80")
+	)
 	(text "Wire colours"
 		(exclude_from_sim no)
 		(at 353.06 114.3 0)
@@ -5628,7 +5726,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "350abf09-1b1c-43d7-ae33-1336bba0b558")
+		(uuid "1bc4ad04-daa8-4255-890f-e45d05978b3e")
 	)
 	(text "Light 1"
 		(exclude_from_sim no)
@@ -5641,7 +5739,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "d453507b-dfba-40b3-ad74-81493581e56d")
+		(uuid "8bd6daa9-4841-40f7-b536-ae803de16e3d")
 	)
 	(text "Light 2"
 		(exclude_from_sim no)
@@ -5654,7 +5752,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "76846c14-9242-4f07-9037-d229801efebf")
+		(uuid "3148aa12-247d-43de-8e34-24e045f9a437")
 	)
 	(text "Light 3"
 		(exclude_from_sim no)
@@ -5667,7 +5765,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "bec953da-c106-4a6e-9d42-5e6473514264")
+		(uuid "00eca856-4503-4ca0-aca7-5fd4e7875312")
 	)
 	(text "Light 4"
 		(exclude_from_sim no)
@@ -5680,7 +5778,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "0b4e282a-4196-4d08-8ec9-337dbe47cb4b")
+		(uuid "c91e1f86-51e7-49e8-a077-872b607dadd7")
 	)
 	(text "Light 5"
 		(exclude_from_sim no)
@@ -5693,7 +5791,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "63c3bdb6-206e-4c0a-b6b9-c6d0de7ccf0e")
+		(uuid "a0a8cb8c-bbdb-4639-834c-e77b20cdf9ac")
 	)
 	(text "Arm button"
 		(exclude_from_sim no)
@@ -5706,7 +5804,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "2d003d14-8876-4c30-944a-170d94fcbe7f")
+		(uuid "62a040d4-bff9-41e5-add0-4a3cf63cc5b2")
 	)
 	(text "Latch enable"
 		(exclude_from_sim no)
@@ -5719,7 +5817,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "35f3be30-354a-4796-9a33-d782045e6b8e")
+		(uuid "25043884-c968-4446-854a-bda49ea1e183")
 	)
 	(text "Other nets"
 		(exclude_from_sim no)
@@ -5732,7 +5830,18 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "3062adaf-1eca-4fda-9df8-ccca9183c526")
+		(uuid "02b5ed03-e80b-41f4-910f-a1e8b0f2f3d4")
+	)
+	(text "C4-C18: 10 nF each"
+		(exclude_from_sim no)
+		(at 62.23 119.38 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c778a6db-244a-4703-9079-e4acea06da8c")
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
@@ -6276,7 +6385,7 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 161.291) (xy 162.56 181.61)
+			(xy 162.56 161.29) (xy 162.56 181.61)
 		)
 		(stroke
 			(width 0)
@@ -6416,7 +6525,7 @@
 	)
 	(wire
 		(pts
-			(xy 157.48 172.721) (xy 157.48 181.61)
+			(xy 157.48 172.72) (xy 157.48 181.61)
 		)
 		(stroke
 			(width 0)
@@ -6526,7 +6635,7 @@
 	)
 	(wire
 		(pts
-			(xy 152.4 161.291) (xy 152.4 179.07)
+			(xy 152.4 161.29) (xy 152.4 179.07)
 		)
 		(stroke
 			(width 0)
@@ -6612,7 +6721,7 @@
 	)
 	(wire
 		(pts
-			(xy 125.73 172.721) (xy 125.73 176.53)
+			(xy 125.73 172.72) (xy 125.73 176.53)
 		)
 		(stroke
 			(width 0)
@@ -6828,7 +6937,7 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 172.721) (xy 167.64 180.34)
+			(xy 167.64 172.72) (xy 167.64 180.34)
 		)
 		(stroke
 			(width 0)
@@ -7468,7 +7577,7 @@
 	)
 	(wire
 		(pts
-			(xy 203.2 161.291) (xy 203.2 175.26)
+			(xy 203.2 161.29) (xy 203.2 175.26)
 		)
 		(stroke
 			(width 0)
@@ -7490,7 +7599,7 @@
 	)
 	(wire
 		(pts
-			(xy 115.57 173.99) (xy 115.57 172.721)
+			(xy 115.57 173.99) (xy 115.57 172.72)
 		)
 		(stroke
 			(width 0)
@@ -7501,7 +7610,7 @@
 	)
 	(wire
 		(pts
-			(xy 161.291 229.87) (xy 195.58 229.87)
+			(xy 161.29 229.87) (xy 195.58 229.87)
 		)
 		(stroke
 			(width 0)
@@ -7912,7 +8021,7 @@
 	)
 	(wire
 		(pts
-			(xy 208.28 173.99) (xy 208.28 172.721)
+			(xy 208.28 173.99) (xy 208.28 172.72)
 		)
 		(stroke
 			(width 0)
@@ -8206,17 +8315,6 @@
 	)
 	(wire
 		(pts
-			(xy 105.41 128.27) (xy 152.4 128.27)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 70 70 70 1)
-		)
-		(uuid "9fa93796-4dd6-4d0c-8973-011ec566b644")
-	)
-	(wire
-		(pts
 			(xy 165.1 161.29) (xy 167.64 161.29)
 		)
 		(stroke
@@ -8239,7 +8337,7 @@
 	)
 	(wire
 		(pts
-			(xy 172.72 161.291) (xy 172.72 179.07)
+			(xy 172.72 161.29) (xy 172.72 179.07)
 		)
 		(stroke
 			(width 0)
@@ -8534,7 +8632,7 @@
 	)
 	(wire
 		(pts
-			(xy 130.81 161.291) (xy 130.81 177.8)
+			(xy 130.81 161.29) (xy 130.81 177.8)
 		)
 		(stroke
 			(width 0)
@@ -8770,7 +8868,7 @@
 	)
 	(wire
 		(pts
-			(xy 120.65 161.291) (xy 120.65 175.26)
+			(xy 120.65 161.29) (xy 120.65 175.26)
 		)
 		(stroke
 			(width 0)
@@ -8781,7 +8879,7 @@
 	)
 	(wire
 		(pts
-			(xy 213.36 161.291) (xy 213.36 172.72)
+			(xy 213.36 161.29) (xy 213.36 172.72)
 		)
 		(stroke
 			(width 0)
@@ -8942,7 +9040,7 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 172.721) (xy 198.12 176.53)
+			(xy 198.12 172.72) (xy 198.12 176.53)
 		)
 		(stroke
 			(width 0)
@@ -9245,7 +9343,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 161.291) (xy 193.04 177.8)
+			(xy 193.04 161.29) (xy 193.04 177.8)
 		)
 		(stroke
 			(width 0)
@@ -9397,17 +9495,6 @@
 	)
 	(wire
 		(pts
-			(xy 152.4 128.27) (xy 152.4 139.7)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 70 70 70 1)
-		)
-		(uuid "e268237a-6d6c-41ad-8baa-17a0e7b9901d")
-	)
-	(wire
-		(pts
 			(xy 139.7 110.49) (xy 133.35 110.49)
 		)
 		(stroke
@@ -9538,7 +9625,7 @@
 	)
 	(wire
 		(pts
-			(xy 110.49 161.291) (xy 110.49 172.72)
+			(xy 110.49 161.29) (xy 110.49 172.72)
 		)
 		(stroke
 			(width 0)
@@ -10205,7 +10292,7 @@
 	)
 	(symbol
 		(lib_id "lesser-magistrate:LED")
-		(at 110.49 156.528 90)
+		(at 110.49 154.94 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10215,7 +10302,7 @@
 		(dnp no)
 		(uuid "046fda7b-f2ea-46b4-b0d3-a17b447b2873")
 		(property "Reference" "DC3"
-			(at 105.78 156.211 0)
+			(at 105.78 154.623 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10226,7 +10313,7 @@
 			)
 		)
 		(property "Value" "Green"
-			(at 110.49 156.528 0)
+			(at 110.49 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10237,7 +10324,7 @@
 			)
 		)
 		(property "Footprint" "lesser-magistrate:LED_L513"
-			(at 110.49 156.528 0)
+			(at 110.49 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10248,7 +10335,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.digikey.com/en/products/detail/american-opto-plus-led/L513GD-B/13556882"
-			(at 110.49 156.528 0)
+			(at 110.49 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10259,7 +10346,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 110.49 156.528 0)
+			(at 110.49 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10270,7 +10357,7 @@
 			)
 		)
 		(property "MPN" "L513GD-B"
-			(at 110.49 156.528 0)
+			(at 110.49 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10453,20 +10540,21 @@
 		(dnp no)
 		(uuid "1305f535-9ef3-49b6-aed5-2d211b0399a7")
 		(property "Reference" "C11"
-			(at 199.39 104.14 0)
-			(hide yes)
+			(at 196.902 104.14 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1.619 1.619)
 				)
+				(justify bottom)
 			)
 		)
 		(property "Value" "10nF"
 			(at 196.902 104.14 0)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.619 1.619)
@@ -10546,14 +10634,14 @@
 		(dnp no)
 		(uuid "15a4a9c8-dc75-49ea-95c8-0aacc4aff12e")
 		(property "Reference" "RB2"
-			(at 53.34 88.9 0)
-			(hide yes)
+			(at 53.34 104.9 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1.619 1.619)
 				)
+				(justify bottom)
 			)
 		)
 		(property "Value" "10k"
@@ -10662,20 +10750,21 @@
 		(dnp no)
 		(uuid "1e32b969-03de-489a-9639-74897764cb46")
 		(property "Reference" "C10"
-			(at 205.74 109.22 0)
-			(hide yes)
+			(at 203.252 109.22 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1.619 1.619)
 				)
+				(justify bottom)
 			)
 		)
 		(property "Value" "10nF"
 			(at 203.252 109.22 0)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.619 1.619)
@@ -10754,20 +10843,21 @@
 		(dnp no)
 		(uuid "26159901-22c3-4883-93d6-653ba3e5e72c")
 		(property "Reference" "C9"
-			(at 212.09 104.14 0)
-			(hide yes)
+			(at 209.602 104.14 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1.619 1.619)
 				)
+				(justify bottom)
 			)
 		)
 		(property "Value" "10nF"
 			(at 209.602 104.14 0)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.619 1.619)
@@ -10836,7 +10926,7 @@
 	)
 	(symbol
 		(lib_id "lesser-magistrate:LED")
-		(at 120.65 156.528 90)
+		(at 120.65 154.94 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10846,7 +10936,7 @@
 		(dnp no)
 		(uuid "28944901-306f-42f2-97d4-df38270bae69")
 		(property "Reference" "DC2"
-			(at 115.94 156.211 0)
+			(at 115.94 154.623 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10857,7 +10947,7 @@
 			)
 		)
 		(property "Value" "Green"
-			(at 120.65 156.528 0)
+			(at 120.65 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10868,7 +10958,7 @@
 			)
 		)
 		(property "Footprint" "lesser-magistrate:LED_L513"
-			(at 120.65 156.528 0)
+			(at 120.65 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10879,7 +10969,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.digikey.com/en/products/detail/american-opto-plus-led/L513GD-B/13556882"
-			(at 120.65 156.528 0)
+			(at 120.65 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10890,7 +10980,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 120.65 156.528 0)
+			(at 120.65 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10901,7 +10991,7 @@
 			)
 		)
 		(property "MPN" "L513GD-B"
-			(at 120.65 156.528 0)
+			(at 120.65 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10937,9 +11027,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "2a9c0527-e0a7-4102-a07b-575150750fdc")
-		(property "Reference" "U7"
+		(property "Reference" "J1"
 			(at 297.18 138.43 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11012,7 +11101,7 @@
 		(instances
 			(project "lm"
 				(path "/a2fb7f97-76c0-47f1-b3de-5018618fd34f"
-					(reference "U7")
+					(reference "J1")
 					(unit 1)
 				)
 			)
@@ -11148,7 +11237,7 @@
 	)
 	(symbol
 		(lib_id "lesser-magistrate:LED")
-		(at 162.56 156.528 90)
+		(at 162.56 154.94 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11158,7 +11247,7 @@
 		(dnp no)
 		(uuid "3040bf9f-fa7a-45c3-b193-e3b3b00b3e9d")
 		(property "Reference" "DB2"
-			(at 157.85 156.211 0)
+			(at 157.85 154.623 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11169,7 +11258,7 @@
 			)
 		)
 		(property "Value" "Green"
-			(at 162.56 156.528 0)
+			(at 162.56 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11180,7 +11269,7 @@
 			)
 		)
 		(property "Footprint" "lesser-magistrate:LED_L513"
-			(at 162.56 156.528 0)
+			(at 162.56 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11191,7 +11280,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.digikey.com/en/products/detail/american-opto-plus-led/L513GD-B/13556882"
-			(at 162.56 156.528 0)
+			(at 162.56 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11202,7 +11291,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 162.56 156.528 0)
+			(at 162.56 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11213,7 +11302,7 @@
 			)
 		)
 		(property "MPN" "L513GD-B"
-			(at 162.56 156.528 0)
+			(at 162.56 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11250,14 +11339,14 @@
 		(dnp no)
 		(uuid "305c1aa9-a4cc-4f85-a634-1d692b6b6dbe")
 		(property "Reference" "RB1"
-			(at 259.08 88.9 0)
-			(hide yes)
+			(at 259.08 104.9 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1.619 1.619)
 				)
+				(justify bottom)
 			)
 		)
 		(property "Value" "10k"
@@ -11366,20 +11455,21 @@
 		(dnp no)
 		(uuid "3c7c8c9f-2068-4c8b-a802-754ba4c360ad")
 		(property "Reference" "C5"
-			(at 237.49 104.14 0)
-			(hide yes)
+			(at 235.002 104.14 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1.619 1.619)
 				)
+				(justify bottom)
 			)
 		)
 		(property "Value" "10nF"
 			(at 235.002 104.14 0)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.619 1.619)
@@ -11448,7 +11538,7 @@
 	)
 	(symbol
 		(lib_id "lesser-magistrate:LED")
-		(at 172.72 156.528 90)
+		(at 172.72 154.94 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11458,7 +11548,7 @@
 		(dnp no)
 		(uuid "44f377d7-bad7-4132-a403-059af2d21bde")
 		(property "Reference" "DB1"
-			(at 168.01 156.211 0)
+			(at 177.43 154.623 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11469,7 +11559,7 @@
 			)
 		)
 		(property "Value" "Green"
-			(at 172.72 156.528 0)
+			(at 172.72 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11480,7 +11570,7 @@
 			)
 		)
 		(property "Footprint" "lesser-magistrate:LED_L513"
-			(at 172.72 156.528 0)
+			(at 172.72 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11491,7 +11581,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.digikey.com/en/products/detail/american-opto-plus-led/L513GD-B/13556882"
-			(at 172.72 156.528 0)
+			(at 172.72 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11502,7 +11592,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 172.72 156.528 0)
+			(at 172.72 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11513,7 +11603,7 @@
 			)
 		)
 		(property "MPN" "L513GD-B"
-			(at 172.72 156.528 0)
+			(at 172.72 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11550,20 +11640,21 @@
 		(dnp no)
 		(uuid "45d3e26a-db96-4019-8ce8-3d9d2a6c2462")
 		(property "Reference" "C15"
-			(at 86.36 104.14 0)
-			(hide yes)
+			(at 83.872 104.14 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1.619 1.619)
 				)
+				(justify bottom)
 			)
 		)
 		(property "Value" "10nF"
 			(at 83.872 104.14 0)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.619 1.619)
@@ -11632,7 +11723,7 @@
 	)
 	(symbol
 		(lib_id "lesser-magistrate:LED")
-		(at 152.4 156.528 90)
+		(at 152.4 154.94 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11642,7 +11733,7 @@
 		(dnp no)
 		(uuid "4ca9f461-4d71-4824-80dc-bf862a90d3be")
 		(property "Reference" "DB3"
-			(at 147.69 156.211 0)
+			(at 147.69 154.623 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11653,7 +11744,7 @@
 			)
 		)
 		(property "Value" "Green"
-			(at 152.4 156.528 0)
+			(at 152.4 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11664,7 +11755,7 @@
 			)
 		)
 		(property "Footprint" "lesser-magistrate:LED_L513"
-			(at 152.4 156.528 0)
+			(at 152.4 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11675,7 +11766,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.digikey.com/en/products/detail/american-opto-plus-led/L513GD-B/13556882"
-			(at 152.4 156.528 0)
+			(at 152.4 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11686,7 +11777,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 152.4 156.528 0)
+			(at 152.4 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11697,7 +11788,7 @@
 			)
 		)
 		(property "MPN" "L513GD-B"
-			(at 152.4 156.528 0)
+			(at 152.4 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11734,14 +11825,14 @@
 		(dnp no)
 		(uuid "4fc2ac1d-2324-431e-aa89-bd04c905c550")
 		(property "Reference" "RA3"
-			(at 118.11 62.23 0)
-			(hide yes)
+			(at 106.607 68.58 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1.619 1.619)
 				)
+				(justify top)
 			)
 		)
 		(property "Value" "33"
@@ -11844,18 +11935,18 @@
 		(dnp no)
 		(uuid "51a574ee-d6ce-40d7-a411-5f15077e243b")
 		(property "Reference" "C2"
-			(at 147.32 142.24 0)
-			(hide yes)
+			(at 147.32 147.07 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1.619 1.619)
 				)
+				(justify bottom)
 			)
 		)
 		(property "Value" "1uF"
-			(at 147.32 139.752 0)
+			(at 147.32 144.728 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11926,7 +12017,7 @@
 	)
 	(symbol
 		(lib_id "lesser-magistrate:LED")
-		(at 130.81 156.528 90)
+		(at 130.81 154.94 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11936,7 +12027,7 @@
 		(dnp no)
 		(uuid "568ca2f3-59a2-46b3-aaa7-eae7eafab45d")
 		(property "Reference" "DC1"
-			(at 126.1 156.211 0)
+			(at 126.1 154.623 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11947,7 +12038,7 @@
 			)
 		)
 		(property "Value" "Green"
-			(at 130.81 156.528 0)
+			(at 130.81 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11958,7 +12049,7 @@
 			)
 		)
 		(property "Footprint" "lesser-magistrate:LED_L513"
-			(at 130.81 156.528 0)
+			(at 130.81 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11969,7 +12060,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.digikey.com/en/products/detail/american-opto-plus-led/L513GD-B/13556882"
-			(at 130.81 156.528 0)
+			(at 130.81 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11980,7 +12071,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 130.81 156.528 0)
+			(at 130.81 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11991,7 +12082,7 @@
 			)
 		)
 		(property "MPN" "L513GD-B"
-			(at 130.81 156.528 0)
+			(at 130.81 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12156,14 +12247,14 @@
 		(dnp no)
 		(uuid "62ad2dbe-b971-410b-bbe4-56a75febf91f")
 		(property "Reference" "C1"
-			(at 199.39 139.7 0)
-			(hide yes)
+			(at 199.39 142.188 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1.619 1.619)
 				)
+				(justify bottom)
 			)
 		)
 		(property "Value" "1uF"
@@ -12248,14 +12339,14 @@
 		(dnp no)
 		(uuid "6e3649b3-f25f-41f2-bf03-b3eb934f9869")
 		(property "Reference" "C3"
-			(at 83.82 227.33 0)
-			(hide yes)
+			(at 83.82 229.818 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1.619 1.619)
 				)
+				(justify top)
 			)
 		)
 		(property "Value" "1uF"
@@ -12339,7 +12430,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "6f6e5225-145f-4441-9d62-885e0d63abb2")
-		(property "Reference" "UB1"
+		(property "Reference" "JB1"
 			(at 297.18 69.85 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12432,7 +12523,7 @@
 		(instances
 			(project "lm"
 				(path "/a2fb7f97-76c0-47f1-b3de-5018618fd34f"
-					(reference "UB1")
+					(reference "JB1")
 					(unit 1)
 				)
 			)
@@ -12450,14 +12541,14 @@
 		(dnp no)
 		(uuid "7287c67c-28b0-4ab1-b6e7-ea9e7a7f7a1e")
 		(property "Reference" "RB3"
-			(at 226.06 224.79 0)
-			(hide yes)
+			(at 242.06 224.79 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1.619 1.619)
 				)
+				(justify top)
 			)
 		)
 		(property "Value" "150"
@@ -12566,20 +12657,21 @@
 		(dnp no)
 		(uuid "754385de-e033-46d5-b2e5-424aabe48333")
 		(property "Reference" "C6"
-			(at 231.14 109.22 0)
-			(hide yes)
+			(at 228.652 109.22 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1.619 1.619)
 				)
+				(justify bottom)
 			)
 		)
 		(property "Value" "10nF"
 			(at 228.652 109.22 0)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.619 1.619)
@@ -12648,7 +12740,7 @@
 	)
 	(symbol
 		(lib_id "lesser-magistrate:LED")
-		(at 125.73 167.958 90)
+		(at 125.73 166.37 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -12658,7 +12750,7 @@
 		(dnp no)
 		(uuid "7ae17a3d-4b9c-46dc-b735-43ae91351e4b")
 		(property "Reference" "DC4"
-			(at 121.02 167.641 0)
+			(at 121.02 166.053 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12669,7 +12761,7 @@
 			)
 		)
 		(property "Value" "Green"
-			(at 125.73 167.958 0)
+			(at 125.73 166.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12680,7 +12772,7 @@
 			)
 		)
 		(property "Footprint" "lesser-magistrate:LED_L513"
-			(at 125.73 167.958 0)
+			(at 125.73 166.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12691,7 +12783,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.digikey.com/en/products/detail/american-opto-plus-led/L513GD-B/13556882"
-			(at 125.73 167.958 0)
+			(at 125.73 166.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12702,7 +12794,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 125.73 167.958 0)
+			(at 125.73 166.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12713,7 +12805,7 @@
 			)
 		)
 		(property "MPN" "L513GD-B"
-			(at 125.73 167.958 0)
+			(at 125.73 166.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12750,20 +12842,21 @@
 		(dnp no)
 		(uuid "7bdc21b4-73bb-4f82-9f95-86d4ee0267c1")
 		(property "Reference" "C13"
-			(at 99.06 104.14 0)
-			(hide yes)
+			(at 96.572 104.14 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1.619 1.619)
 				)
+				(justify bottom)
 			)
 		)
 		(property "Value" "10nF"
 			(at 96.572 104.14 0)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.619 1.619)
@@ -12842,20 +12935,21 @@
 		(dnp no)
 		(uuid "7c805ddd-4e36-474f-b076-2e6930045edb")
 		(property "Reference" "C14"
-			(at 92.71 109.22 0)
-			(hide yes)
+			(at 90.222 109.22 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1.619 1.619)
 				)
+				(justify bottom)
 			)
 		)
 		(property "Value" "10nF"
 			(at 90.222 109.22 0)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.619 1.619)
@@ -12933,7 +13027,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "7e7b2314-aaf0-47ac-bb9a-94ce2577e554")
-		(property "Reference" "UA1"
+		(property "Reference" "JA1"
 			(at 297.18 36.83 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13026,7 +13120,7 @@
 		(instances
 			(project "lm"
 				(path "/a2fb7f97-76c0-47f1-b3de-5018618fd34f"
-					(reference "UA1")
+					(reference "JA1")
 					(unit 1)
 				)
 			)
@@ -13180,7 +13274,7 @@
 	)
 	(symbol
 		(lib_id "lesser-magistrate:LED")
-		(at 203.2 156.528 90)
+		(at 203.2 154.94 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -13190,7 +13284,7 @@
 		(dnp no)
 		(uuid "8ef92095-432d-43ea-9237-182176b4dc9b")
 		(property "Reference" "DA2"
-			(at 198.49 156.211 0)
+			(at 198.49 154.623 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13201,7 +13295,7 @@
 			)
 		)
 		(property "Value" "Green"
-			(at 203.2 156.528 0)
+			(at 203.2 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13212,7 +13306,7 @@
 			)
 		)
 		(property "Footprint" "lesser-magistrate:LED_L513"
-			(at 203.2 156.528 0)
+			(at 203.2 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13223,7 +13317,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.digikey.com/en/products/detail/american-opto-plus-led/L513GD-B/13556882"
-			(at 203.2 156.528 0)
+			(at 203.2 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13234,7 +13328,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 203.2 156.528 0)
+			(at 203.2 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13245,7 +13339,7 @@
 			)
 		)
 		(property "MPN" "L513GD-B"
-			(at 203.2 156.528 0)
+			(at 203.2 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13282,20 +13376,21 @@
 		(dnp no)
 		(uuid "90eb18c4-d8da-4ad5-a73c-58ecd79facad")
 		(property "Reference" "C7"
-			(at 224.79 104.14 0)
-			(hide yes)
+			(at 222.302 104.14 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1.619 1.619)
 				)
+				(justify bottom)
 			)
 		)
 		(property "Value" "10nF"
 			(at 222.302 104.14 0)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.619 1.619)
@@ -13373,9 +13468,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "98ebd924-239f-4564-a2b3-5d3c12e2e37b")
-		(property "Reference" "U4"
-			(at 81.28 40.64 0)
-			(hide yes)
+		(property "Reference" "J2"
+			(at 73.66 31.75 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13454,7 +13548,7 @@
 		(instances
 			(project "lm"
 				(path "/a2fb7f97-76c0-47f1-b3de-5018618fd34f"
-					(reference "U4")
+					(reference "J2")
 					(unit 1)
 				)
 			)
@@ -13462,7 +13556,7 @@
 	)
 	(symbol
 		(lib_id "lesser-magistrate:LED")
-		(at 157.48 167.958 90)
+		(at 157.48 166.37 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -13472,7 +13566,7 @@
 		(dnp no)
 		(uuid "a30465f6-ef08-4980-86cb-bb4e86ce2b47")
 		(property "Reference" "DB5"
-			(at 152.77 167.641 0)
+			(at 152.77 166.053 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13483,7 +13577,7 @@
 			)
 		)
 		(property "Value" "Green"
-			(at 157.48 167.958 0)
+			(at 157.48 166.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13494,7 +13588,7 @@
 			)
 		)
 		(property "Footprint" "lesser-magistrate:LED_L513"
-			(at 157.48 167.958 0)
+			(at 157.48 166.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13505,7 +13599,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.digikey.com/en/products/detail/american-opto-plus-led/L513GD-B/13556882"
-			(at 157.48 167.958 0)
+			(at 157.48 166.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13516,7 +13610,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 157.48 167.958 0)
+			(at 157.48 166.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13527,7 +13621,7 @@
 			)
 		)
 		(property "MPN" "L513GD-B"
-			(at 157.48 167.958 0)
+			(at 157.48 166.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13564,20 +13658,21 @@
 		(dnp no)
 		(uuid "a5d456c6-5773-4b23-9043-635110a75683")
 		(property "Reference" "C18"
-			(at 67.31 109.22 0)
-			(hide yes)
+			(at 64.822 109.22 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1.619 1.619)
 				)
+				(justify bottom)
 			)
 		)
 		(property "Value" "10nF"
 			(at 64.822 109.22 0)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.619 1.619)
@@ -13646,7 +13741,7 @@
 	)
 	(symbol
 		(lib_id "lesser-magistrate:LED")
-		(at 156.528 229.87 180)
+		(at 154.94 229.87 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -13656,7 +13751,7 @@
 		(dnp no)
 		(uuid "a6d7a228-157a-4c92-b922-e1dce07f3cd5")
 		(property "Reference" "D1"
-			(at 156.211 227.382 0)
+			(at 154.623 227.382 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13667,7 +13762,7 @@
 			)
 		)
 		(property "Value" "Yellow"
-			(at 156.528 229.87 0)
+			(at 154.94 229.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13678,7 +13773,7 @@
 			)
 		)
 		(property "Footprint" "lesser-magistrate:LED_L513"
-			(at 156.528 229.87 0)
+			(at 154.94 229.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13689,7 +13784,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.digikey.com/en/products/detail/american-opto-plus-led/L513YD-C/13556895"
-			(at 156.528 229.87 0)
+			(at 154.94 229.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13700,7 +13795,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 156.528 229.87 0)
+			(at 154.94 229.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13711,7 +13806,7 @@
 			)
 		)
 		(property "MPN" "L513YD-C"
-			(at 156.528 229.87 0)
+			(at 154.94 229.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13748,20 +13843,21 @@
 		(dnp no)
 		(uuid "aec8eb93-932d-47f7-9ebb-8ab9642fe205")
 		(property "Reference" "C17"
-			(at 73.66 104.14 0)
-			(hide yes)
+			(at 71.172 104.14 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1.619 1.619)
 				)
+				(justify bottom)
 			)
 		)
 		(property "Value" "10nF"
 			(at 71.172 104.14 0)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.619 1.619)
@@ -13839,7 +13935,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "aecead0f-cdce-481f-8c99-deea49ec152d")
-		(property "Reference" "UC1"
+		(property "Reference" "JC1"
 			(at 297.18 102.87 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13932,7 +14028,7 @@
 		(instances
 			(project "lm"
 				(path "/a2fb7f97-76c0-47f1-b3de-5018618fd34f"
-					(reference "UC1")
+					(reference "JC1")
 					(unit 1)
 				)
 			)
@@ -13950,20 +14046,21 @@
 		(dnp no)
 		(uuid "bb324eb8-1f91-44d7-909d-33c11df92503")
 		(property "Reference" "C8"
-			(at 218.44 109.22 0)
-			(hide yes)
+			(at 215.952 109.22 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1.619 1.619)
 				)
+				(justify bottom)
 			)
 		)
 		(property "Value" "10nF"
 			(at 215.952 109.22 0)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.619 1.619)
@@ -14042,20 +14139,21 @@
 		(dnp no)
 		(uuid "bdc17397-a1a8-4d5f-b9b8-1c70329a1ef8")
 		(property "Reference" "C12"
-			(at 105.41 109.22 0)
-			(hide yes)
+			(at 102.922 109.22 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1.619 1.619)
 				)
+				(justify bottom)
 			)
 		)
 		(property "Value" "10nF"
 			(at 102.922 109.22 0)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.619 1.619)
@@ -14134,18 +14232,18 @@
 		(dnp no)
 		(uuid "c4fbfa06-5181-4491-a7d2-bec61bf9a834")
 		(property "Reference" "RA2"
-			(at 186.69 62.23 0)
-			(hide yes)
+			(at 199.46 68.58 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1.619 1.619)
 				)
+				(justify top)
 			)
 		)
 		(property "Value" "33"
-			(at 177.217 68.58 0)
+			(at 197.43 68.58 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14234,7 +14332,7 @@
 	)
 	(symbol
 		(lib_id "lesser-magistrate:LED")
-		(at 198.12 167.958 90)
+		(at 198.12 166.37 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -14244,7 +14342,7 @@
 		(dnp no)
 		(uuid "c5629a02-c8bc-4a76-9614-cc12f8408264")
 		(property "Reference" "DA5"
-			(at 193.41 167.641 0)
+			(at 193.41 166.053 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14255,7 +14353,7 @@
 			)
 		)
 		(property "Value" "Green"
-			(at 198.12 167.958 0)
+			(at 198.12 166.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14266,7 +14364,7 @@
 			)
 		)
 		(property "Footprint" "lesser-magistrate:LED_L513"
-			(at 198.12 167.958 0)
+			(at 198.12 166.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14277,7 +14375,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.digikey.com/en/products/detail/american-opto-plus-led/L513GD-B/13556882"
-			(at 198.12 167.958 0)
+			(at 198.12 166.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14288,7 +14386,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 198.12 167.958 0)
+			(at 198.12 166.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14299,7 +14397,7 @@
 			)
 		)
 		(property "MPN" "L513GD-B"
-			(at 198.12 167.958 0)
+			(at 198.12 166.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14336,20 +14434,21 @@
 		(dnp no)
 		(uuid "cd375fa5-e6aa-460b-98dc-3099d61e45b7")
 		(property "Reference" "C16"
-			(at 80.01 109.22 0)
-			(hide yes)
+			(at 77.52 109.22 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1.619 1.619)
 				)
+				(justify bottom)
 			)
 		)
 		(property "Value" "10nF"
-			(at 77.522 109.22 0)
+			(at 82.498 109.22 0)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.619 1.619)
@@ -14428,20 +14527,21 @@
 		(dnp no)
 		(uuid "cdc3e688-b07d-42dd-9066-032ae061175a")
 		(property "Reference" "C4"
-			(at 243.84 109.22 0)
-			(hide yes)
+			(at 241.352 109.22 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1.619 1.619)
 				)
+				(justify bottom)
 			)
 		)
 		(property "Value" "10nF"
 			(at 241.352 109.22 0)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.619 1.619)
@@ -14510,7 +14610,7 @@
 	)
 	(symbol
 		(lib_id "lesser-magistrate:LED")
-		(at 167.64 167.958 90)
+		(at 167.64 166.37 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -14520,7 +14620,7 @@
 		(dnp no)
 		(uuid "d0034a39-28f9-4569-822e-104a487d15bd")
 		(property "Reference" "DB4"
-			(at 162.93 167.641 0)
+			(at 162.93 166.053 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14531,7 +14631,7 @@
 			)
 		)
 		(property "Value" "Green"
-			(at 167.64 167.958 0)
+			(at 167.64 166.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14542,7 +14642,7 @@
 			)
 		)
 		(property "Footprint" "lesser-magistrate:LED_L513"
-			(at 167.64 167.958 0)
+			(at 167.64 166.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14553,7 +14653,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.digikey.com/en/products/detail/american-opto-plus-led/L513GD-B/13556882"
-			(at 167.64 167.958 0)
+			(at 167.64 166.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14564,7 +14664,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 167.64 167.958 0)
+			(at 167.64 166.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14575,7 +14675,7 @@
 			)
 		)
 		(property "MPN" "L513GD-B"
-			(at 167.64 167.958 0)
+			(at 167.64 166.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14612,18 +14712,18 @@
 		(dnp no)
 		(uuid "d16844c5-8c26-435c-a130-79437e879f04")
 		(property "Reference" "RA4"
-			(at 138.43 62.23 0)
-			(hide yes)
+			(at 151.2 68.58 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1.619 1.619)
 				)
+				(justify top)
 			)
 		)
 		(property "Value" "33"
-			(at 128.957 68.58 0)
+			(at 149.17 68.58 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14722,14 +14822,14 @@
 		(dnp no)
 		(uuid "d234aebd-0424-4674-9d83-9f6d9ef9409c")
 		(property "Reference" "RA1"
-			(at 166.37 62.23 0)
-			(hide yes)
+			(at 154.867 68.58 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1.619 1.619)
 				)
+				(justify top)
 			)
 		)
 		(property "Value" "33"
@@ -14832,14 +14932,14 @@
 		(dnp no)
 		(uuid "e2c86a66-0638-4cf3-931f-b0aaba62c650")
 		(property "Reference" "RB4"
-			(at 57.15 222.25 0)
-			(hide yes)
+			(at 73.15 222.25 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1.619 1.619)
 				)
+				(justify top)
 			)
 		)
 		(property "Value" "150"
@@ -15066,7 +15166,7 @@
 	)
 	(symbol
 		(lib_id "lesser-magistrate:LED")
-		(at 213.36 156.528 90)
+		(at 213.36 154.94 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -15076,7 +15176,7 @@
 		(dnp no)
 		(uuid "f2f6fc68-cc6c-4d11-b457-9f578d93a2c7")
 		(property "Reference" "DA1"
-			(at 208.65 156.211 0)
+			(at 218.07 154.623 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15087,7 +15187,7 @@
 			)
 		)
 		(property "Value" "Green"
-			(at 213.36 156.528 0)
+			(at 213.36 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15098,7 +15198,7 @@
 			)
 		)
 		(property "Footprint" "lesser-magistrate:LED_L513"
-			(at 213.36 156.528 0)
+			(at 213.36 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15109,7 +15209,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.digikey.com/en/products/detail/american-opto-plus-led/L513GD-B/13556882"
-			(at 213.36 156.528 0)
+			(at 213.36 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15120,7 +15220,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 213.36 156.528 0)
+			(at 213.36 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15131,7 +15231,7 @@
 			)
 		)
 		(property "MPN" "L513GD-B"
-			(at 213.36 156.528 0)
+			(at 213.36 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15158,7 +15258,7 @@
 	)
 	(symbol
 		(lib_id "lesser-magistrate:LED")
-		(at 208.28 167.958 90)
+		(at 208.28 166.37 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -15168,7 +15268,7 @@
 		(dnp no)
 		(uuid "fb59b614-6dca-41ce-8e46-c6617d912c44")
 		(property "Reference" "DA4"
-			(at 203.57 167.641 0)
+			(at 203.57 166.053 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15179,7 +15279,7 @@
 			)
 		)
 		(property "Value" "Green"
-			(at 208.28 167.958 0)
+			(at 208.28 166.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15190,7 +15290,7 @@
 			)
 		)
 		(property "Footprint" "lesser-magistrate:LED_L513"
-			(at 208.28 167.958 0)
+			(at 208.28 166.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15201,7 +15301,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.digikey.com/en/products/detail/american-opto-plus-led/L513GD-B/13556882"
-			(at 208.28 167.958 0)
+			(at 208.28 166.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15212,7 +15312,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 208.28 167.958 0)
+			(at 208.28 166.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15223,7 +15323,7 @@
 			)
 		)
 		(property "MPN" "L513GD-B"
-			(at 208.28 167.958 0)
+			(at 208.28 166.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15378,7 +15478,7 @@
 	)
 	(symbol
 		(lib_id "lesser-magistrate:LED")
-		(at 193.04 156.528 90)
+		(at 193.04 154.94 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -15388,7 +15488,7 @@
 		(dnp no)
 		(uuid "ff77014c-6f07-4eb7-a686-724d2facb8b0")
 		(property "Reference" "DA3"
-			(at 188.33 156.211 0)
+			(at 188.33 154.623 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15399,7 +15499,7 @@
 			)
 		)
 		(property "Value" "Green"
-			(at 193.04 156.528 0)
+			(at 193.04 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15410,7 +15510,7 @@
 			)
 		)
 		(property "Footprint" "lesser-magistrate:LED_L513"
-			(at 193.04 156.528 0)
+			(at 193.04 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15421,7 +15521,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.digikey.com/en/products/detail/american-opto-plus-led/L513GD-B/13556882"
-			(at 193.04 156.528 0)
+			(at 193.04 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15432,7 +15532,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 193.04 156.528 0)
+			(at 193.04 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15443,7 +15543,7 @@
 			)
 		)
 		(property "MPN" "L513GD-B"
-			(at 193.04 156.528 0)
+			(at 193.04 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15470,7 +15570,7 @@
 	)
 	(symbol
 		(lib_id "lesser-magistrate:LED")
-		(at 115.57 167.958 90)
+		(at 115.57 166.37 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -15480,7 +15580,7 @@
 		(dnp no)
 		(uuid "ffec99fb-186f-4c1c-961a-95e25f83a95b")
 		(property "Reference" "DC5"
-			(at 110.86 167.641 0)
+			(at 110.86 166.053 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15491,7 +15591,7 @@
 			)
 		)
 		(property "Value" "Green"
-			(at 115.57 167.958 0)
+			(at 115.57 166.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15502,7 +15602,7 @@
 			)
 		)
 		(property "Footprint" "lesser-magistrate:LED_L513"
-			(at 115.57 167.958 0)
+			(at 115.57 166.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15513,7 +15613,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.digikey.com/en/products/detail/american-opto-plus-led/L513GD-B/13556882"
-			(at 115.57 167.958 0)
+			(at 115.57 166.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15524,7 +15624,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 115.57 167.958 0)
+			(at 115.57 166.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15535,7 +15635,7 @@
 			)
 		)
 		(property "MPN" "L513GD-B"
-			(at 115.57 167.958 0)
+			(at 115.57 166.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

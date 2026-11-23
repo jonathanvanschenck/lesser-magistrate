@@ -25,3 +25,7 @@ datasheets/*.pdf
 
 # Editor settings
 .vscode/
+
+# Local working files (not part of the design)
+/manufacture/
+/3d/printing_status.ods

@@ -3377,7 +3377,7 @@
 		(uuid "76a97b23-a8f5-42f2-b1ab-4f740b0a3ddc")
 		(at 93.98 64.135 -90)
 		(descr "DipTrace pattern: USB A")
-		(property "Reference" "U4"
+		(property "Reference" "J2"
 			(at 0 -8.336 90)
 			(unlocked yes)
 			(layer "F.SilkS")
@@ -3548,7 +3548,7 @@
 			(drill 0.92)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "unconnected-(U4-D--Pad2)")
+			(net "unconnected-(J2-D--Pad2)")
 			(solder_mask_margin 0.0508)
 			(zone_connect 2)
 			(thermal_bridge_angle 0)
@@ -3560,7 +3560,7 @@
 			(drill 0.92)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "unconnected-(U4-D+-Pad3)")
+			(net "unconnected-(J2-D+-Pad3)")
 			(solder_mask_margin 0.0508)
 			(zone_connect 2)
 			(thermal_bridge_angle 0)
@@ -5008,7 +5008,7 @@
 		(layer "F.Cu")
 		(uuid "949cc51c-cfe2-402e-a3f4-60335e9f8080")
 		(at 184.785 53.125 180)
-		(property "Reference" "UA1"
+		(property "Reference" "JA1"
 			(at 1.905 -4.206 0)
 			(unlocked yes)
 			(layer "F.SilkS")
@@ -5230,7 +5230,7 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "unconnected-(UA1-Pad3)")
+			(net "unconnected-(JA1-Pad3)")
 			(solder_mask_margin 0.0508)
 			(zone_connect 2)
 			(thermal_bridge_angle 0)
@@ -5254,7 +5254,7 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "unconnected-(UA1-Pad5)")
+			(net "unconnected-(JA1-Pad5)")
 			(solder_mask_margin 0.0508)
 			(zone_connect 2)
 			(thermal_bridge_angle 0)
@@ -7516,7 +7516,7 @@
 		(layer "F.Cu")
 		(uuid "bdd93830-bb78-40a9-b77f-167e922efafa")
 		(at 150.8125 53.125 180)
-		(property "Reference" "UB1"
+		(property "Reference" "JB1"
 			(at 1.905 -4.206 0)
 			(unlocked yes)
 			(layer "F.SilkS")
@@ -7738,7 +7738,7 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "unconnected-(UB1-Pad3)")
+			(net "unconnected-(JB1-Pad3)")
 			(solder_mask_margin 0.0508)
 			(zone_connect 2)
 			(thermal_bridge_angle 0)
@@ -7762,7 +7762,7 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "unconnected-(UB1-Pad5)")
+			(net "unconnected-(JB1-Pad5)")
 			(solder_mask_margin 0.0508)
 			(zone_connect 2)
 			(thermal_bridge_angle 0)
@@ -8539,7 +8539,7 @@
 		(layer "F.Cu")
 		(uuid "dca6d3f7-17b2-470b-bd8f-0c0944c9643c")
 		(at 116.84 53.125 180)
-		(property "Reference" "UC1"
+		(property "Reference" "JC1"
 			(at 1.905 -4.206 0)
 			(unlocked yes)
 			(layer "F.SilkS")
@@ -8761,7 +8761,7 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "unconnected-(UC1-Pad3)")
+			(net "unconnected-(JC1-Pad3)")
 			(solder_mask_margin 0.0508)
 			(zone_connect 2)
 			(thermal_bridge_angle 0)
@@ -8785,7 +8785,7 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "unconnected-(UC1-Pad5)")
+			(net "unconnected-(JC1-Pad5)")
 			(solder_mask_margin 0.0508)
 			(zone_connect 2)
 			(thermal_bridge_angle 0)
@@ -9391,7 +9391,7 @@
 		(layer "F.Cu")
 		(uuid "fc4f4cdc-d6e7-4460-87ba-64b40dda780e")
 		(at 87.63 82.8675 -90)
-		(property "Reference" "U7"
+		(property "Reference" "J1"
 			(at 0 -18.486 90)
 			(unlocked yes)
 			(layer "F.SilkS")
