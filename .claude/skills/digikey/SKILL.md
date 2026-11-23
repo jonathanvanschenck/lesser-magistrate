@@ -40,7 +40,7 @@ node tools/digikey/dk.mjs datasheet <DigiKey# or MPN> [--dir path]
 Follow the README's Philosophy of Design: low cost, easy to buy, buildable by a
 hobbyist. Prefer:
 - status **Active**, with healthy stock (thousands, not dozens), and more than one manufacturer where possible
-- the same family and package as the existing BOM (`components/README.md`, `lib/BOM.csv`)
+- the same family and package as the existing BOM (`components/README.md`, and the MPN fields in the KiCad schematics under `kicad/`)
 - through-hole parts for the hand-soldered boards; the SMD variant is a separate effort
 
 When recommending a part, give the MPN, manufacturer, DigiKey #, stock, unit price at the

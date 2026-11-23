@@ -4,9 +4,24 @@
 !*.png
 *.gcode
 
+# KiCad: per-user state, backups, caches and lock files
+*.kicad_prl
+*-backups/
+.history/
+fp-info-cache
+~*.lck
+_autosave-*
+\#auto_saved_files\#
+
 # DigiKey API credentials and token cache (see template.env)
 .env
 tools/digikey/.cache/
 
 # Downloaded datasheets (summaries alongside them are fine to commit)
 datasheets/*.pdf
+
+# Generated outputs (tools/kicad/check.sh)
+/build/
+
+# Editor settings
+.vscode/

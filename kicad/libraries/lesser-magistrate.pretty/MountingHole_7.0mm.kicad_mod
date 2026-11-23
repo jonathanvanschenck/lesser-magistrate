@@ -1,0 +1,60 @@
+(footprint "MountingHole_7.0mm"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "ef07bb7e-bc88-47ab-8fec-f7f1600a3d2c")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Value" "MountingHole_7.0mm"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "2462ac1d-033a-4880-9a00-b5fc0c09f2e9")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "80ea717d-533b-4028-ba54-907d330ec01a")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "902c33c9-95c1-44fe-bfee-f2f293b03d0d")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr board_only exclude_from_pos_files exclude_from_bom)
+	(duplicate_pad_numbers_are_jumpers no)
+	(pad "" np_thru_hole circle
+		(at 0 0)
+		(size 7 7)
+		(drill 7)
+		(layers "*.Cu" "*.Mask")
+		(clearance 0.95)
+		(uuid "bdcf1d42-4b37-494d-bf3b-407cc7ebb2db")
+	)
+	(embedded_fonts no)
+)

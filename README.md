@@ -72,7 +72,7 @@ However you plan on getting your prints, you will need the STL files in the [stl
 ## Contributing and Development
 The Lesser Magistrate is a fully open sourced project, and as such contribution is encouraged! As such PRs are more than welcome, and we would love to hear about [any issues](https://github.com/jonathanvanschenck/lesser-magistrate/issues) you may run into. Feature requests are also encouraged -- though keep in mind features will only be included in this project if they conform to the Philosophy of Design described above. Finally, if you take this project and do something cool with it (like adding extra features not suitable to this design philosophy), we would love to hear about it so that we can add a link to your work in the section below!
 
-Currently the electrical side of the project is developed in [diptrace](https://diptrace.com/), and all the project files are in the [lib](./lib) directory. That being said, we are in the process of converting to KiCAD as the development tool, and also creating a SMD-variant of the LM/LMM/Trigger boards which will facilitate a pick-n-place machine assembly; so don't get too attached to diptrace.
+The electrical side of the project is developed in [KiCad](https://www.kicad.org/), with one project per board in the [kicad](./kicad) directory (see its [README](./kicad/README.md)). We are also working on an SMD variant of the LM/LMM/Trigger boards so they can be assembled by a pick-and-place machine.
 
 Developer tooling (a DigiKey part-search CLI, and a KiCad MCP server for AI-assisted board design with Claude Code) is described in [DEVELOPMENT.md](./DEVELOPMENT.md).
 

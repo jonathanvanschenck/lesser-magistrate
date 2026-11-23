@@ -1,16 +1,17 @@
 # Development Tooling
 
-This document describes the tooling used to develop the Lesser Magistrate electronics: part sourcing, and
-AI-assisted board design with [Claude Code](https://docs.claude.com/claude-code). None of it is required to *build* a
-Lesser Magistrate (see the [README](./README.md) for that), and all of it is optional for contributors. The KiCad
-projects open and edit normally without any of it.
+This document describes the tooling used to develop the Lesser Magistrate electronics: KiCad and its design checks,
+part sourcing, and AI-assisted board design with [Claude Code](https://docs.claude.com/claude-code). None of it is
+required to *build* a Lesser Magistrate (see the [README](./README.md) for that). KiCad is the one tool you need to
+work on the boards; everything else is optional, and the KiCad projects open and edit normally without it.
 
 | Tool | What it does | Where it lives | Status |
 | ---- | ------------ | -------------- | ------ |
+| [KiCad](#kicad) | Schematics and boards; design checks (ERC/DRC) and fabrication outputs, locally and in CI | `kicad/`, `tools/kicad/`, `.github/workflows/` | Ready |
 | [DigiKey CLI](#digikey-cli) | Search parts, check stock and pricing, find substitutes, download datasheets | `tools/digikey/` (this repo) | Ready |
 | [KiCad MCP server](#kicad-mcp-server) | Lets Claude read and edit the KiCad schematics and boards | External clone, registered with Claude Code | Ready |
 | [Claude Code project setup](#claude-code-project-setup) | Skills that teach Claude how to use the tools above | `.claude/` (this repo) | Ready |
-| [Planned](#planned) | BOM pricing, datasheet summaries, design-rules `CLAUDE.md` | | Not started |
+| [Planned](#planned) | SPICE, BOM pricing, datasheet summaries, design-rules `CLAUDE.md` | | Not started |
 
 ## Prerequisites
 
@@ -27,6 +28,58 @@ cp template.env .env   # then fill in the values; never commit .env
 ```
 
 `template.env` documents every variable. At present only the DigiKey CLI reads it.
+
+---
+
+## KiCad
+
+The boards are KiCad 10 projects under [`kicad/`](./kicad), one per board, sharing a project library. See the
+[KiCad README](./kicad/README.md) for how the projects and libraries are organized.
+
+### Install
+
+Install KiCad 10 with its standard libraries (symbols, footprints and 3D models). Older versions can't open the files.
+
+- **Ubuntu/Debian:** the KiCad PPA. This installs everything, including the ~3 GB 3D model library:
+  ```bash
+  sudo add-apt-repository ppa:kicad/kicad-10.0-releases
+  sudo apt update && sudo apt install kicad
+  ```
+- **Windows / macOS:** the installer from [kicad.org/download](https://www.kicad.org/download/), with the default
+  options (which include the libraries).
+
+On first start, accept KiCad's offer to use the default global symbol and footprint library tables. The projects
+find their own library through relative paths, so no further library setup is needed. The stock 3D models are found
+through `${KICAD10_3DMODEL_DIR}`, which the installer sets.
+
+Check the install from a terminal:
+
+```bash
+kicad-cli version                 # 10.x
+tools/kicad/check.sh              # ERC + DRC on every board
+```
+
+### Design checks
+
+`tools/kicad/check.sh` runs ERC and DRC (including schematic/board parity) on each board and fails on any error
+that hasn't been excluded in KiCad. With `--fab` it also writes gerbers, drill files, a BOM, the schematic PDF and a 3D
+render. Everything goes to `build/kicad/<board>/`, which git ignores.
+
+CI runs the same script on every push or pull request that touches `kicad/` (see
+[`.github/workflows/kicad.yml`](./.github/workflows/kicad.yml)), in the official `kicad/kicad:10.0` Docker image, and
+uploads `build/kicad/` as the `kicad-outputs` artifact.
+
+When a check fails on something that is understood and accepted, exclude it in KiCad with a comment saying why
+(right-click the marker in the ERC/DRC dialog → *Exclude*) instead of loosening the rules. Exclusions live in the
+`.kicad_pro` file, so they are reviewed in git like any other change.
+
+### Working on the boards
+
+- **Don't edit a board in KiCad and by script (or Claude) at the same time.** Close it in KiCad first, or reload it
+  afterwards.
+- **Commit before large edits,** so `git diff` on the KiCad files is your review and your undo.
+- **Per-user files stay out of git:** `*.kicad_prl` (window layout, visible layers), backups, autosaves and lock files
+  are git-ignored.
 
 ---
 
@@ -187,9 +240,12 @@ Local to each developer (not committed):
 
 ## Planned
 
-- **`dk bom`:** price `lib/BOM.csv` / `components/README.md` at the 10, 12 and 16-trigger quantities through the API,
-  flag non-active or low-stock parts, and point out cheaper price breaks. This would replace the old page scraper in
-  `manufacture/pricing/`.
+- **SPICE:** simulate the trigger signal path (switch, cables, input RC network, latch thresholds) with ngspice, to
+  catch crosstalk and edge-rate problems before ordering parts.
+- **`dk bom`:** price the BOM that `tools/kicad/check.sh --fab` exports from the schematics (MPN field) at the 10, 12
+  and 16-trigger quantities through the API, flag non-active or low-stock parts, and point out cheaper price breaks.
+  This would replace the old page scraper in `manufacture/pricing/` and could generate the tables in
+  `components/README.md`.
 - **Datasheet summaries:** a short `datasheets/<MPN>.md` per part (pinout, supply range, key timing, package), so each
   datasheet is read once and later work uses the summary.
 - **`CLAUDE.md`:** project design rules and decisions (through-hole for the hand-soldered boards, cheap and widely

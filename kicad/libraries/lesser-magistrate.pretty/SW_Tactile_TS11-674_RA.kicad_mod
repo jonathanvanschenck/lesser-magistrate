@@ -1,0 +1,141 @@
+(footprint "SW_Tactile_TS11-674_RA"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Right-angle THT tactile switch; geometry recovered from the Trigger board fab files")
+	(property "Reference" "REF**"
+		(at 0 -12.52 0)
+		(layer "F.SilkS")
+		(uuid "f0b8a70c-f747-4422-ad7f-7f3f79ef00f4")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Value" "SW_Tactile_TS11-674_RA"
+		(at 0 2.15 0)
+		(layer "F.Fab")
+		(uuid "00938094-261f-4ed0-b5a4-d5a716507d6f")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0786fc59-bfb5-466e-adb2-13bc11472cff")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "be2821fa-1680-4d08-a52f-6136a3a9cff7")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -3.61 2.6)
+		(end -3.61 0)
+		(stroke
+			(width 0.119989)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "756532eb-e861-408c-91fe-91558afe7a98")
+	)
+	(fp_line
+		(start -3.61 2.6)
+		(end 3.61 2.6)
+		(stroke
+			(width 0.119989)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "0dc927f4-d454-4e7c-9a8b-68dbea5588d6")
+	)
+	(fp_line
+		(start 3.61 2.6)
+		(end 3.61 0)
+		(stroke
+			(width 0.119989)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "eda89d5b-fa9f-476e-b95c-7a9a4e67647b")
+	)
+	(fp_rect
+		(start -4.4 -11.52)
+		(end 4.4 1.15)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "9998af3f-6658-4496-bf36-d3c26e7865b5")
+	)
+	(pad "" np_thru_hole circle
+		(at -3.504 -2.4891)
+		(size 1.30048 1.30048)
+		(drill 1.30048)
+		(layers "*.Cu" "*.Mask")
+		(uuid "8394c2a0-83ae-41a5-aa1a-dc1cbda1dda5")
+	)
+	(pad "" np_thru_hole circle
+		(at 0.0012 -9.9999)
+		(size 2.54 2.54)
+		(drill 2.54)
+		(layers "*.Cu" "*.Mask")
+		(uuid "bf64b53e-c9f6-4572-81a0-38089625083b")
+	)
+	(pad "" np_thru_hole circle
+		(at 3.5038 -2.4891)
+		(size 1.30048 1.30048)
+		(drill 1.30048)
+		(layers "*.Cu" "*.Mask")
+		(uuid "0111e3bb-c0dd-4d89-9a31-4e1fddeb30ea")
+	)
+	(pad "1" thru_hole circle
+		(at 2.2491 0.0001)
+		(size 1.80086 1.80086)
+		(drill 0.990599)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "f93f36e5-0a13-4181-93d5-397f5a1d804c")
+	)
+	(pad "2" thru_hole circle
+		(at -2.2493 0.0001)
+		(size 1.80086 1.80086)
+		(drill 0.990599)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "d289854a-32c6-42bc-bf85-74adb961d5e4")
+	)
+	(embedded_fonts no)
+	(model "${KICAD10_3DMODEL_DIR}/Button_Switch_THT.3dshapes/SW_Tactile_SPST_Angled_PTS645Vx83-2LFS.step"
+		(offset
+			(xyz 2.2491 -0.0001 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 180)
+		)
+	)
+)

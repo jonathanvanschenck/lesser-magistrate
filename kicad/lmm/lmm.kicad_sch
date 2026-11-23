@@ -1,0 +1,1655 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "4aaed70d-43ab-42a1-bf4f-36bc07322f39")
+	(paper "A4")
+	(title_block
+		(title "Lesser Magistrate Module (LMM)")
+	)
+	(lib_symbols
+		(symbol "lesser-magistrate:RJ11"
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "RJ11"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "lesser-magistrate:RJ11_Amphenol_54601-906001WPLF"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "RJ11 (6P2C) modular jack"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "RJ11_1_0"
+				(polyline
+					(pts
+						(xy -1.27 0) (xy 6.35 0)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -12.7) (xy -1.27 0)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 -7.303) (xy 0 -8.255)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -4.763) (xy 0 -8.255)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -8.255) (xy 0.635 -7.303)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 6.35 0) (xy 6.35 -12.7)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 6.35 -12.7) (xy -1.27 -12.7)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(text "RJ11"
+					(at -1.853 -8.297 900)
+					(effects
+						(font
+							(size 1.619 1.619)
+						)
+						(justify left bottom)
+					)
+				)
+				(text "Plug"
+					(at 1.27 -5.692 0)
+					(effects
+						(font
+							(size 1.619 1.619)
+						)
+						(justify left top)
+					)
+				)
+				(pin passive line
+					(at 1.27 2.54 270)
+					(length 2.54)
+					(name "3"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 -15.24 90)
+					(length 2.54)
+					(name "4"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "lesser-magistrate:RJ45"
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J"
+				(at 12.013 6.35 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.619 1.619)
+					)
+					(justify top)
+				)
+			)
+			(property "Value" "RJ45"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "lesser-magistrate:RJ45_AdamTech_MTJ-881X1"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "RJ45 (8P8C) modular jack"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "RJ45_1_0"
+				(polyline
+					(pts
+						(xy -2.54 12.7) (xy 11.43 12.7)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 0) (xy -2.54 12.7)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.953 5.08) (xy 1.588 4.128)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.588 7.62) (xy 1.588 4.128)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.588 4.128) (xy 2.223 5.08)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 11.43 12.7) (xy 11.43 0)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 11.43 0) (xy -2.54 0)
+					)
+					(stroke
+						(width 0.25)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(text "RJ45"
+					(at -3.152 8.988 900)
+					(effects
+						(font
+							(size 1.619 1.619)
+						)
+						(justify right bottom)
+					)
+				)
+				(text "Plug"
+					(at 2.858 6.691 0)
+					(effects
+						(font
+							(size 1.619 1.619)
+						)
+						(justify left top)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 1.27 15.24 270)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 2.54 -2.54 90)
+					(length 2.54)
+					(name "3"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 15.24 270)
+					(length 2.54)
+					(name "4"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 5.08 -2.54 90)
+					(length 2.54)
+					(name "5"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 6.35 15.24 270)
+					(length 2.54)
+					(name "6"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -2.54 90)
+					(length 2.54)
+					(name "7"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 8.89 15.24 270)
+					(length 2.54)
+					(name "8"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(text "Lesser Magistrate Module\nJonathan Van Schenck\nv1.0.0"
+		(exclude_from_sim no)
+		(at 161.29 124.821 0)
+		(effects
+			(font
+				(size 4.318 4.318)
+			)
+			(justify left top)
+		)
+		(uuid "0bc2e8f7-ed52-41fb-9b71-7585937a9721")
+	)
+	(text "Color Guide"
+		(exclude_from_sim no)
+		(at 50.8 93.933 0)
+		(effects
+			(font
+				(size 3.239 3.239)
+			)
+			(justify left top)
+		)
+		(uuid "56c3b318-9ee7-4796-855a-c8e2ebb5593a")
+	)
+	(text "Light 5"
+		(exclude_from_sim no)
+		(at 50.8 125.479 0)
+		(effects
+			(font
+				(size 2.699 2.699)
+			)
+			(justify left top)
+		)
+		(uuid "88cce006-3235-4c64-950a-c8e0717cabf4")
+	)
+	(text "+5V"
+		(exclude_from_sim no)
+		(at 50.8 131.829 0)
+		(effects
+			(font
+				(size 2.699 2.699)
+			)
+			(justify left top)
+		)
+		(uuid "89ffa143-92e1-4287-b595-7cf4beee708c")
+	)
+	(text "Light 2"
+		(exclude_from_sim no)
+		(at 50.8 106.429 0)
+		(effects
+			(font
+				(size 2.699 2.699)
+			)
+			(justify left top)
+		)
+		(uuid "8e6be57a-ed63-4051-8a58-637baf5c3430")
+	)
+	(text "View from Bottom:\n5  4  3  2  1"
+		(exclude_from_sim no)
+		(at 135.878 61.83 0)
+		(effects
+			(font
+				(size 5.668 5.668)
+			)
+			(justify top)
+		)
+		(uuid "c2b10f89-2fe6-4954-aa16-7d56b92062b6")
+	)
+	(text "Light 3"
+		(exclude_from_sim no)
+		(at 50.8 112.779 0)
+		(effects
+			(font
+				(size 2.699 2.699)
+			)
+			(justify left top)
+		)
+		(uuid "c33c7eff-89ac-4ea4-9795-d43c7289e35d")
+	)
+	(text "Light 4"
+		(exclude_from_sim no)
+		(at 50.8 119.129 0)
+		(effects
+			(font
+				(size 2.699 2.699)
+			)
+			(justify left top)
+		)
+		(uuid "ce232fe9-64be-422a-ac89-5adb37a183ed")
+	)
+	(text "Light 1"
+		(exclude_from_sim no)
+		(at 50.8 100.079 0)
+		(effects
+			(font
+				(size 2.699 2.699)
+			)
+			(justify left top)
+		)
+		(uuid "fb5dc10e-4a84-44fa-9e69-040643af5b11")
+	)
+	(junction
+		(at 116.84 83.82)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1b5e4ccf-3e98-4ce8-aecf-4358a30c8252")
+	)
+	(junction
+		(at 151.13 83.82)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "510412b1-24e6-43c0-b724-bf5a6407d2e5")
+	)
+	(junction
+		(at 133.35 83.82)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ac9a5b11-2e10-4ed9-a875-5c642f776618")
+	)
+	(junction
+		(at 100.33 83.82)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f6375f98-ed99-4ff6-b713-3d328551b0b0")
+	)
+	(wire
+		(pts
+			(xy 100.33 83.82) (xy 100.33 87.63)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "006cf25e-ddbb-49ab-ab19-3cbce61a2c8e")
+	)
+	(polyline
+		(pts
+			(xy 91.44 83.82) (xy 91.44 58.42)
+		)
+		(stroke
+			(width 0.333)
+			(type solid)
+		)
+		(uuid "00e5ac2c-ef7c-4c1a-b340-e8e8aa67a76d")
+	)
+	(wire
+		(pts
+			(xy 116.84 83.82) (xy 116.84 87.63)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "0a472af1-a7e8-4891-bee4-8dd41a3940d8")
+	)
+	(wire
+		(pts
+			(xy 100.33 83.82) (xy 116.84 83.82)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "1011dc30-869b-48fd-a918-98abbd43e703")
+	)
+	(polyline
+		(pts
+			(xy 243.84 121.92) (xy 243.84 147.32)
+		)
+		(stroke
+			(width 0.333)
+			(type solid)
+		)
+		(uuid "12665550-412e-4600-8a56-8680f543c8d8")
+	)
+	(wire
+		(pts
+			(xy 91.44 83.82) (xy 100.33 83.82)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "14722ebb-9d7e-47cb-9f54-2bc3490e485a")
+	)
+	(wire
+		(pts
+			(xy 148.59 147.32) (xy 138.43 147.32)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "1d9bb605-9bf9-46f5-94e0-f4ac87985302")
+	)
+	(wire
+		(pts
+			(xy 91.44 147.32) (xy 91.44 83.82)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "23fdf232-31ad-4b34-96f6-b991d1754a1b")
+	)
+	(wire
+		(pts
+			(xy 130.81 143.51) (xy 130.81 147.32)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "2bbec196-c187-4857-ae62-c1ecc8722355")
+	)
+	(wire
+		(pts
+			(xy 119.38 113.03) (xy 134.62 113.03)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "2e783941-491e-4aa1-a2da-d0bde4ff10b4")
+	)
+	(wire
+		(pts
+			(xy 133.35 83.82) (xy 151.13 83.82)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "3020be5a-e47f-404e-825d-ec594bd29a6a")
+	)
+	(wire
+		(pts
+			(xy 135.89 105.41) (xy 135.89 109.22)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "309e9a3a-aba9-4639-ba24-e8766d5334a8")
+	)
+	(wire
+		(pts
+			(xy 135.89 109.22) (xy 148.59 109.22)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "39efab7d-7f15-4e85-9554-61a10a4b43f0")
+	)
+	(polyline
+		(pts
+			(xy 91.44 58.42) (xy 176.53 58.42)
+		)
+		(stroke
+			(width 0.333)
+			(type solid)
+		)
+		(uuid "442ed1ea-d2e8-4ecd-9335-b2c97de8adbc")
+	)
+	(wire
+		(pts
+			(xy 153.67 105.41) (xy 153.67 120.65)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "4cb9bbab-bd97-43a7-93f7-f07bd7a0d329")
+	)
+	(wire
+		(pts
+			(xy 133.35 83.82) (xy 133.35 87.63)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "52dc1aed-d467-4a04-8318-3fe6118a0a4c")
+	)
+	(polyline
+		(pts
+			(xy 48.26 91.44) (xy 83.82 91.44)
+		)
+		(stroke
+			(width 0.333)
+			(type solid)
+		)
+		(uuid "54667e79-072a-4163-99fc-d09d12560b88")
+	)
+	(wire
+		(pts
+			(xy 130.81 147.32) (xy 91.44 147.32)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "5887e7ba-765c-41fa-a7dd-23d4b86669c7")
+	)
+	(polyline
+		(pts
+			(xy 158.75 121.92) (xy 243.84 121.92)
+		)
+		(stroke
+			(width 0.333)
+			(type solid)
+		)
+		(uuid "5af74af8-bd1f-4039-baef-e475e9b62243")
+	)
+	(wire
+		(pts
+			(xy 171.45 115.57) (xy 171.45 105.41)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "69b2fcec-a694-43f7-ae95-15aa2870153f")
+	)
+	(wire
+		(pts
+			(xy 102.87 111.76) (xy 139.7 111.76)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "69dfa82e-d7ac-4ff6-8b37-11df0f9a69e1")
+	)
+	(polyline
+		(pts
+			(xy 83.82 137.16) (xy 48.26 137.16)
+		)
+		(stroke
+			(width 0.333)
+			(type solid)
+		)
+		(uuid "772f6caf-a96e-4ccb-ba28-b888c9b0dc4a")
+	)
+	(wire
+		(pts
+			(xy 119.38 105.41) (xy 119.38 113.03)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "8158456e-7000-49ee-a5ed-3de6cc359d55")
+	)
+	(polyline
+		(pts
+			(xy 243.84 147.32) (xy 158.75 147.32)
+		)
+		(stroke
+			(width 0.333)
+			(type solid)
+		)
+		(uuid "82886409-be01-440b-9250-5fb1a26cd380")
+	)
+	(polyline
+		(pts
+			(xy 48.26 137.16) (xy 48.26 91.44)
+		)
+		(stroke
+			(width 0.333)
+			(type solid)
+		)
+		(uuid "834783e6-f5ae-4d0f-b0a6-653c62354ee4")
+	)
+	(wire
+		(pts
+			(xy 132.08 115.57) (xy 171.45 115.57)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "a72f1de4-15bf-47d7-ab6b-654726ec3cde")
+	)
+	(polyline
+		(pts
+			(xy 176.53 83.82) (xy 91.44 83.82)
+		)
+		(stroke
+			(width 0.333)
+			(type solid)
+		)
+		(uuid "a7703539-bfd7-48af-9c16-a143731406cb")
+	)
+	(wire
+		(pts
+			(xy 134.62 113.03) (xy 134.62 125.73)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "a793e813-db36-4ee3-a84e-49f610fb713b")
+	)
+	(wire
+		(pts
+			(xy 102.87 105.41) (xy 102.87 111.76)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "bbad9f23-6bf7-496d-9a69-0b9fd608b4fe")
+	)
+	(polyline
+		(pts
+			(xy 176.53 58.42) (xy 176.53 83.82)
+		)
+		(stroke
+			(width 0.333)
+			(type solid)
+		)
+		(uuid "c0736617-3ab9-4ec7-baa2-b9aec9390895")
+	)
+	(wire
+		(pts
+			(xy 151.13 83.82) (xy 151.13 87.63)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "c20d307e-fe56-478c-9ef0-d90a0b0da090")
+	)
+	(wire
+		(pts
+			(xy 168.91 83.82) (xy 168.91 87.63)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "ced3db93-0096-47b0-a33d-1f173ff129df")
+	)
+	(wire
+		(pts
+			(xy 137.16 120.65) (xy 137.16 125.73)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "d6a26a78-31c7-4c21-b97c-6ef868c5762b")
+	)
+	(polyline
+		(pts
+			(xy 158.75 147.32) (xy 158.75 121.92)
+		)
+		(stroke
+			(width 0.333)
+			(type solid)
+		)
+		(uuid "df303570-7986-4416-8523-312eb9d81a18")
+	)
+	(polyline
+		(pts
+			(xy 83.82 91.44) (xy 83.82 137.16)
+		)
+		(stroke
+			(width 0.333)
+			(type solid)
+		)
+		(uuid "e28e2314-4064-4fd7-992d-6172849d297f")
+	)
+	(wire
+		(pts
+			(xy 116.84 83.82) (xy 133.35 83.82)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "e2d30694-7375-4b1a-b72e-abf22f0c6fa2")
+	)
+	(wire
+		(pts
+			(xy 138.43 147.32) (xy 138.43 143.51)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "e9036c0b-205f-4bb0-b40f-99f2e6f842df")
+	)
+	(wire
+		(pts
+			(xy 139.7 111.76) (xy 139.7 125.73)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "eb3bc4de-a959-48ec-8d41-6551b7ab10e3")
+	)
+	(wire
+		(pts
+			(xy 148.59 109.22) (xy 148.59 147.32)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "eff339a0-dba0-477e-83ae-38b32e232da7")
+	)
+	(wire
+		(pts
+			(xy 153.67 120.65) (xy 137.16 120.65)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "f4dd4b87-d90b-4931-a204-81b960070ff3")
+	)
+	(wire
+		(pts
+			(xy 132.08 125.73) (xy 132.08 115.57)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "f6152a05-432b-4172-96f0-217df3575b5e")
+	)
+	(wire
+		(pts
+			(xy 151.13 83.82) (xy 168.91 83.82)
+		)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(uuid "f7719988-60d6-461a-bc66-9301c35d0846")
+	)
+	(symbol
+		(lib_id "lesser-magistrate:RJ45")
+		(at 130.81 140.97 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ae435df2-59b2-4fd0-a358-3e507e7654f3")
+		(property "Reference" "U0"
+			(at 127.687 134.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "RJ45"
+			(at 130.81 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "lesser-magistrate:RJ45_AdamTech_MTJ-881X1"
+			(at 130.81 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/adam-tech/MTJ-881X1/9832263"
+			(at 130.81 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "RJ45 (8P8C) modular jack"
+			(at 130.81 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "MTJ-881X1"
+			(at 130.81 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0f3fe92c-df00-4ae5-9326-12a50a213801")
+		)
+		(pin "2"
+			(uuid "03ad55f2-adcb-4ad2-8c52-170ac9044cbd")
+		)
+		(pin "3"
+			(uuid "edc511a1-5b4f-4fe8-9c4e-5ae7c84a9767")
+		)
+		(pin "4"
+			(uuid "7ebd4e6b-9610-43d1-8b1d-2bd82341812c")
+		)
+		(pin "5"
+			(uuid "fbfaf9e5-7b33-4835-9f37-03c1ddd49318")
+		)
+		(pin "6"
+			(uuid "a550cc46-967c-4077-ab2b-daf9a0189715")
+		)
+		(pin "7"
+			(uuid "0013db82-12f8-4634-8bb0-a2a479655e43")
+		)
+		(pin "8"
+			(uuid "f7696b0c-4497-4797-840f-55e5bdf8d894")
+		)
+		(instances
+			(project "lmm"
+				(path "/4aaed70d-43ab-42a1-bf4f-36bc07322f39"
+					(reference "U0")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "lesser-magistrate:RJ11")
+		(at 104.14 102.87 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "eb6490dd-29cb-4b2e-8aaa-89f75e41ba5a")
+		(property "Reference" "U5"
+			(at 97.207 96.52 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "RJ11"
+			(at 104.14 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "lesser-magistrate:RJ11_Amphenol_54601-906001WPLF"
+			(at 104.14 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/amphenol-cs-fci/54601-906001WPLF/4242889"
+			(at 104.14 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "RJ11 (6P2C) modular jack"
+			(at 104.14 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "54601-906001WPLF"
+			(at 104.14 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "df717d83-6918-4251-891b-79157354c76a")
+		)
+		(pin "4"
+			(uuid "f3faca49-c055-46cb-ae54-cbe2d2ac7399")
+		)
+		(instances
+			(project "lmm"
+				(path "/4aaed70d-43ab-42a1-bf4f-36bc07322f39"
+					(reference "U5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "lesser-magistrate:RJ11")
+		(at 120.65 102.87 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "a0340728-29c9-48f7-866c-35d6230031e8")
+		(property "Reference" "U4"
+			(at 113.717 96.52 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "RJ11"
+			(at 120.65 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "lesser-magistrate:RJ11_Amphenol_54601-906001WPLF"
+			(at 120.65 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/amphenol-cs-fci/54601-906001WPLF/4242889"
+			(at 120.65 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "RJ11 (6P2C) modular jack"
+			(at 120.65 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "54601-906001WPLF"
+			(at 120.65 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "f4f8c37b-2fd0-4343-b211-957bf2659032")
+		)
+		(pin "4"
+			(uuid "7008222a-d17e-4cc9-be76-a753fba450f7")
+		)
+		(instances
+			(project "lmm"
+				(path "/4aaed70d-43ab-42a1-bf4f-36bc07322f39"
+					(reference "U4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "lesser-magistrate:RJ11")
+		(at 137.16 102.87 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "1f1362f4-b5e4-4ee6-ac9e-3f0d3f390dc6")
+		(property "Reference" "U3"
+			(at 130.227 96.52 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "RJ11"
+			(at 137.16 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "lesser-magistrate:RJ11_Amphenol_54601-906001WPLF"
+			(at 137.16 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/amphenol-cs-fci/54601-906001WPLF/4242889"
+			(at 137.16 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "RJ11 (6P2C) modular jack"
+			(at 137.16 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "54601-906001WPLF"
+			(at 137.16 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "fb30221c-eb53-4b51-957c-79a2f137744d")
+		)
+		(pin "4"
+			(uuid "a67fd0b8-3ba5-4c0a-860a-304ecbcf2a33")
+		)
+		(instances
+			(project "lmm"
+				(path "/4aaed70d-43ab-42a1-bf4f-36bc07322f39"
+					(reference "U3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "lesser-magistrate:RJ11")
+		(at 154.94 102.87 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "9657e6f8-5241-4233-9f39-999665f26d5e")
+		(property "Reference" "U2"
+			(at 148.007 96.52 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "RJ11"
+			(at 154.94 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "lesser-magistrate:RJ11_Amphenol_54601-906001WPLF"
+			(at 154.94 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/amphenol-cs-fci/54601-906001WPLF/4242889"
+			(at 154.94 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "RJ11 (6P2C) modular jack"
+			(at 154.94 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "54601-906001WPLF"
+			(at 154.94 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "840fa45e-974b-413f-a58e-78e3bf04d13a")
+		)
+		(pin "4"
+			(uuid "55eb872d-9eb3-45be-994c-96751f11b101")
+		)
+		(instances
+			(project "lmm"
+				(path "/4aaed70d-43ab-42a1-bf4f-36bc07322f39"
+					(reference "U2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "lesser-magistrate:RJ11")
+		(at 172.72 102.87 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "0e8ddb7a-330f-43d6-8950-0beee4e63371")
+		(property "Reference" "U1"
+			(at 165.787 96.52 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "RJ11"
+			(at 172.72 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "lesser-magistrate:RJ11_Amphenol_54601-906001WPLF"
+			(at 172.72 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/amphenol-cs-fci/54601-906001WPLF/4242889"
+			(at 172.72 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "RJ11 (6P2C) modular jack"
+			(at 172.72 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "54601-906001WPLF"
+			(at 172.72 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "a3fa3a20-1b94-4811-8f07-4fe53cff24c5")
+		)
+		(pin "4"
+			(uuid "84f05791-584a-438a-b4e3-6e7b8b61492e")
+		)
+		(instances
+			(project "lmm"
+				(path "/4aaed70d-43ab-42a1-bf4f-36bc07322f39"
+					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "5V"
+		(at 130.81 143.51 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "489296ab-a983-4372-a6e0-b8de46ca1e74")
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

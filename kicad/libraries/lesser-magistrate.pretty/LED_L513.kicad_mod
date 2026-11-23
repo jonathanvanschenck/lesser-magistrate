@@ -1,0 +1,170 @@
+(footprint "LED_L513"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "DipTrace pattern: LED Through")
+	(property "Reference" "REF**"
+		(at 0.318 -3.66 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "6c2ef7d5-0086-496b-b2c9-b947a7b60510")
+		(effects
+			(font
+				(size 1.215 1.215)
+				(thickness 0.135)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Value" "LED_L513"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "31ba27b1-897c-4449-9da5-4a2c6582722d")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "9af58ce5-201c-46aa-84f6-7d9e9fc7baea")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6c4f418a-8e6a-4139-ab28-9e6a0044c103")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -2.54 1.905)
+		(end -2.54 -1.905)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "663414b3-e19e-462d-83e8-035106e5bf6c")
+	)
+	(fp_line
+		(start -0.317 1.27)
+		(end -0.317 2.222)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "6d51507e-1b4b-4b90-b443-96dabe836d93")
+	)
+	(fp_line
+		(start -0.317 1.746)
+		(end -1.27 1.746)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "dbf73142-db3e-4b43-beda-77a103512c07")
+	)
+	(fp_line
+		(start 0.476 1.27)
+		(end -0.317 1.746)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "744b5013-0218-42c2-bbb2-242524f7293a")
+	)
+	(fp_line
+		(start 0.476 1.27)
+		(end 0.476 2.222)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "2158474a-9b99-4958-91cd-de7632afac2a")
+	)
+	(fp_line
+		(start 0.476 1.746)
+		(end 1.27 1.746)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "963494c8-8a21-40e7-945a-40aafd19cef4")
+	)
+	(fp_line
+		(start 0.476 2.222)
+		(end -0.317 1.746)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "99e2a088-1469-41f7-bbc4-f57a6a93a051")
+	)
+	(fp_arc
+		(start -2.534 -1.911)
+		(mid 3.1752 0)
+		(end -2.534 1.911)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "5eed0b3c-c5b0-4f06-b307-0b4fbf4fe700")
+	)
+	(pad "1" thru_hole rect
+		(at -1.27 0 90)
+		(size 1.5 1.5)
+		(drill 0.9)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.0508)
+		(zone_connect 2)
+		(thermal_bridge_angle 0)
+		(uuid "6874efd1-c27b-438f-8cb0-703a7859bf47")
+	)
+	(pad "2" thru_hole circle
+		(at 1.27 0 90)
+		(size 1.5 1.5)
+		(drill 0.9)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.0508)
+		(zone_connect 2)
+		(thermal_bridge_angle 0)
+		(uuid "13c4becf-7c74-4502-9792-762a17c4193e")
+	)
+	(embedded_fonts no)
+	(model "${KICAD10_3DMODEL_DIR}/LED_THT.3dshapes/LED_D5.0mm.step"
+		(offset
+			(xyz -1.27 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

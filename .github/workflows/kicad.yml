@@ -1,0 +1,29 @@
+# Design checks on the KiCad boards (ERC, DRC + schematic/board parity), plus fabrication outputs as a build artifact.
+# Runs the same script developers run locally: tools/kicad/check.sh
+name: KiCad checks
+
+on:
+  push:
+    paths: ['kicad/**', 'tools/kicad/**', '.github/workflows/kicad.yml']
+  pull_request:
+    paths: ['kicad/**', 'tools/kicad/**', '.github/workflows/kicad.yml']
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    container:
+      image: kicad/kicad:10.0
+      options: --user root   # actions/checkout needs to write to the workspace
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: ERC and DRC
+        run: tools/kicad/check.sh --fab
+
+      - name: Upload reports and fabrication outputs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: kicad-outputs
+          path: build/kicad/

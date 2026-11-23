@@ -1,0 +1,4 @@
+(sym_lib_table
+	(version 7)
+	(lib (name "lesser-magistrate")(type "KiCad")(uri "${KIPRJMOD}/../libraries/lesser-magistrate.kicad_sym")(options "")(descr "Lesser Magistrate parts"))
+)

@@ -1,0 +1,4 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "lesser-magistrate")(type "KiCad")(uri "${KIPRJMOD}/../libraries/lesser-magistrate.pretty")(options "")(descr "Lesser Magistrate parts"))
+)
