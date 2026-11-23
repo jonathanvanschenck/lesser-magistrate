@@ -31,11 +31,10 @@ KiCad's stock DIP and resistor-array footprints have different drill sizes, for 
 
 Symbols are named after the generic part (`C`, `LED`, `R_Network09`, `R_Pack04_SIP`, `74AC573`, `4072`, `74AC04`,
 `RJ11`, `RJ45`, `USB_A`, `SW_Push`). `RJ11` and `RJ45` use KiCad's stock modular-jack drawings (pins numbered by contact
-position, to match the footprints). LM still uses the DipTrace drawings of those two, kept as `RJ11_DipTrace` and
-`RJ45_DipTrace` until the LM schematic is redrawn; don't use them in new work. Footprints are named after the physical package or the specific part they were
+position, to match the footprints). Footprints are named after the physical package or the specific part they were
 drawn for (`RJ45_AdamTech_MTJ-881X1`, `DIP-20_W7.62mm`, …). Every placed part has:
 
-- **Value**: what is printed on the board and the BOM (e.g. `10nF`, `CD4072BE`, `Green`)
+- **Value**: the generic part, printed on the board and the BOM (e.g. `10nF`, `4072`, `74AC573`, `Green`)
 - **MPN**: manufacturer part number
 - **Datasheet**: the DigiKey product page
 
@@ -59,11 +58,10 @@ Where no stock model of the exact part exists, the closest stock model with the 
 | `USB_A_OnShore_USB-A1HSW6` | Molex 67643 USB-A (same pin pattern) | close |
 | `SW_Tactile_TS11-674_RA` | C&K PTS645 right-angle tactile switch (same pin pattern) | close |
 | `RJ45_AdamTech_MTJ-881X1` | Adam Tech's model, in `lesser-magistrate.3dshapes/` | yes |
-| `RJ11_Amphenol_54601-906001WPLF` | none yet | — |
+| `RJ11_Amphenol_54601-906001WPLF` | Amphenol's model, in `lesser-magistrate.3dshapes/` | yes |
 
 Manufacturer models go in `libraries/lesser-magistrate.3dshapes/`, named after the footprint and referenced as
-`${KIPRJMOD}/../libraries/lesser-magistrate.3dshapes/<name>.step`. Amphenol only offers the RJ11 model behind its
-website's download page, which blocks scripted downloads.
+`${KIPRJMOD}/../libraries/lesser-magistrate.3dshapes/<name>.step`.
 
 ## Checks and outputs
 
@@ -112,8 +110,8 @@ Known differences from the manufactured boards (none of them electrical):
   gaps between pads. DipTrace filled with a 0.635 mm stroke and couldn't reach them. Clearances are unchanged.
 - **Silkscreen text** is placed, sized and stroked like the manufactured boards (rebuilt from the Eagle export, using
   Eagle's rule that turns upside-down text the right way up). KiCad's font is slightly wider than DipTrace's. Text that
-  DipTrace printed upside down now reads upright in the same spot. The 14-pin chips show their Value field, which is
-  now the part number (`CD4072BE` where DipTrace printed `OR`); the label choice is still open. Multi-line titles are
+  DipTrace printed upside down now reads upright in the same spot. The chips are labelled with their part type
+  (`4072`, `74AC04`, `74AC573`) where DipTrace printed `OR`, `NOT` and `Octal D-Latch`. Multi-line titles are
   split into one text per line, because KiCad's 3D renderer and gerber plotter space multi-line text differently.
 - **Mounting holes** are footprints `H1`–`H4`, marked board-only, so they're on the board but not in the schematic.
 
@@ -122,7 +120,15 @@ Schematic cleanup after the import (connectivity unchanged):
 - LM: net labels moved off the pins onto the ends of their wire stubs, no-connect flags on intentionally unused pins,
   `PWR_FLAG`s where 5V and GND enter from the USB connector, and pin names hidden on symbols whose pin names were just
   their numbers.
-- LMM and Trigger: redrawn with the stock-style jack symbols and named nets (`5V`, `TRIG1`–`TRIG5`, `TRIG`).
+- Boards moved to the middle of their pages (LM's Eagle import had put it off the page); every fab layer moved by the
+  same exact offset and is otherwise unchanged.
+- All three: jacks drawn with the stock-style symbols, each pin a short wire and a named net (`5V`, `TRIG_A1`–`TRIG_C5`
+  and `ARM` on the LM, `TRIG1`–`TRIG5` on the LMM, `TRIG` on the Trigger); drawings centred on their sheets.
+- Wire colours: DipTrace's net colours didn't survive the export, so they were re-derived from the circuit. Each
+  trigger's signal is coloured from its jack, through its series resistor and latch, to its LED, with the same colour
+  for trigger *k* on the LM and the LMM; the arm button and latch-enable nets have their own colours. The colours are
+  stored on each wire, so a new wire needs its colour set by hand (right-click → *Properties*). Each schematic has a
+  legend.
 
 ## Known issues from the original design
 

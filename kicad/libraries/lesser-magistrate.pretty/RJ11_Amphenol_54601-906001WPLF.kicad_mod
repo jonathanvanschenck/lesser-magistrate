@@ -144,4 +144,15 @@
 		(uuid "8b746c42-af6c-41c2-b656-e7258963ffb4")
 	)
 	(embedded_fonts no)
+	(model "${KIPRJMOD}/../libraries/lesser-magistrate.3dshapes/RJ11_Amphenol_54601-906001WPLF.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 0 0)
+		)
+	)
 )

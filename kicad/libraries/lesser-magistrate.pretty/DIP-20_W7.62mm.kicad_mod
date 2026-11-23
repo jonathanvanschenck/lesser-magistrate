@@ -17,17 +17,17 @@
 			(justify right top)
 		)
 	)
-	(property "Value" "DIP-20_W7.62mm"
-		(at 1.661 -24.382 0)
+	(property "Value" "74AC573"
+		(at -10.489 2.542 0)
 		(unlocked yes)
-		(layer "F.Fab")
+		(layer "F.SilkS")
 		(uuid "b21cd318-19a9-4808-8177-7791f8f8720e")
 		(effects
 			(font
-				(size 1.215 1.215)
-				(thickness 0.135)
+				(size 1.2825 1.2825)
+				(thickness 0.196)
 			)
-			(justify right top)
+			(justify left top)
 		)
 	)
 	(property "Datasheet" ""
@@ -1014,19 +1014,6 @@
 		)
 		(layer "F.Fab")
 		(uuid "705c9c19-1380-44d8-b24e-e23724091896")
-	)
-	(fp_text user "Octal D-Latch"
-		(at -10.489 2.542 0)
-		(unlocked yes)
-		(layer "F.SilkS")
-		(uuid "5d6ad0c8-413e-40b7-bff9-cda9a61df3c9")
-		(effects
-			(font
-				(size 1.2825 1.2825)
-				(thickness 0.196)
-			)
-			(justify left top)
-		)
 	)
 	(pad "1" thru_hole rect
 		(at -7.62 -22.86 90)
