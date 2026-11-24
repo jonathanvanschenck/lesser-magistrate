@@ -5843,6 +5843,78 @@
 		)
 		(uuid "c778a6db-244a-4703-9079-e4acea06da8c")
 	)
+	(wire
+		(pts
+			(xy 118.11 118.11) (xy 118.11 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "59cd8e84-f955-4793-9c11-0980eb2f0a90")
+	)
+	(label "GND"
+		(at 118.11 116.84 90)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "4f1f7d05-1e64-429d-809d-a75ca6d20055")
+	)
+	(wire
+		(pts
+			(xy 96.52 233.68) (xy 96.52 234.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7f825762-c918-4db1-982f-2aad72029c85")
+	)
+	(wire
+		(pts
+			(xy 101.6 233.68) (xy 101.6 234.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "89e8df67-678f-4837-bd97-4801b61879fc")
+	)
+	(wire
+		(pts
+			(xy 106.68 233.68) (xy 106.68 234.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b9f26493-ecaf-4dad-b6e2-203f9f77ded0")
+	)
+	(wire
+		(pts
+			(xy 96.52 234.95) (xy 111.76 234.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "23dee752-b806-48b4-a8be-dfd7ba557840")
+	)
+	(junction
+		(at 101.6 234.95)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fad231d3-033b-4092-b73b-4049eef0b307")
+	)
+	(junction
+		(at 106.68 234.95)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fe6b94df-c5c9-407c-92d3-c6906d33ab2b")
+	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
 		(at 87.63 36.83 0)

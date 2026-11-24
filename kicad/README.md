@@ -80,11 +80,11 @@ Reports and outputs go to `build/kicad/<board>/`, which git ignores. CI uploads 
 
 **Known issues that fail the check:** a violation that's understood and accepted should be *excluded* in KiCad, with a
 comment saying why (right-click the marker in the ERC or DRC dialog, *Exclude*). Exclusions are saved in the
-`.kicad_pro` file, so the check and CI skip them too. LM has seven such violations from the original design (see
-[below](#known-issues-from-the-original-design)) that haven't been excluded yet.
+`.kicad_pro` file, so the check and CI skip them too. There are no exclusions at the moment: all three boards pass.
 
 **Fabrication files:** the zips in [`gerber/`](../gerber) are still the production files exported from DipTrace. They
-stay the reference until a batch made from KiCad's output has been built and tested.
+stay the reference until a batch made from KiCad's output has been built and tested. LM's KiCad copper is no longer
+identical to them: see [Fixes since the DipTrace design](#fixes-since-the-diptrace-design).
 
 ## Migration from DipTrace
 
@@ -132,14 +132,20 @@ Schematic cleanup after the import (connectivity unchanged):
   stored on each wire, so a new wire needs its colour set by hand (right-click → *Properties*). Each schematic has a
   legend.
 
-## Known issues from the original design
+## Fixes since the DipTrace design
 
-These are reported by ERC/DRC on LM and fail `check.sh` until they're excluded or fixed:
+ERC and DRC found two problems in LM as manufactured. Both are fixed in the schematic and on the board, so LM's copper
+differs from the DipTrace gerbers in these places only:
 
 - **Floating inputs (ERC, 4 errors):** the three unused inverters in U8 (CD74AC04E, inputs A1–A3) and latch input
-  U2 D8 are left floating. Unused CMOS inputs are normally tied to GND.
-- **Clearance (DRC, 3 errors):** the 5V track passes 0.18 mm from the unconnected pad 3 of each RJ45 (JA1, JB1, JC1).
-  The design rule is 0.2032 mm (8 mil).
+  U2 D8 were left floating. A floating CMOS input can drift to mid-supply and make its gate draw current or oscillate.
+  They're now tied to GND: U8 pins 1, 3 and 5 by a back-side track to pin 7, and U2 pin 9 by a back-side track to
+  pin 10.
+- **Clearance (DRC, 3 errors):** the 5V track ran diagonally into pad 1 of each RJ45 (JA1, JB1, JC1), passing 0.18 mm
+  from the unconnected pad 3. The design rule is 0.2032 mm (8 mil). The track now runs along the 5V bus to above pad 1
+  and drops straight down, about 0.9 mm from pad 3.
+
+The ground pour was refilled after these changes.
 
 Warnings that don't fail the check: silkscreen overlaps on all three boards, and 28 small isolated copper islands in
 LM's ground pour.
