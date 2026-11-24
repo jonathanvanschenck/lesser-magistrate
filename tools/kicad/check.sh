@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
-# Design checks for every KiCad board: ERC, and DRC with schematic/board parity.
-# Fails (exit 1) on any error-severity violation that hasn't been excluded in KiCad; warnings are reported but pass.
-# Full reports are written to build/kicad/<board>/.
+# Design checks for every KiCad board: ERC, and DRC with schematic/board parity. When LM is checked, also the trigger
+# crosstalk simulation (sim/crosstalk.py), which reads LM's input network from its schematic.
+# Fails (exit 1) on any error-severity violation that hasn't been excluded in KiCad, or a failed simulation; warnings
+# are reported but pass. Full reports are written to build/kicad/<board>/ and build/sim/.
 #
 #   tools/kicad/check.sh            # all boards
 #   tools/kicad/check.sh lm         # one board
@@ -55,4 +56,17 @@ for b in "${BOARDS[@]}"; do
       || echo "    (3D render skipped: needs KiCad's 3D model library)"
   fi
 done
+
+if [[ " ${BOARDS[*]} " == *" lm "* ]]; then
+  mkdir -p build/sim
+  plot=()
+  [ $FAB = 1 ] && plot=(--plot build/sim/crosstalk.png)
+  if python3 sim/crosstalk.py --check "${plot[@]}" > build/sim/crosstalk.txt 2>&1; then
+    echo "sim      crosstalk ok"
+  else
+    echo "sim      crosstalk FAIL"
+    status=1
+  fi
+  sed -n '/^As drawn/,$p' build/sim/crosstalk.txt | sed 's/^/    /'
+fi
 exit $status

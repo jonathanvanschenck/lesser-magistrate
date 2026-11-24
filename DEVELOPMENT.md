@@ -8,10 +8,11 @@ work on the boards; everything else is optional, and the KiCad projects open and
 | Tool | What it does | Where it lives | Status |
 | ---- | ------------ | -------------- | ------ |
 | [KiCad](#kicad) | Schematics and boards; design checks (ERC/DRC) and fabrication outputs, locally and in CI | `kicad/`, `tools/kicad/`, `.github/workflows/` | Ready |
+| [Crosstalk simulation](#crosstalk-simulation) | SPICE model of the trigger lines; checks a press can't latch a neighbouring light | `sim/` | Ready |
 | [DigiKey CLI](#digikey-cli) | Search parts, check stock and pricing, find substitutes, download datasheets | `tools/digikey/` (this repo) | Ready |
 | [KiCad MCP server](#kicad-mcp-server) | Lets Claude read and edit the KiCad schematics and boards | External clone, registered with Claude Code | Ready |
 | [Claude Code project setup](#claude-code-project-setup) | Skills that teach Claude how to use the tools above | `.claude/` (this repo) | Ready |
-| [Planned](#planned) | SPICE, BOM pricing, datasheet summaries, design-rules `CLAUDE.md` | | Not started |
+| [Planned](#planned) | BOM pricing, datasheet summaries, design-rules `CLAUDE.md` | | Not started |
 
 ## Prerequisites
 
@@ -72,6 +73,14 @@ uploads `build/kicad/` as the `kicad-outputs` artifact.
 When a check fails on something that is understood and accepted, exclude it in KiCad with a comment saying why
 (right-click the marker in the ERC/DRC dialog → *Exclude*) instead of loosening the rules. Exclusions live in the
 `.kicad_pro` file, so they are reviewed in git like any other change.
+
+### Crosstalk simulation
+
+[`sim/crosstalk.py`](./sim/crosstalk.py) simulates one team's trigger lines (switches, phone cords, LMM, Cat5, LM
+input network, latch thresholds) and checks that pressing one trigger can't latch another. `check.sh` runs it whenever
+it checks LM, so it is part of CI. It uses KiCad's own `libngspice` through Python's `ctypes`, so it needs nothing
+beyond KiCad. With `--fab`, it also writes `build/sim/crosstalk.png` if matplotlib is installed. See
+[`sim/README.md`](./sim/README.md) for the model and its assumptions.
 
 ### Working on the boards
 
@@ -240,8 +249,9 @@ Local to each developer (not committed):
 
 ## Planned
 
-- **SPICE:** simulate the trigger signal path (switch, cables, input RC network, latch thresholds) with ngspice, to
-  catch crosstalk and edge-rate problems before ordering parts.
+- **Calibrate the crosstalk model:** scope an idle trigger line at the LM (latch input) while pressing its neighbour,
+  with and without the 10 nF capacitor, and fit the cable values in `sim/crosstalk.py` to it. Until then the cable
+  values are estimates (see `sim/README.md`).
 - **`dk bom`:** price the BOM that `tools/kicad/check.sh --fab` exports from the schematics (MPN field) at the 10, 12
   and 16-trigger quantities through the API, flag non-active or low-stock parts, and point out cheaper price breaks.
   This would replace the old page scraper in `manufacture/pricing/` and could generate the tables in
