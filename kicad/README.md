@@ -176,6 +176,30 @@ have:
 These will be enforced by checks (see [DEVELOPMENT.md](../DEVELOPMENT.md#planned)): a power budget computed from the
 schematic, and a capacitor near every chip on the board.
 
+### Battery power (option)
+
+Not committed to; an option if a set needs to run without a computer or USB charger. Only the LM changes: the LMMs
+and triggers take their 5V from the LM through the cables. At the steady ~20 mA above, batteries last a long time.
+
+- **No change: a USB power bank** on the existing A-to-A cable. Many power banks switch off when the load is below
+  about 50–100 mA, which would cut out mid-quiz, so it needs one with an "always on" or low-current mode. Test a
+  bank before relying on it.
+- **Built in: 4 × AA NiMH rechargeable cells** (about 2000 mAh, so roughly 100 hours). They start near 5.6 V fully
+  charged, inside the 74AC chips' 6 V limit, and stay around 4.8–5 V for most of their discharge. The board needs a
+  battery holder, an on/off switch, and a Schottky diode or P-channel MOSFET on each source so USB and the battery
+  can't feed into each other; about $3–5 of parts. The bigger job is a battery compartment in the 3D-printed
+  enclosure. The cells are charged outside the box.
+- **Not recommended:**
+  - 3 × AA alkaline works, but the supply sags from 4.5 V to about 3.3 V as they drain: the LEDs dim and the CD4072s
+    slow down, widening the tie window.
+  - 4 × AA alkaline starts at about 6.4 V, above the 74AC chips' limit.
+  - A built-in lithium cell needs a charger chip and protection circuit, fine-pitch parts and shipping rules, which
+    doesn't fit the hand-built, low-cost design.
+
+If the battery option goes ahead, the crosstalk simulation's supply voltage (fixed at 5 V in `sim/crosstalk.py`)
+should become a parameter, and the check should also run at the lowest battery voltage, since the noise margins
+shrink with the supply.
+
 ### Trigger cable
 
 TRIG3 and TRIG5 share a twisted pair in the Cat5 cable, which makes them the worst case for crosstalk (see
