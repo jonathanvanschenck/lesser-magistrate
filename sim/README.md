@@ -22,7 +22,7 @@ needs installing.
 One team, pressing each of the five triggers in turn with the other four idle:
 
 ```
-trigger switch ── 6 ft flat cord ── LMM ── 15/30 ft Cat5 ── LM: 33 Ω ─┬─ latch input
+trigger switch ── 7 ft flat cord ── LMM ── 15/30 ft Cat5 ── LM: 33 Ω ─┬─ latch input
   (5V ↔ TRIGk)    (5V, TRIGk)    (connectors      (8 wires,          10 kΩ ┴ 10 nF ┴ clamp diodes
                                    only)          no ground)
 ```
@@ -50,7 +50,7 @@ trigger switch ── 6 ft flat cord ── LMM ── 15/30 ft Cat5 ── LM: 
 | LM input | Worst idle line in the latch window | Case |
 | -------- | ----------------------------------- | ---- |
 | As drawn (10 nF) | 0.29 V | 30 ft, pessimistic cable, TRIG3 ↔ TRIG5 |
-| No filter (original boards) | 4.97 V, and every case fails | 30 ft, pessimistic cable, TRIG3 ↔ TRIG5 |
+| No filter (original boards) | 5.00 V, and every case fails | 30 ft, pessimistic cable, TRIG3 ↔ TRIG5 |
 
 With the filter, the pressed line reaches the latch threshold 300–430 ns after the switch closes, which is well within
 human reaction times. TRIG3 and TRIG5 are always the worst pair because they share a twisted pair. In the next

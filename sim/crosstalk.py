@@ -29,7 +29,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 FT = 0.3048
 LENGTHS_FT = (15, 30)            # LM-LMM Cat5 runs that ship
-CORD_FT = 6                      # LMM-trigger flat phone cord
+CORD_FT = 7                      # LMM-trigger flat phone cord (AT-S-26-6/6/B-7/R)
 
 # Cat5: RJ45 pin -> signal (same on LM and LMM), and the twisted pairs (T568B pairs by pin).
 CAT5_PIN = {1: '5V', 2: 'TRIG1', 3: None, 4: 'TRIG4', 5: None, 6: 'TRIG2', 7: 'TRIG3', 8: 'TRIG5'}

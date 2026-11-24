@@ -271,8 +271,12 @@ Local to each developer (not committed):
   values are estimates (see `sim/README.md`).
 - **`dk bom`:** price each set from `tools/bom/bom.mjs`'s `buildSets()` through the API, flag non-active or low-stock
   parts, and point out cheaper price breaks.
-- **DigiKey list sync:** push each set's BOM to its DigiKey shopping list, so the links in `components/README.md`
-  always match the tables.
+- **DigiKey list sync:** push each set's BOM (`buildSets()` in `tools/bom/bom.mjs`) to its DigiKey shopping list, so
+  the links in `components/README.md` always match the tables. DigiKey's MyLists API
+  (`https://api.digikey.com/mylists/v1`) needs 3-legged OAuth: a one-time browser login with an https redirect URL
+  registered on the DigiKey app, then a stored refresh token (valid about 90 days). `dk.mjs` only does the 2-legged
+  flow today. A lighter alternative is DigiKey's key-less third-party endpoint, which turns a BOM into a one-time link
+  that opens it as a new list, but it can't update an existing one.
 - **Datasheet summaries:** a short `datasheets/<MPN>.md` per part (pinout, supply range, key timing, package), so each
   datasheet is read once and later work uses the summary.
 - **`CLAUDE.md`:** project design rules and decisions (through-hole for the hand-soldered boards, cheap and widely
