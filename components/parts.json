@@ -1,0 +1,138 @@
+{
+  "_comment": [
+    "Part catalogue for the BOM tables in components/README.md. Generate them with: node tools/bom/bom.mjs",
+    "Board parts get their quantities from the KiCad schematics (MPN field); every MPN on a schematic must be listed",
+    "here. Parts that aren't on a board (cables) give their quantity with 'per': count per board, e.g. {\"lmm\": 1}.",
+    "Rows appear in the order listed. 'sets' is how many of each board a set needs."
+  ],
+  "sets": {
+    "16": { "title": "16 Trigger Set", "lm": 1, "lmm": 3, "trigger": 16 },
+    "12": { "title": "12 Trigger Set", "lm": 1, "lmm": 3, "trigger": 12 },
+    "10": { "title": "10 Trigger Set", "lm": 1, "lmm": 3, "trigger": 10 }
+  },
+  "parts": [
+    {
+      "mpn": "L513GD-B",
+      "description": "GREEN LED",
+      "digikey": "2460-L513GD-B-ND",
+      "url": "https://www.digikey.com/en/products/detail/american-opto-plus-led/L513GD-B/13556882"
+    },
+    {
+      "mpn": "L513YD-C",
+      "description": "YELLOW LED",
+      "digikey": "2460-L513YD-C-ND",
+      "url": "https://www.digikey.com/en/products/detail/american-opto-plus-led/L513YD-C/13556895"
+    },
+    {
+      "mpn": "4610X-101-151LF",
+      "description": "RES ARRAY 9 RES 150 OHM 10SIP (for LED current limiting)",
+      "digikey": "4610X-1-151LF-ND",
+      "url": "https://www.digikey.com/en/products/detail/bourns-inc/4610X-101-151LF/1089176"
+    },
+    {
+      "mpn": "4608X-102-330LF",
+      "description": "RES ARRAY 4 RES 33 OHM 8SIP (for trigger signal input isolation)",
+      "digikey": "4608X-2-330LF-ND",
+      "url": "https://www.digikey.com/en/products/detail/bourns-inc/4608X-102-330LF/1089133"
+    },
+    {
+      "mpn": "4610X-101-103LF",
+      "description": "RES ARRAY 9 RES 10K OHM 10SIP (pull down)",
+      "digikey": "4610X-1-103LF-ND",
+      "url": "https://www.digikey.com/en/products/detail/bourns-inc/4610X-101-103LF/1089169"
+    },
+    {
+      "mpn": "C410C105K3R5TA",
+      "description": "CAPACITOR CER 1UF (Stabilizing)",
+      "digikey": "399-C410C105K3R5TA-ND",
+      "url": "https://www.digikey.com/en/products/detail/kemet/C410C105K3R5TA/12701220"
+    },
+    {
+      "mpn": "C410C103K5R5TA",
+      "description": "CAPACITOR CER 10000PF (Isolating)",
+      "digikey": "399-C410C103K5R5TA-ND",
+      "url": "https://www.digikey.com/en/products/detail/kemet/C410C103K5R5TA/12701142"
+    },
+    {
+      "mpn": "CD74AC04E",
+      "description": "IC INVERTER (NOT Gate) 6CH 1IN 14DIP",
+      "digikey": "296-4217-5-ND",
+      "url": "https://www.digikey.com/en/products/detail/texas-instruments/CD74AC04E/375681"
+    },
+    {
+      "mpn": "CD4072BE",
+      "description": "IC OR Gate 2CH 4-INP 14DIP",
+      "digikey": "296-2063-5-ND",
+      "url": "https://www.digikey.com/en/products/detail/texas-instruments/CD4072BE/67317"
+    },
+    {
+      "mpn": "SN74AC573N",
+      "description": "IC D-Latch 8:8 20-PDIP",
+      "digikey": "296-33649-5-ND",
+      "url": "https://www.digikey.com/en/products/detail/texas-instruments/SN74AC573N/1575944"
+    },
+    {
+      "mpn": "MTJ-881X1",
+      "description": "RJ45 Connector 8P8C",
+      "digikey": "2057-MTJ-881X1-ND",
+      "url": "https://www.digikey.com/en/products/detail/adam-tech/MTJ-881X1/9832263"
+    },
+    {
+      "mpn": "USB-A1HSW6",
+      "description": "USB A Connector",
+      "digikey": "ED2989-ND",
+      "url": "https://www.digikey.com/en/products/detail/on-shore-technology-inc/USB-A1HSW6/2677750"
+    },
+    {
+      "mpn": "54601-906001WPLF",
+      "note": "Obsoleted: may be hard to find",
+      "description": "RJ11 Connector 6P2C",
+      "digikey": "609-5354-ND",
+      "url": "https://www.digikey.com/en/products/detail/amphenol-cs-fci/54601-906001WPLF/4242889",
+      "alternates": [
+        {
+          "mpn": "87180-062LF",
+          "url": "https://www.digikey.com/en/products/detail/amphenol-cs-fci/87180-062LF/1001369",
+          "note": "more expensive and deeper socket"
+        },
+        {
+          "mpn": "E5362-3000G2-L",
+          "url": "https://www.digikey.com/en/products/detail/pulse-electronics/E5362-3000G2-L/2264740",
+          "note": "connector is vertically mirrored"
+        },
+        {
+          "mpn": "E5362-300NG2-L",
+          "url": "https://www.digikey.com/en/products/detail/pulse-electronics/E5362-300NG2-L/1785183",
+          "note": "grey instead of black"
+        }
+      ]
+    },
+    {
+      "mpn": "AK670/2-1",
+      "description": "USB Cable A TO A, Male to Male",
+      "digikey": "AE1454-ND",
+      "url": "https://www.digikey.com/en/products/detail/assmann-wsw-components/AK670-2-1/930239",
+      "per": { "lm": 1 }
+    },
+    {
+      "mpn": "N002-015-BK",
+      "description": "Ethernet Cable 8P8C 15'",
+      "digikey": "TL573-ND",
+      "url": "https://www.digikey.com/en/products/detail/eaton-tripp-lite/N002-015-BK/4438389",
+      "per": { "lmm": 1 }
+    },
+    {
+      "mpn": "AT-S-26-6/6/B-7/R",
+      "description": "RJ11 Cable 6P6C 7'",
+      "digikey": "A2662R-07-ND",
+      "url": "https://www.digikey.com/en/products/detail/assmann-wsw-components/AT-S-26-6-6-B-7-R/1972588",
+      "per": { "trigger": 1 }
+    },
+    {
+      "mpn": "TS11-674-95-BK-260-RA-D",
+      "description": "TACTILE Button SPST-NO",
+      "digikey": "2223-TS11-674-95-BK-260-RA-D-ND",
+      "url": "https://www.digikey.com/en/products/detail/same-sky-formerly-cui-devices/TS11-674-95-BK-260-RA-D/16562778"
+    }
+  ]
+}

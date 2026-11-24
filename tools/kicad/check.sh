@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Design checks for every KiCad board: ERC, and DRC with schematic/board parity. When LM is checked, also the trigger
-# crosstalk simulation (sim/crosstalk.py), which reads LM's input network from its schematic.
+# crosstalk simulation (sim/crosstalk.py), which reads LM's input network from its schematic. When every board is
+# checked, also that the BOM tables in components/README.md match the schematics (tools/bom/bom.mjs; needs Node).
 # Fails (exit 1) on any error-severity violation that hasn't been excluded in KiCad, or a failed simulation; warnings
 # are reported but pass. Full reports are written to build/kicad/<board>/ and build/sim/.
 #
@@ -18,7 +19,8 @@ for a in "$@"; do
     *) BOARDS+=("$a") ;;
   esac
 done
-[ ${#BOARDS[@]} -eq 0 ] && BOARDS=(lm lmm trigger)
+ALL=0
+[ ${#BOARDS[@]} -eq 0 ] && BOARDS=(lm lmm trigger) && ALL=1
 
 status=0
 for b in "${BOARDS[@]}"; do
@@ -68,5 +70,22 @@ if [[ " ${BOARDS[*]} " == *" lm "* ]]; then
     status=1
   fi
   sed -n '/^As drawn/,$p' build/sim/crosstalk.txt | sed 's/^/    /'
+fi
+
+if [ $ALL = 1 ]; then
+  if command -v node >/dev/null; then
+    if node tools/bom/bom.mjs --check >/dev/null 2>build/bom-check.txt; then
+      echo "bom      components/README.md ok"
+    else
+      echo "bom      components/README.md FAIL"
+      sed 's/^/    /' build/bom-check.txt
+      status=1
+    fi
+  elif [ -n "${CI:-}" ]; then
+    echo "bom      FAIL: node is not installed"
+    status=1
+  else
+    echo "bom      skipped (node is not installed)"
+  fi
 fi
 exit $status

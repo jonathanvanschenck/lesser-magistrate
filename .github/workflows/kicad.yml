@@ -1,13 +1,13 @@
-# Design checks on the KiCad boards (ERC, DRC + schematic/board parity, trigger crosstalk simulation), plus
-# fabrication outputs as a build artifact.
+# Design checks on the KiCad boards (ERC, DRC + schematic/board parity, trigger crosstalk simulation, BOM tables in
+# components/README.md), plus fabrication outputs as a build artifact.
 # Runs the same script developers run locally: tools/kicad/check.sh
 name: KiCad checks
 
 on:
   push:
-    paths: ['kicad/**', 'sim/**', 'tools/kicad/**', '.github/workflows/kicad.yml']
+    paths: ['kicad/**', 'sim/**', 'components/**', 'tools/kicad/**', 'tools/bom/**', '.github/workflows/kicad.yml']
   pull_request:
-    paths: ['kicad/**', 'sim/**', 'tools/kicad/**', '.github/workflows/kicad.yml']
+    paths: ['kicad/**', 'sim/**', 'components/**', 'tools/kicad/**', 'tools/bom/**', '.github/workflows/kicad.yml']
   workflow_dispatch:
 
 jobs:
@@ -19,7 +19,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: ERC, DRC and crosstalk simulation
+      - uses: actions/setup-node@v4   # for tools/bom/bom.mjs
+        with:
+          node-version: 22
+
+      - name: ERC, DRC, crosstalk simulation and BOM tables
         run: tools/kicad/check.sh --fab
 
       - name: Upload reports and fabrication outputs

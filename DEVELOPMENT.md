@@ -9,6 +9,7 @@ work on the boards; everything else is optional, and the KiCad projects open and
 | ---- | ------------ | -------------- | ------ |
 | [KiCad](#kicad) | Schematics and boards; design checks (ERC/DRC) and fabrication outputs, locally and in CI | `kicad/`, `tools/kicad/`, `.github/workflows/` | Ready |
 | [Crosstalk simulation](#crosstalk-simulation) | SPICE model of the trigger lines; checks a press can't latch a neighbouring light | `sim/` | Ready |
+| [BOM tables](#bom-tables) | Generates the parts tables in `components/README.md` from the schematics | `tools/bom/`, `components/parts.json` | Ready |
 | [DigiKey CLI](#digikey-cli) | Search parts, check stock and pricing, find substitutes, download datasheets | `tools/digikey/` (this repo) | Ready |
 | [KiCad MCP server](#kicad-mcp-server) | Lets Claude read and edit the KiCad schematics and boards | External clone, registered with Claude Code | Ready |
 | [Claude Code project setup](#claude-code-project-setup) | Skills that teach Claude how to use the tools above | `.claude/` (this repo) | Ready |
@@ -81,6 +82,22 @@ input network, latch thresholds) and checks that pressing one trigger can't latc
 it checks LM, so it is part of CI. It uses KiCad's own `libngspice` through Python's `ctypes`, so it needs nothing
 beyond KiCad. With `--fab`, it also writes `build/sim/crosstalk.png` if matplotlib is installed. See
 [`sim/README.md`](./sim/README.md) for the model and its assumptions.
+
+### BOM tables
+
+The parts tables in [`components/README.md`](./components/README.md) (one per set size) are generated, so they can't
+drift from the boards. [`tools/bom/bom.mjs`](./tools/bom/bom.mjs) takes each board's parts and quantities from its
+schematic (the `MPN` field) and multiplies them by the boards per set. It adds what the schematics don't hold from
+[`components/parts.json`](./components/parts.json): descriptions, DigiKey part numbers and links, alternates, notes,
+row order, and the off-board items (cables) with their quantity per board.
+
+```bash
+node tools/bom/bom.mjs           # rewrite the tables after changing a schematic or parts.json
+node tools/bom/bom.mjs --check   # exit 1 if they're out of date
+```
+
+It fails if a schematic has a part that `parts.json` doesn't list, or the reverse. `check.sh` runs the check when it
+checks every board, and so does CI. The DigiKey shopping-list links above each table are still maintained by hand.
 
 ### Working on the boards
 
@@ -252,10 +269,10 @@ Local to each developer (not committed):
 - **Calibrate the crosstalk model:** scope an idle trigger line at the LM (latch input) while pressing its neighbour,
   with and without the 10 nF capacitor, and fit the cable values in `sim/crosstalk.py` to it. Until then the cable
   values are estimates (see `sim/README.md`).
-- **`dk bom`:** price the BOM that `tools/kicad/check.sh --fab` exports from the schematics (MPN field) at the 10, 12
-  and 16-trigger quantities through the API, flag non-active or low-stock parts, and point out cheaper price breaks.
-  This would replace the old page scraper in `manufacture/pricing/` and could generate the tables in
-  `components/README.md`.
+- **`dk bom`:** price each set from `tools/bom/bom.mjs`'s `buildSets()` through the API, flag non-active or low-stock
+  parts, and point out cheaper price breaks.
+- **DigiKey list sync:** push each set's BOM to its DigiKey shopping list, so the links in `components/README.md`
+  always match the tables.
 - **Datasheet summaries:** a short `datasheets/<MPN>.md` per part (pinout, supply range, key timing, package), so each
   datasheet is read once and later work uses the summary.
 - **`CLAUDE.md`:** project design rules and decisions (through-hole for the hand-soldered boards, cheap and widely
