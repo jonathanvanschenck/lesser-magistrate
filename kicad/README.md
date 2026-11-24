@@ -149,3 +149,35 @@ The ground pour was refilled after these changes.
 
 Warnings that don't fail the check: silkscreen overlaps on all three boards, and 28 small isolated copper islands in
 LM's ground pour.
+
+## Next revision
+
+Changes planned for the next LM revision (the SMD variant). None of them are in the current boards.
+
+### Power and decoupling
+
+The LM draws little power. Each LED takes about (5 V − 2.1 V) / 150 Ω ≈ 19 mA, and normally one LED is lit: the
+yellow light while armed, then the winner's green light. A tie lights more, and the worst case, every LED at once, is
+about 0.3 A, within USB 2.0's 500 mA. The 1.524 mm 5V track drops about 20 mV at that current, so track width isn't
+the limit. A USB port or a long, thin cable loses more than the board does.
+
+The weak point is decoupling. LM has six logic chips but only three 1 µF capacitors (C1–C3), 15–30 mm from the chips,
+and none near the three CD4072s (U3, U5, U6). When a latch output switches an LED, the current step pulls a chip's
+supply down and lifts its ground for a moment, which can cause a false or missed latch. The next revision should
+have:
+
+- **A 100 nF ceramic capacitor (X7R) at every chip**, between its VCC and GND pins, within about 3 mm of the VCC pin,
+  with short, direct tracks or vias to the ground pour.
+- **A 10–47 µF bulk capacitor where USB power enters** (J2), to supply LED switching current and smooth out a long
+  USB cable. The existing 1 µF capacitors can go.
+- **Solid ground pours on both layers**, stitched together with vias. The current pour has 28 isolated islands.
+- **The 5V track at 0.5 mm or wider**: plenty for 0.3 A, so routing space isn't wasted on a wider track.
+
+These will be enforced by checks (see [DEVELOPMENT.md](../DEVELOPMENT.md#planned)): a power budget computed from the
+schematic, and a capacitor near every chip on the board.
+
+### Trigger cable
+
+TRIG3 and TRIG5 share a twisted pair in the Cat5 cable, which makes them the worst case for crosstalk (see
+[sim/README.md](../sim/README.md)). Giving each trigger its own pair, or using a spare wire as a ground, would cut the
+coupling at its source. That changes the LMM and LM jack wiring, so it would need a new LMM too.

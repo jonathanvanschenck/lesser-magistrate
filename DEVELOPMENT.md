@@ -276,6 +276,12 @@ Local to each developer (not committed):
   an LED on the wrong output), which matters most for the SMD revision. Two presses a set time apart would also measure
   the tie window (about 150–500 ns, set by the CD4072 delays). It can't decide races closer than a few nanoseconds,
   because the digital models don't simulate latch metastability.
+- **Power budget check:** add up the LED currents from the schematic (resistor values and LED forward voltages) and
+  the chips' supply currents, for the normal case (one LED) and the worst (every LED), and fail if the worst case
+  exceeds USB 2.0's 500 mA. See [kicad/README.md](kicad/README.md#power-and-decoupling).
+- **Decoupling check:** read each board file and fail unless every chip has a capacitor between its power and ground
+  nets within a few mm of its power pin. The current LM fails it, so it would start as a warning and become an error
+  for the next revision.
 - **`dk bom`:** price each set from `tools/bom/bom.mjs`'s `buildSets()` through the API, flag non-active or low-stock
   parts, and point out cheaper price breaks.
 - **DigiKey list sync:** push each set's BOM (`buildSets()` in `tools/bom/bom.mjs`) to its DigiKey shopping list, so
