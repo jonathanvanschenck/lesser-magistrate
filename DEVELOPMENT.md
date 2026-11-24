@@ -269,6 +269,13 @@ Local to each developer (not committed):
 - **Calibrate the crosstalk model:** scope an idle trigger line at the LM (latch input) while pressing its neighbour,
   with and without the 10 nF capacitor, and fit the cable values in `sim/crosstalk.py` to it. Until then the cable
   values are estimates (see `sim/README.md`).
+- **Logic simulation from the schematic:** generate a mixed analog/digital ngspice test from each board's KiCad netlist
+  (ngspice's built-in digital latch, OR and inverter models with datasheet delays, plus the analog input network and
+  cables from `sim/crosstalk.py`). Press each trigger and check that exactly its LED lights and stays latched, and that
+  the arm button resets it. Because it's generated from the netlist, it catches wiring mistakes (a swapped latch input,
+  an LED on the wrong output), which matters most for the SMD revision. Two presses a set time apart would also measure
+  the tie window (about 150–500 ns, set by the CD4072 delays). It can't decide races closer than a few nanoseconds,
+  because the digital models don't simulate latch metastability.
 - **`dk bom`:** price each set from `tools/bom/bom.mjs`'s `buildSets()` through the API, flag non-active or low-stock
   parts, and point out cheaper price breaks.
 - **DigiKey list sync:** push each set's BOM (`buildSets()` in `tools/bom/bom.mjs`) to its DigiKey shopping list, so
