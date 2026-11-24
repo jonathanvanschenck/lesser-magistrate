@@ -65,11 +65,13 @@ tools/kicad/check.sh              # ERC + DRC on every board
 
 `tools/kicad/check.sh` runs ERC and DRC (including schematic/board parity) on each board and fails on any error
 that hasn't been excluded in KiCad. With `--fab` it also writes gerbers, drill files, a BOM, the schematic PDF and a 3D
-render. Everything goes to `build/kicad/<board>/`, which git ignores.
+render. Everything goes to `build/kicad/<board>/`, which git ignores. These gerbers are for review, not for ordering:
+the production files are still the DipTrace exports in [`gerber/`](./gerber) until a KiCad batch has been built and
+tested.
 
-CI runs the same script on every push or pull request that touches `kicad/` (see
-[`.github/workflows/kicad.yml`](./.github/workflows/kicad.yml)), in the official `kicad/kicad:10.0` Docker image, and
-uploads `build/kicad/` as the `kicad-outputs` artifact.
+CI runs the same script on every push or pull request that touches the boards, the simulation, the parts catalogue or
+the tooling (see [`.github/workflows/kicad.yml`](./.github/workflows/kicad.yml)), in the official `kicad/kicad:10.0` Docker image, and
+uploads `build/kicad/` and `build/sim/` as the `kicad-outputs` artifact.
 
 When a check fails on something that is understood and accepted, exclude it in KiCad with a comment saying why
 (right-click the marker in the ERC/DRC dialog → *Exclude*) instead of loosening the rules. Exclusions live in the

@@ -45,7 +45,7 @@ Here are additional example videos:
 
 ### Electrical Schematics
 
-All electrical schematics are available in the [graphics](./graphcis) directory, which can be helpful during assembly, particularly for those who are more electrically inclined.
+All electrical schematics are available in the [graphics](./graphics) directory, which can be helpful during assembly, particularly for those who are more electrically inclined. They match the boards made from the [gerber files](./gerber).
 
 There are some additional tools which are very helpful during the build process; but are not strictly necessary:
   - Some elmers glue, or similar light adhesive
@@ -62,7 +62,7 @@ If you did not receive kit, you will need to acquire the raw materials. Broadly 
 You will need to buy all the electrical components (meaning chips, resistors, connectors and wires). See the [components README](./components/README.md) for full part lists and Digikey shopping links for 16, 12, and 10 trigger set configurations.
 
 #### 2. PCB
-You will also need to buy the actual PCBs to soulder everything to. You can find the gerber files (the extension is `.zip`) in the `gerber` directory, with a [README](./gerber/README.md) for details. You can use any PCB manufacturer you prefer, for example [PCBWay](https://www.pcbway.com/) -- in every case you cant just upload your gerber files and the website will walk you through the steps. Two things to note: (1) make sure to select HASL lead-free surface treatment to avoid lead exposure, use defaults for everything else (2) you will likely be required to order at least 5 of every board; but the boards are sufficiently cheap that shipping is frequently the majority of the PCB cost even when over-buying boards.
+You will also need to buy the actual PCBs to soulder everything to. You can find the gerber files (the extension is `.zip`) in the `gerber` directory, with a [README](./gerber/README.md) for details. Always order from these files: they are the production files, built and tested. Don't order boards from files exported out of the `kicad` directory yet (see below). You can use any PCB manufacturer you prefer, for example [PCBWay](https://www.pcbway.com/) -- in every case you cant just upload your gerber files and the website will walk you through the steps. Two things to note: (1) make sure to select HASL lead-free surface treatment to avoid lead exposure, use defaults for everything else (2) you will likely be required to order at least 5 of every board; but the boards are sufficiently cheap that shipping is frequently the majority of the PCB cost even when over-buying boards.
 
 #### 3. Plastic Enclosures
 You will also need to get plastic enclosures for all the electrical elements. All of this is done with a 3d printer. Many schools and libraries have 3d printers available to the students/members, so try asking around in your community to see if someone has access to a printer to help with this piece. There are also plenty of online services that you can upload a file to and have them print and ship it to you. Though, if you plan on making more than, like, 2 of these units -- just get a printer yourself. They are pretty cheap these days, can you can do a lot with them. Both [Bambu Labs](https://bambulab.com/en-us) and [Prusa Reaserch](https://www.prusa3d.com/) have mid-level and high-end hobbyist models in the $500-$1500 range.
@@ -72,9 +72,9 @@ However you plan on getting your prints, you will need the STL files in the [stl
 ## Contributing and Development
 The Lesser Magistrate is a fully open sourced project, and as such contribution is encouraged! As such PRs are more than welcome, and we would love to hear about [any issues](https://github.com/jonathanvanschenck/lesser-magistrate/issues) you may run into. Feature requests are also encouraged -- though keep in mind features will only be included in this project if they conform to the Philosophy of Design described above. Finally, if you take this project and do something cool with it (like adding extra features not suitable to this design philosophy), we would love to hear about it so that we can add a link to your work in the section below!
 
-The electrical side of the project is developed in [KiCad](https://www.kicad.org/), with one project per board in the [kicad](./kicad) directory (see its [README](./kicad/README.md)). We are also working on an SMD variant of the LM/LMM/Trigger boards so they can be assembled by a pick-and-place machine.
+The electrical design was originally drawn in DipTrace, and the boards you order today still come from DipTrace's production files in the [gerber](./gerber) directory. Development has moved to [KiCad](https://www.kicad.org/), with one project per board in the [kicad](./kicad) directory (see its [README](./kicad/README.md)). The KiCad boards have not been manufactured yet, so they replace the DipTrace gerbers only once a batch has been built and tested. We are also working on an SMD variant of the LM/LMM/Trigger boards so they can be assembled by a pick-and-place machine.
 
-Developer tooling (a DigiKey part-search CLI, and a KiCad MCP server for AI-assisted board design with Claude Code) is described in [DEVELOPMENT.md](./DEVELOPMENT.md).
+Developer tooling (KiCad design checks, a crosstalk simulation, the generated parts tables, a DigiKey part-search CLI, and a KiCad MCP server for AI-assisted board design with Claude Code) is described in [DEVELOPMENT.md](./DEVELOPMENT.md).
 
 ## Related Projects
 

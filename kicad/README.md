@@ -67,7 +67,8 @@ Manufacturer models go in `libraries/lesser-magistrate.3dshapes/`, named after t
 
 `tools/kicad/check.sh` runs ERC and DRC (with schematic/board parity) on every board. It fails on any error that hasn't
 been excluded in KiCad, and reports warnings without failing. The same script runs in CI
-([.github/workflows/kicad.yml](../.github/workflows/kicad.yml)) on every push that touches `kicad/`.
+([.github/workflows/kicad.yml](../.github/workflows/kicad.yml)) on every push or pull request that touches the boards,
+the simulation, the parts catalogue or the tooling.
 
 ```sh
 tools/kicad/check.sh              # all boards
