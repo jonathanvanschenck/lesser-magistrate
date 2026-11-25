@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # Design checks for every KiCad board: ERC, and DRC with schematic/board parity. When LM is checked, also the trigger
 # crosstalk simulation (sim/crosstalk.py), which reads LM's input network from its schematic. When every board is
-# checked, also that the BOM tables in components/README.md match the schematics (tools/bom/bom.mjs; needs Node).
+# checked, also that the BOM tables in components/README.md match the schematics (tools/bom/bom.mjs), and that every
+# board's VERSION is x.y.z and the release script's tests pass (tools/release/release.mjs). Those two need Node.
 # Fails (exit 1) on any error-severity violation that hasn't been excluded in KiCad, or a failed simulation; warnings
 # are reported but pass. Full reports are written to build/kicad/<board>/ and build/sim/.
 #
@@ -79,6 +80,14 @@ if [ $ALL = 1 ]; then
     else
       echo "bom      components/README.md FAIL"
       sed 's/^/    /' build/bom-check.txt
+      status=1
+    fi
+    if node tools/release/release.mjs check >/dev/null 2>build/release-check.txt \
+        && node --test tools/release/release.test.mjs >>build/release-check.txt 2>&1; then
+      echo "release  board versions and release script ok"
+    else
+      echo "release  FAIL"
+      grep -E '^release:|^not ok' build/release-check.txt | sed 's/^/    /'
       status=1
     fi
   elif [ -n "${CI:-}" ]; then

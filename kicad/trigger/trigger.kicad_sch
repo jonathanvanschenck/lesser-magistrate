@@ -6,6 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "Lesser Magistrate Trigger")
+		(rev "${VERSION}")
 		(comment 1 "Rebuilt in KiCad from the DipTrace fab outputs (buzzer_pcb.dip source lost)")
 	)
 	(lib_symbols

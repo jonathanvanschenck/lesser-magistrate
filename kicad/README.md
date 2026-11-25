@@ -65,19 +65,50 @@ Manufacturer models go in `libraries/lesser-magistrate.3dshapes/`, named after t
 
 ## Versions
 
-Each board's version lives in one place: the `VERSION` text variable in its project file (in KiCad: *File →
-Schematic Setup* or *Board Setup → Text Variables*; it's stored in `<board>.kicad_pro`). Everything that shows the
-version reads it from there:
+Each board has its own version, because each is made separately: a new LM doesn't make a new LMM. A board's version
+lives in one place, the `VERSION` text variable in its project file (`<board>.kicad_pro`; in KiCad, *Schematic Setup*
+or *Board Setup* → *Project* → *Text Variables*). Everything that shows the version reads it from there as
+`${VERSION}`:
 
-- the version on the silkscreen (`v${VERSION}` on LM's front, `LM Module v${VERSION}` on LMM's back)
-- the *Rev* field of the schematic and board title blocks (`${VERSION}`), which appears on the schematic PDF
+- the silkscreen: `v${VERSION}` on LM's front, `LM Module v${VERSION}` on LMM's back, `Trigger v${VERSION}` on the
+  Trigger's back
+- the *Rev* field of each schematic and board title block, which appears on the schematic PDF
 
-To release a new version of a board, change `VERSION` and nothing else. Boards are versioned separately, because they
-are made separately: a change to LM doesn't make a new LMM. Trigger has no version text or variable yet.
+Versions are `major.minor.patch`, as in npm: **major** for a board that isn't a drop-in replacement (a different size,
+connector or pinout), **minor** for a change to the circuit or copper, **patch** for silkscreen or other changes that
+don't touch the circuit.
 
-When exporting, `kicad-cli` can override the variable without editing the project, e.g.
-`kicad-cli pcb export gerbers --define-var VERSION=1.1.0 ...`. That is how a build from a git tag could stamp the tag's
-version on the boards.
+### Releasing a version
+
+Release from a clean working tree, ideally on `master`:
+
+```sh
+node tools/release/release.mjs status              # each board's version, tag and fab files
+node tools/release/release.mjs bump lm minor       # or major, patch, or an exact version: bump lm 1.1.0
+git push origin master && git push origin lm@1.1.0
+```
+
+`bump` does everything a release needs, and undoes its changes if any step fails:
+
+1. sets `VERSION` in the board's project file
+2. runs every design check (`tools/kicad/check.sh`: ERC, DRC, the crosstalk simulation, the BOM tables)
+3. exports the board's fab files and replaces its zip in [`gerber/`](../gerber): gerbers, drill file and an
+   IPC-D-356 netlist (which board makers use for electrical testing)
+4. exports the schematic to `graphics/<board>-schematic.pdf`
+5. updates the version table in [`gerber/README.md`](../gerber/README.md)
+6. commits those files as `<board>: version <x.y.z>`, and tags that commit `<board>@<x.y.z>` (e.g. `lm@1.1.0`)
+
+It never pushes. If you release from a branch, merge it with a merge commit, not a squash or rebase, so the tag stays on
+a commit that's on `master`.
+
+The repo's older tags (`0.4.0` to `1.0.0`) versioned the whole repo, enclosures included. Board tags carry the board's
+name, so they don't collide with them or with each other.
+
+**A second, design-for-manufacture board line** (the planned SMD revision) fits the same scheme if it lives in its own
+directory with its own board names, e.g. `kicad-dfm/lm-dfm/`, tagged `lm-dfm@1.0.0`: add its boards to `BOARDS` in
+`tools/release/release.mjs`. On a separate long-lived branch instead, its tags would still share the repo's one tag
+namespace, so it would need distinct board names anyway, and fixes would have to be merged between the branches. A
+directory is the simpler of the two.
 
 ## Checks and outputs
 
@@ -99,9 +130,10 @@ Reports and outputs go to `build/kicad/<board>/`, which git ignores. CI uploads 
 comment saying why (right-click the marker in the ERC or DRC dialog, *Exclude*). Exclusions are saved in the
 `.kicad_pro` file, so the check and CI skip them too. There are no exclusions at the moment: all three boards pass.
 
-**Fabrication files:** the zips in [`gerber/`](../gerber) are still the production files exported from DipTrace. They
-stay the reference until a batch made from KiCad's output has been built and tested. LM's KiCad copper is no longer
-identical to them: see [Fixes since the DipTrace design](#fixes-since-the-diptrace-design).
+**Fabrication files:** the gerbers `--fab` writes are for review. The files to order are the released ones in
+[`gerber/`](../gerber), which `release.mjs bump` writes (see [Releasing a version](#releasing-a-version)). Until a
+board's first KiCad release, its zip there is the original DipTrace export; the table in
+[`gerber/README.md`](../gerber/README.md) says which each one is.
 
 ## Migration from DipTrace
 

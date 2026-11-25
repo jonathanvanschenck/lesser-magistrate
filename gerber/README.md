@@ -1,16 +1,22 @@
 # Gerber Files
 In this directory are the gerber files (extension `.zip`) for the PCBs used in this project.
 
-These are the production files exported from the original DipTrace design, and every Lesser Magistrate built so far was made from them. Order from these. The boards are now developed in KiCad (see the [kicad](../kicad) directory), but KiCad's outputs haven't been manufactured and tested yet, so they don't replace these files until they have been. The KiCad LM also has two small fixes that these files don't (see [Fixes since the DipTrace design](../kicad/README.md#fixes-since-the-diptrace-design)); boards made from these files work without them.
+Order from these files. They are the released version of each board: don't order from files exported out of the
+`kicad` directory yourself, which may hold unreleased changes.
 
-A gerber file is really just a zip file containing all the information necessary for a PCB manufacturer to create your PCB. Any boardhouse will know what to do with a gerber file.
+<!-- BEGIN releases (generated: run node tools/release/release.mjs bump, see kicad/README.md#versions) -->
+| Board | File | Version | Made with |
+|-------|------|---------|-----------|
+| LM | [LMGerber.zip](./LMGerber.zip) | 1.0.0 | DipTrace (original production files) |
+| LMM | [LMMGerber.zip](./LMMGerber.zip) | 1.0.0 | DipTrace (original production files) |
+| Trigger | [TriggerGerber.zip](./TriggerGerber.zip) | 1.0.0 | DipTrace (original production files) |
+<!-- END releases -->
 
-Note, each file will create only a single instance of whatever it contains. So, for example, if you order "a LMM board" from the gerber file, you will get exactly 1 PCB, where a typical set requires 3. So, you will want to make sure your quantities are corrected when ordering.
-
-## Gerber files
-  - [LM Board](./LMGerber.zip)
-  - [LMM Board](./LMMGerber.zip)
-  - [Trigger Board](./TriggerGerber.zip)
+The boards were first drawn in DipTrace, and every Lesser Magistrate built so far was made from the DipTrace files.
+They are now developed in KiCad (see the [kicad](../kicad) directory). Each board's file is replaced by KiCad's output
+when that board's next version is released, and the table says which file you have. The KiCad LM has two small fixes
+the DipTrace LM doesn't (see [Fixes since the DipTrace design](../kicad/README.md#fixes-since-the-diptrace-design));
+boards made from the DipTrace file work without them.
 
 ## Quantities by Trigger Set
 

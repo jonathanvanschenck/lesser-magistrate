@@ -9,6 +9,7 @@ work on the boards; everything else is optional, and the KiCad projects open and
 | ---- | ------------ | -------------- | ------ |
 | [KiCad](#kicad) | Schematics and boards; design checks (ERC/DRC) and fabrication outputs, locally and in CI | `kicad/`, `tools/kicad/`, `.github/workflows/` | Ready |
 | [Crosstalk simulation](#crosstalk-simulation) | SPICE model of the trigger lines; checks a press can't latch a neighbouring light | `sim/` | Ready |
+| [Releases](#releases) | Versions each board, and cuts a release: checks, fab files, commit and tag | `tools/release/` | Ready |
 | [BOM tables](#bom-tables) | Generates the parts tables in `components/README.md` from the schematics | `tools/bom/`, `components/parts.json` | Ready |
 | [DigiKey CLI](#digikey-cli) | Search parts, check stock and pricing, find substitutes, download datasheets | `tools/digikey/` (this repo) | Ready |
 | [KiCad MCP server](#kicad-mcp-server) | Lets Claude read and edit the KiCad schematics and boards | External clone, registered with Claude Code | Ready |
@@ -66,8 +67,7 @@ tools/kicad/check.sh              # ERC + DRC on every board
 `tools/kicad/check.sh` runs ERC and DRC (including schematic/board parity) on each board and fails on any error
 that hasn't been excluded in KiCad. With `--fab` it also writes gerbers, drill files, a BOM, the schematic PDF and a 3D
 render. Everything goes to `build/kicad/<board>/`, which git ignores. These gerbers are for review, not for ordering:
-the production files are still the DipTrace exports in [`gerber/`](./gerber) until a KiCad batch has been built and
-tested.
+the files to order are the released ones in [`gerber/`](./gerber) (see [Releases](#releases)).
 
 CI runs the same script on every push or pull request that touches the boards, the simulation, the parts catalogue or
 the tooling (see [`.github/workflows/kicad.yml`](./.github/workflows/kicad.yml)), in the official `kicad/kicad:10.0` Docker image, and
@@ -100,6 +100,14 @@ node tools/bom/bom.mjs --check   # exit 1 if they're out of date
 
 It fails if a schematic has a part that `parts.json` doesn't list, or the reverse. `check.sh` runs the check when it
 checks every board, and so does CI. The DigiKey shopping-list links above each table are still maintained by hand.
+
+### Releases
+
+Each board has its own version, in the `VERSION` text variable of its KiCad project. `node tools/release/release.mjs
+bump <board> <major|minor|patch|x.y.z>` cuts a release: it sets the version, runs every check, exports the fab files
+to `gerber/` and the schematic PDF to `graphics/`, then commits and tags (`lm@1.1.0`). It doesn't push. See
+[Versions](./kicad/README.md#versions) in the KiCad README for the details and the version rules. `check.sh` checks
+that every board's version is `x.y.z` and runs the script's tests (`node --test tools/release/release.test.mjs`).
 
 ### Working on the boards
 

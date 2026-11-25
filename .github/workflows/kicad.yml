@@ -5,9 +5,9 @@ name: KiCad checks
 
 on:
   push:
-    paths: ['kicad/**', 'sim/**', 'components/**', 'tools/kicad/**', 'tools/bom/**', '.github/workflows/kicad.yml']
+    paths: ['kicad/**', 'sim/**', 'components/**', 'gerber/**', 'tools/kicad/**', 'tools/bom/**', 'tools/release/**', '.github/workflows/kicad.yml']
   pull_request:
-    paths: ['kicad/**', 'sim/**', 'components/**', 'tools/kicad/**', 'tools/bom/**', '.github/workflows/kicad.yml']
+    paths: ['kicad/**', 'sim/**', 'components/**', 'gerber/**', 'tools/kicad/**', 'tools/bom/**', 'tools/release/**', '.github/workflows/kicad.yml']
   workflow_dispatch:
 
 jobs:
