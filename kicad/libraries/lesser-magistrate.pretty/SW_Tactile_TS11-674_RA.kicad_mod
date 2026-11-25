@@ -49,36 +49,6 @@
 	)
 	(attr through_hole)
 	(duplicate_pad_numbers_are_jumpers no)
-	(fp_line
-		(start -3.61 2.6)
-		(end -3.61 0)
-		(stroke
-			(width 0.119989)
-			(type default)
-		)
-		(layer "F.SilkS")
-		(uuid "756532eb-e861-408c-91fe-91558afe7a98")
-	)
-	(fp_line
-		(start -3.61 2.6)
-		(end 3.61 2.6)
-		(stroke
-			(width 0.119989)
-			(type default)
-		)
-		(layer "F.SilkS")
-		(uuid "0dc927f4-d454-4e7c-9a8b-68dbea5588d6")
-	)
-	(fp_line
-		(start 3.61 2.6)
-		(end 3.61 0)
-		(stroke
-			(width 0.119989)
-			(type default)
-		)
-		(layer "F.SilkS")
-		(uuid "eda89d5b-fa9f-476e-b95c-7a9a4e67647b")
-	)
 	(fp_rect
 		(start -4.4 -11.52)
 		(end 4.4 1.15)
@@ -89,6 +59,26 @@
 		(fill no)
 		(layer "F.CrtYd")
 		(uuid "9998af3f-6658-4496-bf36-d3c26e7865b5")
+	)
+	(fp_line
+		(start -3.61 1.8)
+		(end -3.61 0)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "7f03e6db-c1f4-47b9-9746-ea18e5ce93a9")
+	)
+	(fp_line
+		(start 3.61 1.8)
+		(end 3.61 0)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "7097d368-4984-48b2-a169-6c7cd74fc17d")
 	)
 	(pad "" np_thru_hole circle
 		(at -3.504 -2.4891)

@@ -3442,34 +3442,24 @@
 		(sheetfile "lm.kicad_sch")
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
-			(start -6.55 6.5)
-			(end 6.55 6.5)
-			(stroke
-				(width 0.2)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "62890be3-d6d5-4c48-98b5-96132b610b9e")
-		)
-		(fp_line
-			(start 6.55 6.5)
-			(end 6.55 -2.3)
-			(stroke
-				(width 0.2)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "ff1d6b6f-1286-43dd-8832-2d2814a60e67")
-		)
-		(fp_line
 			(start -6.55 -2.3)
-			(end -6.55 6.5)
+			(end -6.55 2.35)
 			(stroke
 				(width 0.2)
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "63b877b2-2165-4fb6-b69c-10b7b92d963f")
+			(uuid "9077b23c-86b7-45d2-8ccc-cac672cfad97")
+		)
+		(fp_line
+			(start 6.55 -2.3)
+			(end 6.55 2.35)
+			(stroke
+				(width 0.2)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "8f4e6b8e-4d8d-4de2-bd72-3abd5793f59c")
 		)
 		(fp_line
 			(start -6.55 -5.3)
@@ -3479,7 +3469,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "aaac39a3-db3f-4f6f-abc0-104b5b8c35dc")
+			(uuid "37ecbc15-7c5a-489b-9383-806f87628c78")
 		)
 		(fp_line
 			(start -6.55 -7.6)
@@ -3489,7 +3479,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "762d8fcf-d2a6-4e1f-b4df-444936e37087")
+			(uuid "5a0ef4c9-4494-4619-9ec9-1a6bfbd3cf60")
 		)
 		(fp_line
 			(start 6.55 -7.6)
@@ -3499,7 +3489,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "2f5487c6-8770-4605-beee-a81de8e22ba6")
+			(uuid "fec0c27f-463d-459d-8c0f-41594df1eed9")
 		)
 		(fp_text user "USB A"
 			(at -2.968 7.26 90)
@@ -3774,7 +3764,7 @@
 		(at 187.325 85.725 90)
 		(descr "DipTrace pattern: Capacitor (Axial 6.5m)")
 		(property "Reference" "C1"
-			(at 0 -1.436 90)
+			(at 0 3.075 90)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "6e3eab45-931d-4169-853d-6222bd13851d")
@@ -4064,7 +4054,7 @@
 		(at 141.605 85.725 90)
 		(descr "DipTrace pattern: Capacitor (Axial 6.5m)")
 		(property "Reference" "C2"
-			(at 0 -1.436 90)
+			(at 0 3.065 90)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "0907c3a2-affd-42a1-b807-6bff669e06e9")
@@ -4354,7 +4344,7 @@
 		(at 108.2675 130.81 -90)
 		(descr "DipTrace pattern: Capacitor (Axial 6.5m)")
 		(property "Reference" "C3"
-			(at 0 -1.436 90)
+			(at 0 2.4675 90)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "49fbc3ef-8f34-4917-940e-6dd303ea0171")
@@ -4499,7 +4489,7 @@
 		(at 152.0825 82.8675 180)
 		(descr "DipTrace pattern: 1k 10 Array")
 		(property "Reference" "RB1"
-			(at -1.286 11.43 90)
+			(at -1.2875 8.2675 90)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "64dd4c88-70c5-4e72-9f9a-c13ce7b80e7a")
@@ -5072,44 +5062,14 @@
 		(sheetfile "lm.kicad_sch")
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
-			(start 10.795 14.54)
-			(end 9.525 14.54)
+			(start 9.525 -3.72)
+			(end 9.525 11)
 			(stroke
 				(width 0.12)
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "57a80fd0-a505-493d-b88c-6567a8340b2d")
-		)
-		(fp_line
-			(start 10.795 13.32)
-			(end 10.795 14.54)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "62794270-c3ab-42d4-8ad5-9397fa47c31b")
-		)
-		(fp_line
-			(start 9.525 16.85)
-			(end 9.525 -3.72)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "310fcdba-9398-4b47-9151-0c4704db4a95")
-		)
-		(fp_line
-			(start 9.525 13.32)
-			(end 10.795 13.32)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "0a29db9f-a523-48aa-8668-b90d88e95b94")
+			(uuid "a670b9c0-83bd-4cf5-9140-d9739b15ebe2")
 		)
 		(fp_line
 			(start 9.525 -3.72)
@@ -5119,57 +5079,17 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "ab29836d-dcaf-462f-88b7-8915ac11f0be")
-		)
-		(fp_line
-			(start -5.715 16.85)
-			(end 9.525 16.85)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "dc9cbb33-9b8e-4af5-b037-c7dc707c38e3")
-		)
-		(fp_line
-			(start -5.715 13.32)
-			(end -6.985 13.32)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "c163d835-bf58-4b5a-94b9-0363c81ce323")
+			(uuid "2e637ec5-099c-45ab-a805-056445cdf566")
 		)
 		(fp_line
 			(start -5.715 -3.72)
-			(end -5.715 16.85)
+			(end -5.715 11)
 			(stroke
 				(width 0.12)
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "d2f61fdf-5446-4ca6-a8ed-d22db946cd8f")
-		)
-		(fp_line
-			(start -6.985 14.54)
-			(end -5.715 14.54)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "5952cd39-a336-435c-bd1f-39b43806c2ba")
-		)
-		(fp_line
-			(start -6.985 13.32)
-			(end -6.985 14.54)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "7e09d47a-227b-4027-a557-c5063a2a2f3b")
+			(uuid "28a8285d-8628-48cb-82f1-e70724a212e6")
 		)
 		(fp_text user "RJ45"
 			(at -0.293001 17.36 0)
@@ -7580,44 +7500,14 @@
 		(sheetfile "lm.kicad_sch")
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
-			(start 10.795 14.54)
-			(end 9.525 14.54)
+			(start 9.525 -3.72)
+			(end 9.525 11)
 			(stroke
 				(width 0.12)
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "4f1cb0fc-d177-4c15-b6a6-9333f767b598")
-		)
-		(fp_line
-			(start 10.795 13.32)
-			(end 10.795 14.54)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "b734e354-bcc5-4cc1-ab96-f991cae73ec0")
-		)
-		(fp_line
-			(start 9.525 16.85)
-			(end 9.525 -3.72)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "1e856b46-674a-4ca4-9f7b-783e91b57087")
-		)
-		(fp_line
-			(start 9.525 13.32)
-			(end 10.795 13.32)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "c5d80dcb-6b80-4d1b-8dd0-e9327b63ee10")
+			(uuid "0548b533-e31d-4485-9ea4-91aa4dd90e17")
 		)
 		(fp_line
 			(start 9.525 -3.72)
@@ -7627,57 +7517,17 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "5d0d8120-f3a5-48e2-8df6-585b698ce158")
-		)
-		(fp_line
-			(start -5.715 16.85)
-			(end 9.525 16.85)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "c099e904-842a-411f-b498-6b3852154b86")
-		)
-		(fp_line
-			(start -5.715 13.32)
-			(end -6.985 13.32)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "8fa690eb-c4f9-46e4-9e30-4c40dc138289")
+			(uuid "d64eb98d-62fe-415b-8c19-9881bf9a82e3")
 		)
 		(fp_line
 			(start -5.715 -3.72)
-			(end -5.715 16.85)
+			(end -5.715 11)
 			(stroke
 				(width 0.12)
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "6fb8ed2a-2a76-491c-a3bc-5a7c95d870dd")
-		)
-		(fp_line
-			(start -6.985 14.54)
-			(end -5.715 14.54)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "792cfa37-548d-4d4c-ab23-1ef086a4537d")
-		)
-		(fp_line
-			(start -6.985 13.32)
-			(end -6.985 14.54)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "4aa5bd3b-1fce-406d-b611-dc7c44105c6b")
+			(uuid "9ea183ee-d1bf-403e-b7c1-401fa712ed0f")
 		)
 		(fp_text user "RJ45"
 			(at -0.293 17.36 0)
@@ -8603,44 +8453,14 @@
 		(sheetfile "lm.kicad_sch")
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
-			(start 10.795 14.54)
-			(end 9.525 14.54)
+			(start 9.525 -3.72)
+			(end 9.525 11)
 			(stroke
 				(width 0.12)
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "807646d4-7544-4589-9a0a-cc4dc4e954be")
-		)
-		(fp_line
-			(start 10.795 13.32)
-			(end 10.795 14.54)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "aa810f42-469b-4b98-ba3b-9aa130db3f21")
-		)
-		(fp_line
-			(start 9.525 16.85)
-			(end 9.525 -3.72)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "8ce45f39-858a-489c-8c63-fc192cb91c7b")
-		)
-		(fp_line
-			(start 9.525 13.32)
-			(end 10.795 13.32)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "71aa040c-1879-4174-a734-53d89a94d49c")
+			(uuid "b53202f3-1b79-46bc-a8d8-9397848ac26d")
 		)
 		(fp_line
 			(start 9.525 -3.72)
@@ -8650,57 +8470,17 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "04bd9550-e6ee-49d4-8be8-2a0da1da5736")
-		)
-		(fp_line
-			(start -5.715 16.85)
-			(end 9.525 16.85)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "2981ca2c-a80d-4e49-9a07-9a40e330ebde")
-		)
-		(fp_line
-			(start -5.715 13.32)
-			(end -6.985 13.32)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "1f2c5bef-db17-4d01-b3fd-c576515207d7")
+			(uuid "50d0f940-0039-4dca-bfe7-fcff1d9b2f68")
 		)
 		(fp_line
 			(start -5.715 -3.72)
-			(end -5.715 16.85)
+			(end -5.715 11)
 			(stroke
 				(width 0.12)
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "2327d2ca-8efa-4f04-ab5e-ddfdd9eff11b")
-		)
-		(fp_line
-			(start -6.985 14.54)
-			(end -5.715 14.54)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "8f6b91a1-27fb-43c2-a0ed-ea5a2d0f9fc1")
-		)
-		(fp_line
-			(start -6.985 13.32)
-			(end -6.985 14.54)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "b4810d2d-72c4-4f24-9734-5187d0ab2d32")
+			(uuid "00651fe5-80a2-4428-a11f-856f1d7f961b")
 		)
 		(fp_text user "RJ45"
 			(at -0.293001 17.36 0)
@@ -9456,34 +9236,44 @@
 		(sheetfile "lm.kicad_sch")
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
-			(start -6.6 0)
-			(end 6.6 0)
+			(start -6.6 -6.56)
+			(end -6.6 -4.05)
 			(stroke
 				(width 0.12)
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "ef556a38-2906-4cd2-bfb0-d2548e3b5b5f")
+			(uuid "ebfbbc7e-dfc2-4c71-b1fd-98881ee5c0e6")
+		)
+		(fp_line
+			(start 6.6 -6.56)
+			(end 6.6 -4.05)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "4ce5960f-eed1-408a-a52f-2194f84ef817")
 		)
 		(fp_line
 			(start -6.6 -18)
-			(end -6.6 0)
+			(end -6.6 -9.2)
 			(stroke
 				(width 0.12)
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "22e2f296-f8ef-4928-97b8-c77c4930c7a1")
+			(uuid "ca7486e4-97df-4952-a3d8-b80ec1134e8e")
 		)
 		(fp_line
 			(start 6.6 -18)
-			(end 6.6 0)
+			(end 6.6 -9.2)
 			(stroke
 				(width 0.12)
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "0bf40701-14d0-4a1d-a8f6-c1d2667e20fb")
+			(uuid "fae9d8c6-3592-433b-8f10-b85aee4c6e42")
 		)
 		(fp_line
 			(start 6.6 -18)
@@ -9493,7 +9283,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "4c8ef934-d0cc-4a9f-9ee5-464173a9dc98")
+			(uuid "f86dbe2e-d7b4-48db-92ca-3b7eb558cbe0")
 		)
 		(fp_text user "RJ11"
 			(at -1.622 0.51 90)

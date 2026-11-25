@@ -53,66 +53,6 @@
 		)
 	)
 	(duplicate_pad_numbers_are_jumpers no)
-	(fp_line
-		(start -6.55 -7.6)
-		(end 6.55 -7.6)
-		(stroke
-			(width 0.2)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "59448db5-15bc-4bb8-ae74-931fffbe51f2")
-	)
-	(fp_line
-		(start -6.55 -5.3)
-		(end -6.55 -7.6)
-		(stroke
-			(width 0.2)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "5d0effaf-4f93-49ab-a19b-aa8bae7560c5")
-	)
-	(fp_line
-		(start -6.55 -2.3)
-		(end -6.55 6.5)
-		(stroke
-			(width 0.2)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "da2d8e58-37ae-4514-9ee7-d80b69e3b53c")
-	)
-	(fp_line
-		(start -6.55 6.5)
-		(end 6.55 6.5)
-		(stroke
-			(width 0.2)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "4c003133-01c2-4404-a3c0-4dc67d06d926")
-	)
-	(fp_line
-		(start 6.55 -7.6)
-		(end 6.55 -5.3)
-		(stroke
-			(width 0.2)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "9f224074-fa74-4e10-9ba0-9007d8195c91")
-	)
-	(fp_line
-		(start 6.55 6.5)
-		(end 6.55 -2.3)
-		(stroke
-			(width 0.2)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "bc017c12-4546-40ad-a40c-6a8f2b266d60")
-	)
 	(fp_text user "USB A"
 		(at -2.968 7.26 0)
 		(unlocked yes)
@@ -125,6 +65,56 @@
 			)
 			(justify left top)
 		)
+	)
+	(fp_line
+		(start -6.55 -7.6)
+		(end 6.55 -7.6)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "0c755ba8-00a3-4108-b4ed-8c3a129d840f")
+	)
+	(fp_line
+		(start -6.55 -5.3)
+		(end -6.55 -7.6)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c0add6b9-bd1c-4ec6-914e-5ffc9735da00")
+	)
+	(fp_line
+		(start 6.55 -7.6)
+		(end 6.55 -5.3)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "9c96f103-0d71-4fce-8220-fa841f1275af")
+	)
+	(fp_line
+		(start -6.55 -2.3)
+		(end -6.55 2.35)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "282259ba-2d04-4250-9ade-9175d225526c")
+	)
+	(fp_line
+		(start 6.55 -2.3)
+		(end 6.55 2.35)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "2ddcb272-e14d-4122-9756-52b41d19a238")
 	)
 	(pad "" np_thru_hole circle
 		(at -6.57 -3.8)

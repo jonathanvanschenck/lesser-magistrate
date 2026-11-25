@@ -136,7 +136,7 @@ Schematic cleanup after the import (connectivity unchanged):
 ## Fixes since the DipTrace design
 
 ERC and DRC found two problems in LM as manufactured. Both are fixed in the schematic and on the board, so LM's copper
-differs from the DipTrace gerbers in these places only:
+differs from the DipTrace gerbers in these places only. The silkscreen was also cleaned up on all three boards:
 
 - **Floating inputs (ERC, 4 errors):** the three unused inverters in U8 (CD74AC04E, inputs A1–A3) and latch input
   U2 D8 were left floating. A floating CMOS input can drift to mid-supply and make its gate draw current or oscillate.
@@ -145,11 +145,14 @@ differs from the DipTrace gerbers in these places only:
 - **Clearance (DRC, 3 errors):** the 5V track ran diagonally into pad 1 of each RJ45 (JA1, JB1, JC1), passing 0.18 mm
   from the unconnected pad 3. The design rule is 0.2032 mm (8 mil). The track now runs along the 5V bus to above pad 1
   and drops straight down, about 0.9 mm from pad 3.
+- **Silkscreen (DRC warnings):** the connector outlines (J2, the RJ45s and RJ11s, and the Trigger's button) ran past
+  the board edge and, on the RJ11s, over the plastic locating-peg holes. They now stop about 0.25 mm inside the edge
+  and leave a gap around the holes, in the library footprints and on every board. Six labels that overlapped
+  another label, an outline or a pad were moved: C1, C2 and C3 (now on the far side of their capacitor from the
+  chip), RB1, and the Trigger's J1 reference and value.
 
-The ground pour was refilled after these changes.
-
-Warnings that don't fail the check: silkscreen overlaps on all three boards, and 28 small isolated copper islands in
-LM's ground pour.
+The ground pour was refilled after these changes. The only remaining warnings are 23 small isolated copper islands in
+LM's ground pour, which don't affect function.
 
 ## Next revision
 
@@ -171,7 +174,7 @@ have:
   with short, direct tracks or vias to the ground pour.
 - **A 10–47 µF bulk capacitor where USB power enters** (J2), to supply LED switching current and smooth out a long
   USB cable. The existing 1 µF capacitors can go.
-- **Solid ground pours on both layers**, stitched together with vias. The current pour has 28 isolated islands.
+- **Solid ground pours on both layers**, stitched together with vias. The current pour has 23 isolated islands.
 - **The 5V track at 0.5 mm or wider**: plenty for 0.3 A, so routing space isn't wasted on a wider track.
 
 These will be enforced by checks (see [DEVELOPMENT.md](../DEVELOPMENT.md#planned)): a power budget computed from the

@@ -152,34 +152,24 @@
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
-			(start 3.61 2.6)
+			(start 3.61 1.8)
 			(end 3.61 0)
 			(stroke
-				(width 0.119989)
-				(type default)
+				(width 0.12)
+				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "29b7a53b-1057-49d7-9905-d22fc0a2b262")
+			(uuid "23d734d6-a2fa-467d-a8a1-62869dfe0a18")
 		)
 		(fp_line
-			(start -3.61 2.6)
-			(end 3.61 2.6)
-			(stroke
-				(width 0.119989)
-				(type default)
-			)
-			(layer "F.SilkS")
-			(uuid "48af7bb3-b48e-48ce-b082-dfd2a71d8cbd")
-		)
-		(fp_line
-			(start -3.61 2.6)
+			(start -3.61 1.8)
 			(end -3.61 0)
 			(stroke
-				(width 0.119989)
-				(type default)
+				(width 0.12)
+				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "895539c2-95f3-4dda-bee6-5cc621495a61")
+			(uuid "309df6a3-a6b8-45a7-b155-73263c375a09")
 		)
 		(fp_rect
 			(start -4.4 -11.52)
@@ -249,7 +239,7 @@
 		(uuid "41fa99d8-827d-4369-94d5-50a54866f380")
 		(at 148.98 136.241)
 		(property "Reference" "J1"
-			(at 0 -18.486 0)
+			(at -1.98 -19.641 0)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "557c6e85-88bf-495c-9d39-ead3c5b5c530")
@@ -262,7 +252,7 @@
 			)
 		)
 		(property "Value" "RJ11"
-			(at 8.028 -17.49 0)
+			(at 6.02 -19.641 0)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "716baec2-5561-427b-a319-2707cae9d3a8")
@@ -314,23 +304,23 @@
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -6.6 -18)
-			(end -6.6 0)
+			(end -6.6 -9.2)
 			(stroke
 				(width 0.12)
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "1fe8b959-de9a-4b88-9c5d-b2e39053c317")
+			(uuid "b70513fd-00b7-4bb0-a2a0-9485205389de")
 		)
 		(fp_line
-			(start -6.6 0)
-			(end 6.6 0)
+			(start -6.6 -6.56)
+			(end -6.6 -4.05)
 			(stroke
 				(width 0.12)
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "1e0965b3-2fb9-477e-be85-19eabc96ea7d")
+			(uuid "71278df3-fec2-4cdd-82d2-60842241a2a6")
 		)
 		(fp_line
 			(start 6.6 -18)
@@ -340,17 +330,27 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "4522f1ee-b8a9-4483-a58c-d9fdcd42d94b")
+			(uuid "dc68cba5-ebd8-4e28-9aae-9d6c880aad84")
 		)
 		(fp_line
 			(start 6.6 -18)
-			(end 6.6 0)
+			(end 6.6 -9.2)
 			(stroke
 				(width 0.12)
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "662acc00-6c12-41b7-8238-087a07195e47")
+			(uuid "b69a8f7e-113d-4f49-9aed-8533048a200c")
+		)
+		(fp_line
+			(start 6.6 -6.56)
+			(end 6.6 -4.05)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "680926a4-8bea-46f8-9b21-5128b0f0dcc8")
 		)
 		(fp_text user "RJ11"
 			(at -1.622 0.51 0)
