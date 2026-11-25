@@ -63,6 +63,22 @@ Where no stock model of the exact part exists, the closest stock model with the 
 Manufacturer models go in `libraries/lesser-magistrate.3dshapes/`, named after the footprint and referenced as
 `${KIPRJMOD}/../libraries/lesser-magistrate.3dshapes/<name>.step`.
 
+## Versions
+
+Each board's version lives in one place: the `VERSION` text variable in its project file (in KiCad: *File →
+Schematic Setup* or *Board Setup → Text Variables*; it's stored in `<board>.kicad_pro`). Everything that shows the
+version reads it from there:
+
+- the version on the silkscreen (`v${VERSION}` on LM's front, `LM Module v${VERSION}` on LMM's back)
+- the *Rev* field of the schematic and board title blocks (`${VERSION}`), which appears on the schematic PDF
+
+To release a new version of a board, change `VERSION` and nothing else. Boards are versioned separately, because they
+are made separately: a change to LM doesn't make a new LMM. Trigger has no version text or variable yet.
+
+When exporting, `kicad-cli` can override the variable without editing the project, e.g.
+`kicad-cli pcb export gerbers --define-var VERSION=1.1.0 ...`. That is how a build from a git tag could stamp the tag's
+version on the boards.
+
 ## Checks and outputs
 
 `tools/kicad/check.sh` runs ERC and DRC (with schematic/board parity) on every board. It fails on any error that hasn't

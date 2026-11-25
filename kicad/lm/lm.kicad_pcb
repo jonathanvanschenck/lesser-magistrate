@@ -7,6 +7,10 @@
 		(legacy_teardrops no)
 	)
 	(paper "A4")
+	(title_block
+		(title "Lesser Magistrate (LM) main board")
+		(rev "${VERSION}")
+	)
 	(layers
 		(0 "F.Cu" signal)
 		(2 "B.Cu" signal)
@@ -12423,7 +12427,7 @@
 			(justify left top)
 		)
 	)
-	(gr_text "v1.0.0"
+	(gr_text "v${VERSION}"
 		(at 153.988 133.723829 0)
 		(layer "F.SilkS")
 		(uuid "24f67d95-e269-4006-a19f-c3425dcb3d5e")

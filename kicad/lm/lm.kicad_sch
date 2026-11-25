@@ -6,6 +6,7 @@
 	(paper "A3")
 	(title_block
 		(title "Lesser Magistrate (LM) main board")
+		(rev "${VERSION}")
 	)
 	(lib_symbols
 		(symbol "lesser-magistrate:4072"

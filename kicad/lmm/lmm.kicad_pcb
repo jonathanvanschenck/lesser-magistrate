@@ -7,6 +7,10 @@
 		(legacy_teardrops no)
 	)
 	(paper "A4")
+	(title_block
+		(title "Lesser Magistrate Module (LMM)")
+		(rev "${VERSION}")
+	)
 	(layers
 		(0 "F.Cu" signal)
 		(2 "B.Cu" signal)
@@ -1261,7 +1265,7 @@
 		(layer "Edge.Cuts")
 		(uuid "7df7c307-4bd5-40b0-b0e1-f632df3f3ca7")
 	)
-	(gr_text "LM Module v1.0.0"
+	(gr_text "LM Module v${VERSION}"
 		(at 174.3 88.876999 0)
 		(layer "B.SilkS")
 		(uuid "4cbbbbb3-2c88-45be-8385-069b9a454ddd")

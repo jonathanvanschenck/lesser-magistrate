@@ -6,6 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "Lesser Magistrate Module (LMM)")
+		(rev "${VERSION}")
 	)
 	(lib_symbols
 		(symbol "lesser-magistrate:RJ11"
