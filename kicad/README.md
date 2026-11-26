@@ -93,7 +93,8 @@ git push origin master && git push origin lm@1.1.0
 1. sets `VERSION` in the board's project file
 2. runs every design check (`tools/kicad/check.sh`: ERC, DRC, the crosstalk simulation, the BOM tables)
 3. exports the board's fab files and replaces its zip in [`gerber/`](../gerber): gerbers, drill file and an
-   IPC-D-356 netlist (which board makers use for electrical testing)
+   IPC-D-356 netlist (which board makers use for electrical testing), and a `README.txt` naming the board and
+   version. Every file name inside carries the version (`lm-1.1.0-F_Cu.gtl`), so a downloaded zip says what it is.
 4. exports the schematic to `graphics/<board>-schematic.pdf`
 5. updates the version table in [`gerber/README.md`](../gerber/README.md)
 6. commits those files as `<board>: version <x.y.z>`, and tags that commit `<board>@<x.y.z>` (e.g. `lm@1.1.0`)

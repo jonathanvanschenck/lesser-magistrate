@@ -12,7 +12,8 @@
 // `bump` needs a clean working tree. It:
 //   1. sets VERSION in the board's project file
 //   2. runs every design check (tools/kicad/check.sh); a failure undoes the bump
-//   3. exports the board's fab package to gerber/<Name>Gerber.zip (gerbers, drill file, IPC-D-356 netlist) and its
+//   3. exports the board's fab package to gerber/<Name>Gerber.zip (gerbers, drill file, IPC-D-356 netlist and a
+//      README.txt naming the board and version; every file name carries the version, e.g. lm-1.1.0-F_Cu.gtl) and its
 //      schematic to graphics/<board>-schematic.pdf, and updates the version table in gerber/README.md
 //   4. commits those files as "<board>: version <x.y.z>", and tags the commit <board>@<x.y.z> (an annotated tag)
 // It never pushes: push the commit, then the tag (the script prints how).
@@ -20,7 +21,7 @@
 // No npm dependencies; needs Node >= 20, git, kicad-cli and python3 (for the zip) on the PATH.
 
 import { execFileSync } from "node:child_process";
-import { mkdtempSync, readFileSync, readdirSync, rmSync, writeFileSync } from "node:fs";
+import { mkdtempSync, readFileSync, readdirSync, renameSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -95,6 +96,44 @@ export function updateTable(readme, id, version, madeWith) {
     return readme.replace(block, (_, a, __, c) => a + rows.join("\n") + c);
 }
 
+// ---------------------------------------------------------------- fab zip contents
+
+const LAYER_NAMES = {
+    F_Cu: "top copper", B_Cu: "bottom copper", F_Mask: "top solder mask", B_Mask: "bottom solder mask",
+    F_Silkscreen: "top silkscreen", B_Silkscreen: "bottom silkscreen", Edge_Cuts: "board outline",
+};
+
+/** A file's name inside the zip: kicad-cli's "<id>-F_Cu.gtl" or "<id>.drl", with the version after the board id. */
+export function zipName(id, version, file) {
+    if (!file.startsWith(id)) fail(`unexpected export file '${file}'`);
+    return `${id}-${version}${file.slice(id.length)}`;
+}
+
+/** What a file in the zip is, for README.txt. */
+export function describe(name) {
+    if (name.endsWith(".drl")) return "drill file (Excellon; plated and non-plated holes)";
+    if (name.endsWith(".d356")) return "IPC-D-356 netlist, for the board maker's electrical test";
+    const layer = Object.keys(LAYER_NAMES).find(l => name.includes(`-${l}.`));
+    return layer ? `${LAYER_NAMES[layer]} (Gerber)` : "";
+}
+
+/** README.txt for the zip: which board and version it is, and what each file holds. */
+export function zipReadme(id, version, names) {
+    const w = Math.max(...names.map(n => n.length));
+    return [
+        `Lesser Magistrate ${BOARDS[id].name} board, version ${version}`,
+        "",
+        `Released from the KiCad project ${BOARDS[id].dir}/ at git tag ${id}@${version}:`,
+        "https://github.com/jonathanvanschenck/lesser-magistrate",
+        "",
+        "Ordering: 2 layers, 1.6 mm FR4, lead-free HASL finish; board maker's defaults for everything else.",
+        "",
+        "Files:",
+        ...names.map(n => `  ${n.padEnd(w)}  ${describe(n)}`),
+        "",
+    ].join("\n");
+}
+
 // ---------------------------------------------------------------- git and tools
 
 function sh(cmd, args, opts = {}) {
@@ -103,8 +142,8 @@ function sh(cmd, args, opts = {}) {
 const git = (...args) => sh("git", args).trim();
 const tagExists = tag => { try { git("rev-parse", "-q", "--verify", `refs/tags/${tag}`); return true; } catch { return false; } };
 
-/** Gerbers, drill file and IPC-D-356 netlist for one board, zipped to its gerber/ file. */
-function exportFab(id) {
+/** Gerbers, drill file, IPC-D-356 netlist and README.txt for one board, zipped to its gerber/ file. */
+function exportFab(id, version) {
     const { dir } = BOARDS[id];
     const pcb = join(ROOT, dir, `${id}.kicad_pcb`);
     const tmp = mkdtempSync(join(tmpdir(), "release-"));
@@ -113,16 +152,20 @@ function exportFab(id) {
         sh("kicad-cli", ["pcb", "export", "drill", "-o", `${tmp}/`, pcb]);
         sh("kicad-cli", ["pcb", "export", "ipcd356", "-o", join(tmp, `${id}.d356`), pcb]);
         const files = readdirSync(tmp).filter(f => !f.endsWith(".gbrjob")).sort();
+        const names = files.map(f => zipName(id, version, f));
+        files.forEach((f, i) => renameSync(join(tmp, f), join(tmp, names[i])));
+        writeFileSync(join(tmp, "README.txt"), zipReadme(id, version, names));
+        names.unshift("README.txt");
         // Fixed timestamps and order, so the zip only changes when its files do.
         sh("python3", ["-c", [
             "import sys, zipfile",
             "out, src, names = sys.argv[1], sys.argv[2], sys.argv[3:]",
             "with zipfile.ZipFile(out, 'w', zipfile.ZIP_DEFLATED) as z:",
             "    for n in names:",
-            "        i = zipfile.ZipInfo(n, (1980, 1, 1, 0, 0, 0)); i.compress_type = zipfile.ZIP_DEFLATED",
+            "        i = zipfile.ZipInfo(n, (1980, 1, 1, 0, 0, 0)); i.compress_type = zipfile.ZIP_DEFLATED; i.external_attr = 0o644 << 16",
             "        z.writestr(i, open(f'{src}/{n}', 'rb').read())",
-        ].join("\n"), join(ROOT, BOARDS[id].zip), tmp, ...files]);
-        return files;
+        ].join("\n"), join(ROOT, BOARDS[id].zip), tmp, ...names]);
+        return names;
     } finally {
         rmSync(tmp, { recursive: true, force: true });
     }
@@ -181,7 +224,7 @@ function bump(id, level) {
             fail("the design checks failed");
         }
         console.log(`exporting ${BOARDS[id].zip} ...`);
-        exportFab(id);
+        exportFab(id, version);
         touched.push(BOARDS[id].zip);
         touched.push(exportSchematic(id));
         const readme = join(ROOT, GERBER_README);
