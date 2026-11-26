@@ -17,6 +17,7 @@ usage: crosstalk.py [--check] [--plot PNG] [--lm-sch PATH]
 Runs on KiCad's libngspice (installed with KiCad); the ngspice command isn't needed.
 """
 import argparse
+import multiprocessing
 import ctypes
 import ctypes.util
 import os
@@ -223,24 +224,33 @@ def simulate(ng, length_ft, corner, lm, pressed):
     return t, v, cross - T_PRESS, peaks
 
 
-def sweep(ng, lm, label):
+_ng = None
+
+
+def _case(args):
+    """One simulation, in a worker process with its own ngspice (the shared library isn't re-entrant)."""
+    global _ng
+    if _ng is None:
+        _ng = NgSpice()
+    return simulate(_ng, *args)
+
+
+def sweep(pool, lm, label):
     filt = f'{lm["Cf"] * 1e9:g} nF filter' if lm['Cf'] else 'no filter'
     print(f'\n{label}: {lm["Rs"]:g} ohm series, {lm["Rpd"]:g} ohm pulldown, {filt}')
     print(f'  {"cable":>6} {"corner":<6} {"pressed":<7} {"crosses VT":>10}   worst idle line in the latch window')
+    cases = [(length, corner, lm, pressed) for length in LENGTHS_FT for corner in CORNERS for pressed in TRIGS]
     worst, missed = (0.0, None), []
-    for length in LENGTHS_FT:
-        for corner in CORNERS:
-            for pressed in TRIGS:
-                t, v, rise, peaks = simulate(ng, length, corner, lm, pressed)
-                if rise is None:
-                    missed.append(f'{length} ft {corner} {pressed}')
-                    print(f'  {length:>4}ft {corner:<6} {pressed:<7} {"never":>10}   (press not detected)')
-                    continue
-                victim = max(peaks, key=peaks.get)
-                flag = '  > VIL' if peaks[victim] > VIL else ''
-                print(f'  {length:>4}ft {corner:<6} {pressed:<7} {rise * 1e9:>7.0f} ns   {victim} {peaks[victim]:.2f} V{flag}')
-                if peaks[victim] >= worst[0]:
-                    worst = (peaks[victim], (length, corner, pressed, victim, t, v))
+    for (length, corner, _, pressed), (t, v, rise, peaks) in zip(cases, pool.map(_case, cases)):
+        if rise is None:
+            missed.append(f'{length} ft {corner} {pressed}')
+            print(f'  {length:>4}ft {corner:<6} {pressed:<7} {"never":>10}   (press not detected)')
+            continue
+        victim = max(peaks, key=peaks.get)
+        flag = '  > VIL' if peaks[victim] > VIL else ''
+        print(f'  {length:>4}ft {corner:<6} {pressed:<7} {rise * 1e9:>7.0f} ns   {victim} {peaks[victim]:.2f} V{flag}')
+        if peaks[victim] >= worst[0]:
+            worst = (peaks[victim], (length, corner, pressed, victim, t, v))
     return worst, missed
 
 
@@ -284,9 +294,10 @@ def main():
     a = ap.parse_args()
 
     lm = lm_inputs(a.lm_sch)
-    ng = NgSpice()
-    drawn, missed = sweep(ng, lm, 'LM as drawn')
-    orig, _ = sweep(ng, dict(lm, Cf=0.0), 'Original fault (filter capacitors removed)')
+    # The cases are independent, so they run on every core: about 35 s one at a time, a few seconds in parallel.
+    with multiprocessing.get_context('spawn').Pool() as pool:
+        drawn, missed = sweep(pool, lm, 'LM as drawn')
+        orig, _ = sweep(pool, dict(lm, Cf=0.0), 'Original fault (filter capacitors removed)')
 
     if missed:
         print(f'\nFAIL: presses not detected: {", ".join(missed)}')

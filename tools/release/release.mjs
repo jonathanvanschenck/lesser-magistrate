@@ -11,7 +11,9 @@
 //
 // `bump` needs a clean working tree. It:
 //   1. sets VERSION in the board's project file
-//   2. runs every design check (tools/kicad/check.sh); a failure undoes the bump
+//   2. runs the design checks for that board (tools/kicad/check.sh <board>: its ERC and DRC, the crosstalk simulation
+//      for LM, and the BOM and release checks), with the new VERSION in place so the version text is checked on the
+//      silkscreen too; a failure undoes the bump, before anything is exported, committed or tagged
 //   3. exports the board's fab package to gerber/<Name>Gerber.zip (gerbers, drill file, IPC-D-356 netlist and a
 //      README.txt naming the board and version; every file name carries the version, e.g. lm-1.1.0-F_Cu.gtl) and its
 //      schematic to graphics/<board>-schematic.pdf, and updates the version table in gerber/README.md
@@ -217,13 +219,13 @@ function bump(id, level) {
     writeFileSync(pro, writeVersion(before, version));
     const touched = [`${BOARDS[id].dir}/${id}.kicad_pro`];
     try {
-        console.log("running the design checks ...");
+        console.log(`1/3 design checks (tools/kicad/check.sh ${id}) ...`);
         try {
-            execFileSync(join(ROOT, "tools/kicad/check.sh"), [], { cwd: ROOT, stdio: "inherit" });
+            execFileSync(join(ROOT, "tools/kicad/check.sh"), [id], { cwd: ROOT, stdio: "inherit" });
         } catch {
-            fail("the design checks failed");
+            fail("the design checks failed; nothing was committed or tagged");
         }
-        console.log(`exporting ${BOARDS[id].zip} ...`);
+        console.log(`2/3 exporting ${BOARDS[id].zip} and the schematic PDF ...`);
         exportFab(id, version);
         touched.push(BOARDS[id].zip);
         touched.push(exportSchematic(id));
@@ -231,6 +233,7 @@ function bump(id, level) {
         writeFileSync(readme, updateTable(readFileSync(readme, "utf8"), id, version, `KiCad (tag \`${tag}\`)`));
         touched.push(GERBER_README);
 
+        console.log(`3/3 committing and tagging ${tag} ...`);
         git("add", "--", ...touched);
         git("commit", "-q", "-m", `${id}: version ${version}`, "--", ...touched);
     } catch (e) {

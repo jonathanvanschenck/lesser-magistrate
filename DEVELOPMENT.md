@@ -60,12 +60,15 @@ Check the install from a terminal:
 ```bash
 kicad-cli version                 # 10.x
 tools/kicad/check.sh              # ERC + DRC on every board
+tools/kicad/check.sh lm           # just one
 ```
 
 ### Design checks
 
-`tools/kicad/check.sh` runs ERC and DRC (including schematic/board parity) on each board and fails on any error
-that hasn't been excluded in KiCad. With `--fab` it also writes gerbers, drill files, a BOM, the schematic PDF and a 3D
+`tools/kicad/check.sh` runs ERC and DRC (including schematic/board parity) on each board, or on the boards named, and
+fails on any error that hasn't been excluded in KiCad. Each runs once, writing a JSON report that
+[`tools/kicad/violations.py`](./tools/kicad/violations.py) reads for errors; a board's ERC and DRC run side by side
+(about 5 s a board). With `--fab` it also writes gerbers, drill files, a BOM, the schematic PDF and a 3D
 render. Everything goes to `build/kicad/<board>/`, which git ignores. These gerbers are for review, not for ordering:
 the files to order are the released ones in [`gerber/`](./gerber) (see [Releases](#releases)).
 
@@ -81,7 +84,7 @@ When a check fails on something that is understood and accepted, exclude it in K
 
 [`sim/crosstalk.py`](./sim/crosstalk.py) simulates one team's trigger lines (switches, phone cords, LMM, Cat5, LM
 input network, latch thresholds) and checks that pressing one trigger can't latch another. `check.sh` runs it whenever
-it checks LM, so it is part of CI. It uses KiCad's own `libngspice` through Python's `ctypes`, so it needs nothing
+it checks LM, so it is part of CI. Its 40 cases run in parallel on every core (about 10 s). It uses KiCad's own `libngspice` through Python's `ctypes`, so it needs nothing
 beyond KiCad. With `--fab`, it also writes `build/sim/crosstalk.png` if matplotlib is installed. See
 [`sim/README.md`](./sim/README.md) for the model and its assumptions.
 
@@ -98,13 +101,13 @@ node tools/bom/bom.mjs           # rewrite the tables after changing a schematic
 node tools/bom/bom.mjs --check   # exit 1 if they're out of date
 ```
 
-It fails if a schematic has a part that `parts.json` doesn't list, or the reverse. `check.sh` runs the check when it
-checks every board, and so does CI. The DigiKey shopping-list links above each table are still maintained by hand.
+It fails if a schematic has a part that `parts.json` doesn't list, or the reverse. `check.sh` always runs the check (it takes
+about 2 s), and so does CI. The DigiKey shopping-list links above each table are still maintained by hand.
 
 ### Releases
 
 Each board has its own version, in the `VERSION` text variable of its KiCad project. `node tools/release/release.mjs
-bump <board> <major|minor|patch|x.y.z>` cuts a release: it sets the version, runs every check, exports the fab files
+bump <board> <major|minor|patch|x.y.z>` cuts a release: it sets the version, runs that board's checks, exports the fab files
 to `gerber/` and the schematic PDF to `graphics/`, then commits and tags (`lm@1.1.0`). It doesn't push. See
 [Versions](./kicad/README.md#versions) in the KiCad README for the details and the version rules. `check.sh` checks
 that every board's version is `x.y.z` and runs the script's tests (`node --test tools/release/release.test.mjs`).

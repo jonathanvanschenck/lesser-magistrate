@@ -91,7 +91,9 @@ git push origin master && git push origin lm@1.1.0
 `bump` does everything a release needs, and undoes its changes if any step fails:
 
 1. sets `VERSION` in the board's project file
-2. runs every design check (`tools/kicad/check.sh`: ERC, DRC, the crosstalk simulation, the BOM tables)
+2. runs that board's design checks (`tools/kicad/check.sh <board>`: its ERC and DRC, the crosstalk simulation for LM,
+   the BOM tables). They run with the new version in place, so the version text is checked on the silkscreen too. If
+   they fail, nothing is exported, committed or tagged.
 3. exports the board's fab files and replaces its zip in [`gerber/`](../gerber): gerbers, drill file and an
    IPC-D-356 netlist (which board makers use for electrical testing), and a `README.txt` naming the board and
    version. Every file name inside carries the version (`lm-1.1.0-F_Cu.gtl`), so a downloaded zip says what it is.
@@ -113,8 +115,9 @@ directory is the simpler of the two.
 
 ## Checks and outputs
 
-`tools/kicad/check.sh` runs ERC and DRC (with schematic/board parity) on every board. It fails on any error that hasn't
-been excluded in KiCad, and reports warnings without failing. The same script runs in CI
+`tools/kicad/check.sh` runs ERC and DRC (with schematic/board parity) on every board, or on the boards you name. It
+fails on any error that hasn't been excluded in KiCad, and reports warnings without failing. A board takes about 5 s;
+checking LM also runs the crosstalk simulation, about 10 s more. The same script runs in CI
 ([.github/workflows/kicad.yml](../.github/workflows/kicad.yml)) on every push or pull request that touches the boards,
 the simulation, the parts catalogue or the tooling.
 
@@ -124,7 +127,7 @@ tools/kicad/check.sh lm           # one board
 tools/kicad/check.sh --fab        # also gerbers, drill, BOM (CSV), schematic PDF and a 3D render
 ```
 
-Reports and outputs go to `build/kicad/<board>/`, which git ignores. CI uploads the same folder as the
+Reports (`erc.json`, `drc.json`) and outputs go to `build/kicad/<board>/`, which git ignores. CI uploads the same folder as the
 `kicad-outputs` artifact.
 
 **Known issues that fail the check:** a violation that's understood and accepted should be *excluded* in KiCad, with a
