@@ -135,9 +135,8 @@ comment saying why (right-click the marker in the ERC or DRC dialog, *Exclude*).
 `.kicad_pro` file, so the check and CI skip them too. There are no exclusions at the moment: all three boards pass.
 
 **Fabrication files:** the gerbers `--fab` writes are for review. The files to order are the released ones in
-[`gerber/`](../gerber), which `release.mjs bump` writes (see [Releasing a version](#releasing-a-version)). Until a
-board's first KiCad release, its zip there is the original DipTrace export; the table in
-[`gerber/README.md`](../gerber/README.md) says which each one is.
+[`gerber/`](../gerber), which `release.mjs bump` writes (see [Releasing a version](#releasing-a-version)). The table in
+[`gerber/README.md`](../gerber/README.md) gives each one's version.
 
 ## Migration from DipTrace
 
@@ -187,8 +186,9 @@ Schematic cleanup after the import (connectivity unchanged):
 
 ## Fixes since the DipTrace design
 
-ERC and DRC found two problems in LM as manufactured. Both are fixed in the schematic and on the board, so LM's copper
-differs from the DipTrace gerbers in these places only. The silkscreen was also cleaned up on all three boards:
+ERC and DRC found two problems in LM as manufactured. Both are fixed in the schematic and on the board. The
+silkscreen was also cleaned up on all three boards, and the first KiCad releases (LM 1.1.0, LMM 1.1.0, Trigger 1.0.1)
+tidied some routing. None of this changes how the boards work:
 
 - **Floating inputs (ERC, 4 errors):** the three unused inverters in U8 (CD74AC04E, inputs A1–A3) and latch input
   U2 D8 were left floating. A floating CMOS input can drift to mid-supply and make its gate draw current or oscillate.
@@ -202,6 +202,9 @@ differs from the DipTrace gerbers in these places only. The silkscreen was also 
   and leave a gap around the holes, in the library footprints and on every board. Six labels that overlapped
   another label, an outline or a pad were moved: C1, C2 and C3 (now on the far side of their capacitor from the
   chip), RB1, and the Trigger's J1 reference and value.
+- **Routing (LM 1.1.0, LMM 1.1.0):** on LM, the 5V track was reshaped in three places and the bottom ground bus moved
+  up 0.66 mm; on LMM, the five trigger lines were rerouted, three of them on the other copper layer. No connection
+  changed. Labels were moved and the board version is printed on each board's silkscreen.
 
 The ground pour was refilled after these changes. The only remaining warnings are 23 small isolated copper islands in
 LM's ground pour, which don't affect function.
