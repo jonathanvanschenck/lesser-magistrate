@@ -148,7 +148,7 @@ function exportFab(id, version) {
     const pcb = join(ROOT, dir, `${id}.kicad_pcb`);
     const tmp = mkdtempSync(join(tmpdir(), "release-"));
     try {
-        sh("kicad-cli", ["pcb", "export", "gerbers", "-l", GERBER_LAYERS, "-o", `${tmp}/`, pcb]);
+        sh("kicad-cli", ["pcb", "export", "gerbers", "--check-zones", "-l", GERBER_LAYERS, "-o", `${tmp}/`, pcb]);
         sh("kicad-cli", ["pcb", "export", "drill", "-o", `${tmp}/`, pcb]);
         sh("kicad-cli", ["pcb", "export", "ipcd356", "-o", join(tmp, `${id}.d356`), pcb]);
         const files = readdirSync(tmp).filter(f => !f.endsWith(".gbrjob")).sort();

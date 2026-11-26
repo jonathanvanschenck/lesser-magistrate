@@ -48,7 +48,7 @@ for b in "${BOARDS[@]}"; do
 
   if [ $FAB = 1 ]; then
     mkdir -p "$out/gerbers"
-    kicad-cli pcb export gerbers -l F.Cu,B.Cu,F.Mask,B.Mask,F.Silkscreen,B.Silkscreen,Edge.Cuts \
+    kicad-cli pcb export gerbers --check-zones -l F.Cu,B.Cu,F.Mask,B.Mask,F.Silkscreen,B.Silkscreen,Edge.Cuts \
       -o "$out/gerbers/" "$pcb" >/dev/null
     kicad-cli pcb export drill -o "$out/gerbers/" "$pcb" >/dev/null
     kicad-cli sch export bom --fields 'Reference,Value,MPN,Footprint,${QUANTITY},Datasheet' \
