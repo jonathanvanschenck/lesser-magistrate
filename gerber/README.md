@@ -7,7 +7,7 @@ Order from these files. They are the released version of each board: don't order
 <!-- BEGIN releases (generated: run node tools/release/release.mjs bump, see kicad/README.md#versions) -->
 | Board | File | Version | Made with |
 |-------|------|---------|-----------|
-| LM | [LMGerber.zip](./LMGerber.zip) | 1.0.0 | DipTrace (original production files) |
+| LM | [LMGerber.zip](./LMGerber.zip) | 1.1.0 | KiCad (tag `lm@1.1.0`) |
 | LMM | [LMMGerber.zip](./LMMGerber.zip) | 1.0.0 | DipTrace (original production files) |
 | Trigger | [TriggerGerber.zip](./TriggerGerber.zip) | 1.0.0 | DipTrace (original production files) |
 <!-- END releases -->
