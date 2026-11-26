@@ -9,7 +9,7 @@ Order from these files. They are the released version of each board: don't order
 |-------|------|---------|-----------|
 | LM | [LMGerber.zip](./LMGerber.zip) | 1.1.0 | KiCad (tag `lm@1.1.0`) |
 | LMM | [LMMGerber.zip](./LMMGerber.zip) | 1.1.0 | KiCad (tag `lmm@1.1.0`) |
-| Trigger | [TriggerGerber.zip](./TriggerGerber.zip) | 1.0.0 | DipTrace (original production files) |
+| Trigger | [TriggerGerber.zip](./TriggerGerber.zip) | 1.0.1 | KiCad (tag `trigger@1.0.1`) |
 <!-- END releases -->
 
 The boards were first drawn in DipTrace, and every Lesser Magistrate built so far was made from the DipTrace files.
